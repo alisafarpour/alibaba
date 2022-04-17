@@ -97,7 +97,7 @@ export default function enterflight() {
             </LocalizationProvider>
           </Grid>
           <Grid item>
-            <Button variant="main">جستجو</Button>
+            <Button variant="main" href="http://localhost:3000/flights">جستجو</Button>
           </Grid>
 
         </Grid>
