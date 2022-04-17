@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Divider from '@mui/material/Divider';
+import FilterBoxTop from './filterBoxTop.js';
 
 
 
@@ -31,6 +32,9 @@ function collocation() {
         justifyContent="flex-start"
         alignItems="center"
       >
+        <Grid item>
+          <FilterBoxTop />
+        </Grid>
         <Grid item>
           <Typography sx={{ marginRight: 1, fontSize: '15px' }}>
             مرتب سازی:
