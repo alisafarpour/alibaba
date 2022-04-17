@@ -12,8 +12,8 @@ function flights() {
             <Grid
                 container
                 direction="row-reverse"
-                justifyContent="space-between"
-                alignItems="center"
+                justifyContent="flex-start"
+                alignItems="flex-start"
                 spacing={1}
                 sx={{ marginTop: 2, width: '85%' }}
             >
