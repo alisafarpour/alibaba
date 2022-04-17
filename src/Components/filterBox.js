@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid } from '@mui/material';
-import Container from "@mui/material/Container";
 import { Typography } from "@mui/material";
 import ListItem from '@mui/material/ListItem';
 import ListSubheader from '@mui/material/ListSubheader';
@@ -11,13 +10,11 @@ import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
 import Divider from '@mui/material/Divider';
 import PropTypes from 'prop-types';
 import Slider, { SliderThumb } from '@mui/material/Slider';
 import { styled } from '@mui/material/styles';
 import Tooltip from '@mui/material/Tooltip';
-import Box from '@mui/material/Box';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
@@ -28,7 +25,6 @@ import Img3 from '../../public/IV.png';
 import Img4 from '../../public/FP.png';
 import Img5 from '../../public/QB.png';
 import Img6 from '../../public/PA.png';
-import { width } from '@mui/system';
 
 
 function ValueLabelComponent(props) {
@@ -114,14 +110,6 @@ function filterBox() {
     }
 
     return (
-        <Grid
-            container
-            direction="row-reverse"
-            justifyContent="space-between"
-            alignItems="center"
-            spacing={1}
-            sx={{ marginTop: 2, width: '85%' }}
-        >
             <Grid
                 container
                 direction="column"
@@ -467,8 +455,6 @@ function filterBox() {
                 </Grid>
             </Grid>
 
-
-        </Grid>
 
     )
 }
