@@ -1,81 +1,108 @@
-import React from 'react'
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import DatePicker from "react-multi-date-picker"
-import persian from "react-date-object/calendars/persian"
-import persian_fa from "react-date-object/locales/persian_fa"
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import React from "react";
+import TextField from "@mui/material/TextField";
+import Autocomplete from "@mui/material/Autocomplete";
+import Grid from "@mui/material/Grid";
+import Button from "@mui/material/Button";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import AdapterJalali from '@date-io/date-fns-jalali';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { Box } from "@mui/material";
+import { useState } from "react";
 
+export default function enterflight() {
 
-
-function enterflight() {
-    const top100Films = [
-        { label: 'The Shawshank Redemption', year: 1994 },
-        { label: 'The Godfather', year: 1972 },
-        { label: 'The Godfather: Part II', year: 1974 },
-        { label: 'The Dark Knight', year: 2008 },
-        { label: '12 Angry Men', year: 1957 },
-        { label: "Schindler's List", year: 1993 },
-        { label: 'Pulp Fiction', year: 1994 },
-        {
-          label: 'The Lord of the Rings: The Return of the King',
-          year: 2003,
-        }];
-        
-
+  const top100Films = [
+    { label: "تهران" },
+    { label: "اهواز" },
+    { label: "شیراز" },
+    { label: "مشهد" },
+    { label: "بندر عباس" },
+    { label: "اصفهان" },
+    { label: "تبریز" },
+    { label: "کیش" },
+  ];
+  const [value, setValue] = React.useState(new Date());
+  const [value2, setValue2] = React.useState(new Date());
   return (
-    <Grid container spacing={2} >
-        <Grid item xs={12} sx={{direction: 'rtl' , borderRadius: 10, marginBottom: 2}} >
-            <Button href="#text-buttons" sx={{borderRadius: '25%',}}>یک طرفه<KeyboardArrowDownIcon /></Button>
+    <Grid container spacing={2}>
+      <Grid
+        item
+        xs={12}
+        sx={{ direction: "rtl", borderRadius: 10, marginBottom: 2 }}
+      >
+        <Button href="#text-buttons" sx={{ borderRadius: "25%" }}>
+          یک طرفه
+          <KeyboardArrowDownIcon />
+        </Button>
+      </Grid>
+      <Grid container spacing={2} direction="row"
+        justifyContent="center"
+        alignItems="center" >
+        <Grid item>
+          <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={top100Films}
+            sx={{ width: 220, borderTopRightRadius: "100%" }}
+            renderOption={(props, option) => (
+              <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+                <LocationOnIcon />
+                {option.label}
+              </Box>
+            )}
+            renderInput={(params) => (
+              <TextField {...params} label="مبدا(شهر)" />
+            )}
+          />
         </Grid>
-        <Grid container spacing={2}>
-            <Grid item >
-                <Autocomplete
-                disablePortal
-                id="combo-box-demo"
-                options={top100Films}
-                sx={{ width: 250}}
-                renderInput={(params) => <TextField {...params} label="مبدا(شهر)" />}
-                />
-            </Grid>
-            <Grid item sx={{marginRight: -2}}>
-                <Autocomplete
-                disablePortal
-                id="combo-box-demo"
-                options={top100Films}
-                sx={{ width: 250 , direction: 'rtl', borderTopRightRadius: 0, borderBottomRightRadius: 0}}
-                renderInput={(params) => <TextField {...params} label="مقصد(شهر)" />}
-                />
-            </Grid>
-            <Grid container xs={4} spacing={-2} sx={{marginTop: 2}}>
-                <Grid item >
-                    <DatePicker
-                        placeholder="تاریخ رفت"
-                        style={{width: '150px', height:'55px', fontSize:'16px',fontWeight:'bold', borderTopLeftRadius: '0', borderBottomLeftRadius: '0'}}
-                        multiple
-                        calendar={persian}
-                        locale={persian_fa}
-                        calendarPosition="bottom-right"
-                    />
-                </Grid>
-                <Grid item >
-                    <DatePicker
-                        
-                        placeholder="تاریخ برگشت"
-                        style={{width: '150px', height:'55px', fontSize:'16px',fontWeight:'bold', borderTopRightRadius: '0', borderBottomRightRadius: '0'}}
-                        multiple
-                        calendar={persian}
-                        locale={persian_fa}
-                        calendarPosition="bottom-right"
-                    />
-                </Grid>
-            </Grid>
+        <Grid item>
+          <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={top100Films}
+            sx={{ width: 220, borderTopRightRadius: "100%" }}
+            renderOption={(props, option) => (
+              <Box sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+                <LocationOnIcon />
+                {option.label}
+              </Box>
+            )}
+            renderInput={(params) => (
+              <TextField {...params} label="مقصد(شهر)" />
+            )}
+          />
         </Grid>
+        <Grid container xs={7} spacing={1} sx={{ marginTop: 1 }}>
+          <Grid item>
+            <LocalizationProvider dateAdapter={AdapterJalali}>
+              <DatePicker
+                mask="____/__/__"
+                value={value}
+                onChange={(newValue) => setValue(newValue)}
+                renderInput={(params) => <TextField {...params} />}
+              />
+            </LocalizationProvider>
+          </Grid>
+          <Grid item>
+            <LocalizationProvider dateAdapter={AdapterJalali}>
+              <DatePicker
+                mask="____/__/__"
+                value={value2}
+                onChange={(newValue2) => setValue2(newValue2)}
+                renderInput={(params) => <TextField {...params} />}
+              />
+            </LocalizationProvider>
+          </Grid>
+          <Grid item>
+            <Button variant="main">جستجو</Button>
+          </Grid>
+
+        </Grid>
+      </Grid>
     </Grid>
-  )
+  );
 }
 
-export default enterflight

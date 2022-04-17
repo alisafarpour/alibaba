@@ -1,32 +1,32 @@
-import { Box, Container } from '@mui/material'
-import React from 'react'
-import Grid from '@mui/material/Grid'
-import Image from 'next/image'
-import Pic1 from '../public/Unknown-4.webp'
-import Pic3 from '../public/Unknown-5.webp'
-import Pic2 from '../public/Unknown-3.webp'
-import Link from '@mui/material/Link'
-import shawl from '../public/shawl.svg'
-import state from '../public/state.svg'
-import aira from '../public/aira.png'
-import passenger from '../public/passenger.svg'
-import enamad from '../public/enamad.png'
-import samandehi from '../public/samandehi.png'
-import ecunion from '../public/ecunion.png'
-import InstagramIcon from '@mui/icons-material/Instagram'
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import TelegramIcon from '@mui/icons-material/Telegram';
+import { Box, Container } from "@mui/material";
+import React from "react";
+import Grid from "@mui/material/Grid";
+import Image from "next/image";
+import Pic1 from "../public/Unknown-4.webp";
+import Pic3 from "../public/Unknown-5.webp";
+import Pic2 from "../public/Unknown-3.webp";
+import Link from "@mui/material/Link";
+import shawl from "../public/shawl.svg";
+import state from "../public/state.svg";
+import aira from "../public/aira.png";
+import passenger from "../public/passenger.svg";
+import enamad from "../public/enamad.png";
+import samandehi from "../public/samandehi.png";
+import ecunion from "../public/ecunion.png";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import TelegramIcon from "@mui/icons-material/Telegram";
 
 function footer() {
   return (
-    <Box sx={{ backgroundColor: 'white' }}>
+    <Box sx={{ backgroundColor: "white" }}>
       <Container
         sx={{
-          width: '72%',
+          width: "72%",
           marginTop: 5,
-          direction: 'rtl',
+          direction: "rtl",
         }}
       >
         <Grid
@@ -37,7 +37,7 @@ function footer() {
           sx={{
             marginTop: 15,
 
-            direction: 'rtl',
+            direction: "rtl",
             paddingTop: 5,
             paddingBottom: 8,
             borderBottom: 0.2,
@@ -86,7 +86,7 @@ function footer() {
           justifyContent="center"
           alignItems="center"
           sx={{
-            direction: 'rtl',
+            direction: "rtl",
             borderBottom: 2,
           }}
         >
@@ -101,64 +101,64 @@ function footer() {
               <Grid xs={4}>
                 <h3>علی بابا</h3>
                 <Grid sx={{ lineHeight: 1.75 }}>
-                  <Link href="#" underline="none" sx={{ color: 'black' }}>
-                    {'درباره ما'}
+                  <Link href="#" underline="none" sx={{ color: "black" }}>
+                    {"درباره ما"}
                   </Link>
                   <br />
-                  <Link href="#" underline="none" sx={{ color: 'black' }}>
-                    {'تماس با ما'}
+                  <Link href="#" underline="none" sx={{ color: "black" }}>
+                    {"تماس با ما"}
                   </Link>
                   <br />
-                  <Link href="#" underline="none" sx={{ color: 'black' }}>
-                    {'چرا علی‌بابا'}
+                  <Link href="#" underline="none" sx={{ color: "black" }}>
+                    {"چرا علی‌بابا"}
                   </Link>
                   <br />
-                  <Link href="#" underline="none" sx={{ color: 'black' }}>
-                    {'علی بابا پلاس'}
+                  <Link href="#" underline="none" sx={{ color: "black" }}>
+                    {"علی بابا پلاس"}
                   </Link>
                   <br />
-                  <Link href="#" underline="none" sx={{ color: 'black' }}>
-                    {'مجله علی‌بابا'}
+                  <Link href="#" underline="none" sx={{ color: "black" }}>
+                    {"مجله علی‌بابا"}
                   </Link>
                 </Grid>
               </Grid>
               <Grid xs={4}>
                 <h3>راهنما</h3>
                 <Grid sx={{ lineHeight: 1.75 }}>
-                  <Link href="#" underline="none" sx={{ color: 'black' }}>
-                    {'راهنمای خرید'}
+                  <Link href="#" underline="none" sx={{ color: "black" }}>
+                    {"راهنمای خرید"}
                   </Link>
                   <br />
-                  <Link href="#" underline="none" sx={{ color: 'black' }}>
-                    {'راهنمای استرداد بلیط'}
+                  <Link href="#" underline="none" sx={{ color: "black" }}>
+                    {"راهنمای استرداد بلیط"}
                   </Link>
                   <br />
-                  <Link href="#" underline="none" sx={{ color: 'black' }}>
-                    {'قوانین و مقررات'}
+                  <Link href="#" underline="none" sx={{ color: "black" }}>
+                    {"قوانین و مقررات"}
                   </Link>
                   <br />
-                  <Link href="#" underline="none" sx={{ color: 'black' }}>
-                    {'پرسش و پاسخ'}
+                  <Link href="#" underline="none" sx={{ color: "black" }}>
+                    {"پرسش و پاسخ"}
                   </Link>
                 </Grid>
               </Grid>
               <Grid xs={4}>
                 <h3>اطلاعات تکمیلی</h3>
                 <Grid sx={{ lineHeight: 1.75 }}>
-                  <Link href="#" underline="none" sx={{ color: 'black' }}>
-                    {'باشگاه مشتریان'}
+                  <Link href="#" underline="none" sx={{ color: "black" }}>
+                    {"باشگاه مشتریان"}
                   </Link>
                   <br />
-                  <Link href="#" underline="none" sx={{ color: 'black' }}>
-                    {'فروش سازمانی'}
+                  <Link href="#" underline="none" sx={{ color: "black" }}>
+                    {"فروش سازمانی"}
                   </Link>
                   <br />
-                  <Link href="#" underline="none" sx={{ color: 'black' }}>
-                    {'همکاری با آژانس‌ها'}
+                  <Link href="#" underline="none" sx={{ color: "black" }}>
+                    {"همکاری با آژانس‌ها"}
                   </Link>
                   <br />
-                  <Link href="#" underline="none" sx={{ color: 'black' }}>
-                    {'فرصت‌های شغلی'}
+                  <Link href="#" underline="none" sx={{ color: "black" }}>
+                    {"فرصت‌های شغلی"}
                   </Link>
                 </Grid>
                 <Grid xs={12}></Grid>
@@ -170,7 +170,7 @@ function footer() {
               justifyContent="flex-start"
               alignItems="center"
               xs={6}
-              sx={{ direction: 'ltr', marginTop: 10 }}
+              sx={{ direction: "ltr", marginTop: 10 }}
             >
               <Grid xs={12}>
                 <Image src={shawl} width="189px" height="30px" />
@@ -275,10 +275,10 @@ function footer() {
               sx={{
                 borderTop: 0.2,
                 paddingTop: 2,
-                direction: 'rtl',
+                direction: "rtl",
                 fontSize: 12,
                 paddingBottom: 5,
-                color: 'black',
+                color: "black",
               }}
             >
               <Grid xs={7}>
@@ -293,20 +293,19 @@ function footer() {
                 direction="row-reverse"
                 justifyContent="flex-start"
                 alignItems="center"
-                
               >
-                <LinkedInIcon sx={{fontSize: 30}} />
-                <InstagramIcon sx={{fontSize: 30 , marginLeft: 2.5}} />
-                <TwitterIcon sx={{fontSize: 30 , marginLeft: 2.5}} />
-                <YouTubeIcon sx={{fontSize: 30 , marginLeft: 2.5}} />
-                <TelegramIcon sx={{fontSize: 30 , marginLeft: 2.5}} />
+                <LinkedInIcon sx={{ fontSize: 30 }} />
+                <InstagramIcon sx={{ fontSize: 30, marginLeft: 2.5 }} />
+                <TwitterIcon sx={{ fontSize: 30, marginLeft: 2.5 }} />
+                <YouTubeIcon sx={{ fontSize: 30, marginLeft: 2.5 }} />
+                <TelegramIcon sx={{ fontSize: 30, marginLeft: 2.5 }} />
               </Grid>
             </Grid>
           </Grid>
         </Grid>
       </Container>
     </Box>
-  )
+  );
 }
 
-export default footer
+export default footer;

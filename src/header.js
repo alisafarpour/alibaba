@@ -1,16 +1,16 @@
-import React from 'react'
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
-import Container from '@mui/material/Container'
-import Button from '@mui/material/Button'
-import Grid from '@mui/material/Grid'
-import Stack from '@mui/material/Stack'
-import Divider from '@mui/material/Divider'
-import HowToRegOutlinedIcon from '@mui/icons-material/HowToRegOutlined'
-import SpeakerNotesOutlinedIcon from '@mui/icons-material/SpeakerNotesOutlined'
-import rtlPlugin from 'stylis-plugin-rtl'
-import Alibaba from '../public/ali-baba.png'
-import { maxWidth } from '@mui/system'
-import Image from 'next/image'
+import React from "react";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import Stack from "@mui/material/Stack";
+import Divider from "@mui/material/Divider";
+import HowToRegOutlinedIcon from "@mui/icons-material/HowToRegOutlined";
+import SpeakerNotesOutlinedIcon from "@mui/icons-material/SpeakerNotesOutlined";
+import rtlPlugin from "stylis-plugin-rtl";
+import Alibaba from "../public/ali-baba.png";
+import { maxWidth } from "@mui/system";
+import Image from "next/image";
 
 function header() {
   return (
@@ -22,7 +22,7 @@ function header() {
         alignItems="center"
         spacing={2}
         xs={12}
-        sx={{ backgroundColor: 'white', height: 80 }}
+        sx={{ backgroundColor: "white", height: 80 }}
       >
         <Grid item xs={1.25}>
           <Image src={Alibaba} />
@@ -41,8 +41,8 @@ function header() {
           >
             <Button
               sx={{
-                bgcolor: 'background.paper',
-                color: 'text.secondary',
+                bgcolor: "background.paper",
+                color: "text.secondary",
                 fontSize: 16,
               }}
             >
@@ -52,8 +52,8 @@ function header() {
 
             <Button
               sx={{
-                bgcolor: 'background.paper',
-                color: 'text.secondary',
+                bgcolor: "background.paper",
+                color: "text.secondary",
                 fontSize: 16,
               }}
             >
@@ -62,8 +62,8 @@ function header() {
 
             <Button
               sx={{
-                bgcolor: 'background.paper',
-                color: 'text.secondary',
+                bgcolor: "background.paper",
+                color: "text.secondary",
                 fontSize: 16,
               }}
             >
@@ -72,8 +72,8 @@ function header() {
 
             <Button
               sx={{
-                bgcolor: 'background.paper',
-                color: 'text.secondary',
+                bgcolor: "background.paper",
+                color: "text.secondary",
                 fontSize: 16,
               }}
             >
@@ -82,8 +82,8 @@ function header() {
 
             <Button
               sx={{
-                bgcolor: 'background.paper',
-                color: 'text.secondary',
+                bgcolor: "background.paper",
+                color: "text.secondary",
                 fontSize: 16,
               }}
             >
@@ -92,8 +92,8 @@ function header() {
 
             <Button
               sx={{
-                bgcolor: 'background.paper',
-                color: 'text.secondary',
+                bgcolor: "background.paper",
+                color: "text.secondary",
                 fontSize: 16,
               }}
             >
@@ -102,8 +102,8 @@ function header() {
 
             <Button
               sx={{
-                bgcolor: 'background.paper',
-                color: 'text.secondary',
+                bgcolor: "background.paper",
+                color: "text.secondary",
                 fontSize: 16,
               }}
             >
@@ -121,8 +121,8 @@ function header() {
           >
             <Button
               sx={{
-                bgcolor: 'background.paper',
-                color: 'text.secondary',
+                bgcolor: "background.paper",
+                color: "text.secondary",
                 fontSize: 16,
               }}
             >
@@ -130,8 +130,8 @@ function header() {
             </Button>
             <Button
               sx={{
-                bgcolor: 'background.paper',
-                color: 'text.secondary',
+                bgcolor: "background.paper",
+                color: "text.secondary",
                 fontSize: 16,
               }}
             >
@@ -141,7 +141,7 @@ function header() {
         </Grid>
       </Grid>
     </div>
-  )
+  );
 }
 
-export default header
+export default header;

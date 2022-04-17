@@ -1,36 +1,42 @@
-import * as React from 'react'
-import Box from '@mui/material/Box'
-import Tab from '@mui/material/Tab'
-import TabContext from '@mui/lab/TabContext'
-import TabList from '@mui/lab/TabList'
-import TabPanel from '@mui/lab/TabPanel'
-import Grid from '@mui/material/Grid'
-import { useState } from 'react'
-import FlightLandOutlinedIcon from '@mui/icons-material/FlightLandOutlined'
-import FlightTakeoffOutlinedIcon from '@mui/icons-material/FlightTakeoffOutlined'
-import DirectionsSubwayFilledOutlinedIcon from '@mui/icons-material/DirectionsSubwayFilledOutlined'
-import DirectionsBusFilledOutlinedIcon from '@mui/icons-material/DirectionsBusFilledOutlined'
-import TourOutlinedIcon from '@mui/icons-material/TourOutlined'
-import KingBedOutlinedIcon from '@mui/icons-material/KingBedOutlined'
-import MeetingRoomOutlinedIcon from '@mui/icons-material/MeetingRoomOutlined'
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import TabContext from "@mui/lab/TabContext";
+import TabList from "@mui/lab/TabList";
+import TabPanel from "@mui/lab/TabPanel";
+import Grid from "@mui/material/Grid";
+import { useState } from "react";
+import FlightLandOutlinedIcon from "@mui/icons-material/FlightLandOutlined";
+import FlightTakeoffOutlinedIcon from "@mui/icons-material/FlightTakeoffOutlined";
+import DirectionsSubwayFilledOutlinedIcon from "@mui/icons-material/DirectionsSubwayFilledOutlined";
+import DirectionsBusFilledOutlinedIcon from "@mui/icons-material/DirectionsBusFilledOutlined";
+import TourOutlinedIcon from "@mui/icons-material/TourOutlined";
+import KingBedOutlinedIcon from "@mui/icons-material/KingBedOutlined";
+import MeetingRoomOutlinedIcon from "@mui/icons-material/MeetingRoomOutlined";
 
-import Enterflight from './enterflight'
+import Enterflight from "./enterflight";
 
 export default function LabTabs() {
-  const [value, setValue] = useState('1')
+  const [value, setValue] = useState("1");
 
   const handleChange = (event, newValue) => {
-    setValue(newValue)
-  }
+    setValue(newValue);
+  };
 
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="center" sx={{marginTop: 4}}>
+    <Grid
+      container
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+      sx={{ marginTop: 4 }}
+    >
       <Box
         sx={{
-          width: '72%',
-          zIndex: 'tooltip',
-          backgroundColor: 'white',
-          position: 'absolute',
+          width: "72%",
+          zIndex: "tooltip",
+          backgroundColor: "white",
+          position: "absolute",
           borderRadius: 2,
         }}
       >
@@ -38,12 +44,12 @@ export default function LabTabs() {
           <Box
             sx={{
               borderBottom: 1,
-              borderColor: 'divider',
-              direction: 'rtl',
-              justifyContent: 'center',
+              borderColor: "divider",
+              direction: "rtl",
+              justifyContent: "center",
             }}
           >
-            <TabList centered onChange={handleChange} sx={{marginTop: 2.5}}>
+            <TabList centered onChange={handleChange} sx={{ marginTop: 2.5 }}>
               <Tab
                 sx={{ fontSize: 16, marginRight: 3, marginLeft: 3 }}
                 label="پرواز داخلی"
@@ -90,10 +96,10 @@ export default function LabTabs() {
               />
             </TabList>
           </Box>
-          <Box sx={{ direction: 'rtl', justifyContent: 'center' }}>
+          <Box sx={{ direction: "rtl", justifyContent: "center" }}>
             <TabPanel value="1">
-              {' '}
-              <Enterflight />{' '}
+              {" "}
+              <Enterflight />{" "}
             </TabPanel>
             <TabPanel value="2">Item Two</TabPanel>
             <TabPanel value="3">Item Three</TabPanel>
@@ -105,5 +111,5 @@ export default function LabTabs() {
         </TabContext>
       </Box>
     </Grid>
-  )
+  );
 }
