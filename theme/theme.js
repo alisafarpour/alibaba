@@ -38,6 +38,25 @@ const theme = createTheme({
                 },
             },
         },
+        {
+          props: { variant: 'ticket' },
+            style: {
+              backgroundColor: "#0177DB",
+              borderRadius: 8,
+              height: 40,
+              width: "144px",
+              padding: "8px 40px",
+              fontSize: "16px",
+              fontWeight: "400",
+              letterSpacing: "normal",
+              lineHeight: 2.5,
+              color: "white",
+                "&: hover": {
+                  backgroundColor: "#01569E",
+                  boxShadow: "0 0 1px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 raba(0, 0, 0, 0.04), 0 16 px",
+                },
+            },
+        },
       ]
     },
   },
