@@ -22,7 +22,11 @@ function flights() {
 
             </Grid>
 
-            <Footer />
+          
+                <Footer />
+           
+
+            
         </div>
 
     )

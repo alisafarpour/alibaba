@@ -453,7 +453,7 @@ function TicketChosse(props) {
                     <Typography sx={{ color: '#CED2D5', fontWeight: '900', fontSize: "10px", marginRight: 1 }}>ریال</Typography>
                 </Grid>
 
-                <Button sx={{ marginTop: 1 }} variant="ticket" >انتخاب بلیط</Button>
+                <Button sx={{ marginTop: 1 }} variant="ticket" href='http://localhost:3000/passengers' >انتخاب بلیط</Button>
                 
                 <Typography sx={{ color: '#DC3444', marginTop: 2, fontSize: '11px' }}>{props.seat} صندلی باقی مانده</Typography>
        

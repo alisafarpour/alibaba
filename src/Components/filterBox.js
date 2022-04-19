@@ -162,7 +162,8 @@ function filterBox() {
                         </ListItemButton>
                         <Collapse in={open} timeout="auto" unmountOnExit>
                             <List component="div" disablePadding>
-                                <ListItem sx={{ pl: 4 }}>
+                                
+                                <ListItem dir='rtl' sx={{ pl: 4 }}>
 
                                     <FilterBoxSlider
                                         components={{ Thumb: FilterBoxComponent }}

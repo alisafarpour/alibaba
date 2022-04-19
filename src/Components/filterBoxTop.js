@@ -21,15 +21,9 @@ function filterBoxTop() {
       direction="row"
       justifyContent="flex-start"
       alignItems="center"
-      sx={{ direction: 'rtl', height: '64px', width: '852px', marginRight: 2, marginBottom: 2 }}
+      sx={{ direction: 'rtl', height: '64px', width: '835px', marginRight: 1, marginBottom: 2, bgcolor: 'background.paper', }}
     >
-        <Box
-      sx={{
-        flexGrow: 1,
-        maxWidth: { xs: 320, sm: 480 },
-        bgcolor: 'background.paper',
-      }}
-    >
+       
       <Tabs
         value={value}
         onChange={handleChange}
@@ -49,8 +43,15 @@ function filterBoxTop() {
         <Tab label="Item Five" />
         <Tab label="Item Six" />
         <Tab label="Item Seven" />
+        <Tab label="Item Seven" />
+        <Tab label="Item Seven" />
+        <Tab label="Item Seven" />
+        <Tab label="Item Seven" />
+        <Tab label="Item Two" />
+        <Tab label="Item Three" />
+        <Tab label="Item Four" />
       </Tabs>
-    </Box>
+    
 
     </Grid>
   )
