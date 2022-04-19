@@ -27,6 +27,9 @@ function footer() {
           width: "72%",
           marginTop: 5,
           direction: "rtl",
+          left: 0,
+          bottom: 0,
+          right: 0,
         }}
       >
         <Grid
@@ -35,7 +38,7 @@ function footer() {
           justifyContent="space-between"
           alignItems="center"
           sx={{
-            marginTop: 15,
+            marginTop: 18,
 
             direction: "rtl",
             paddingTop: 5,

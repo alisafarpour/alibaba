@@ -20,9 +20,10 @@ function header() {
         direction="row"
         justifyContent="center"
         alignItems="center"
+        
         spacing={2}
         xs={12}
-        sx={{ backgroundColor: "white", height: 80 }}
+        sx={{ backgroundColor: "white", height: 80, position: 'sticky' }}
       >
         <Grid item xs={1.25}>
           <Image src={Alibaba} />

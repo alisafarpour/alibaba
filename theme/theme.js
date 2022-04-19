@@ -46,7 +46,7 @@ const theme = createTheme({
               height: 40,
               width: "144px",
               padding: "8px 40px",
-              fontSize: "16px",
+              fontSize: "12px",
               fontWeight: "400",
               letterSpacing: "normal",
               lineHeight: 2.5,
@@ -54,6 +54,23 @@ const theme = createTheme({
                 "&: hover": {
                   backgroundColor: "#01569E",
                   boxShadow: "0 0 1px 0 rgba(0, 0, 0, 0.04), 0 4px 8px 0 raba(0, 0, 0, 0.04), 0 16 px",
+                },
+            },
+        },
+        {
+          props: { variant: 'Close' },
+            style: {
+              height: "23px",
+              width: "63px",
+              borderRadius: 100,
+              fontSize: "12px",
+              letterSpacing: "normal",
+              lineHeight: 1,
+              color: "#0177DB",
+              
+                "&: hover": {
+                  borderColor:"#0177DB",
+                  border: '1px solid currentColor',
                 },
             },
         },

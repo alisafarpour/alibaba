@@ -67,37 +67,46 @@ function filterBox() {
     };
 
 
-    const AirbnbSlider = styled(Slider)(({ theme }) => ({
-        color: '#3a8589',
-        height: 3,
-        padding: '13px 0',
+    
+
+    const FilterBoxSlider = styled(Slider)(({ theme }) => ({
+        color: '#0177DB',
+        height: 1,
+        margin: 5,
         '& .MuiSlider-thumb': {
-            height: 18,
-            width: 18,
+            height: 15,
+            width: 15,
             backgroundColor: '#fff',
-            border: '1px solid currentColor',
+            border: '2px solid gray',
             '&:hover': {
-                boxShadow: '0 0 0 8px rgba(58, 133, 137, 0.16)',
+                border: '2px solid #0177DB',
             },
-            '& .airbnb-bar': {
-                height: 10,
+            '& .MuiSlider-bar': {
+                height: 1,
                 width: 1,
                 backgroundColor: 'currentColor',
                 marginLeft: 1,
                 marginRight: 1,
+                
             },
         },
+        '& .MuiSlider-valueLabelOpen' :{
+            backgroundColor: 'white',
+            color : 'black',
+            fontSize: '13px',
+            fontWeight: '900'
+        },
         '& .MuiSlider-track': {
-            height: 2.5,
+            height: 4,
         },
         '& .MuiSlider-rail': {
             color: theme.palette.mode === 'dark' ? '#bfbfbf' : '#d8d8d8',
             opacity: theme.palette.mode === 'dark' ? undefined : 1,
-            height: 2.5,
+            height: 4,
         },
     }));
 
-    function AirbnbThumbComponent(props) {
+    function FilterBoxComponent(props) {
         const { children, ...other } = props;
         return (
             <SliderThumb {...other}>
@@ -155,14 +164,13 @@ function filterBox() {
                             <List component="div" disablePadding>
                                 <ListItem sx={{ pl: 4 }}>
 
-                                    <AirbnbSlider
-                                        components={{ Thumb: AirbnbThumbComponent }}
-                                        // getAriaLabel={(index) => (index === 0 ? 'Minimum price' : 'Maximum price')}
+                                    <FilterBoxSlider
+                                        components={{ Thumb: FilterBoxComponent }}
                                         max={23}
                                         min={6}
                                         defaultValue={[0, 100]}
                                         valueLabelDisplay="on"
-                                        sx={{ marginTop: 4 }}
+                                        sx={{ marginTop: 2.5 }}
                                     />
 
                                 </ListItem>
