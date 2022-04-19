@@ -7,7 +7,6 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
-import { blue } from "@mui/material/colors";
 
 function toggle() {
   return (

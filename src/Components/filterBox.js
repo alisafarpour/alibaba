@@ -67,7 +67,7 @@ function filterBox() {
     };
 
 
-    
+
 
     const FilterBoxSlider = styled(Slider)(({ theme }) => ({
         color: '#0177DB',
@@ -87,12 +87,12 @@ function filterBox() {
                 backgroundColor: 'currentColor',
                 marginLeft: 1,
                 marginRight: 1,
-                
+
             },
         },
-        '& .MuiSlider-valueLabelOpen' :{
+        '& .MuiSlider-valueLabelOpen': {
             backgroundColor: 'white',
-            color : 'black',
+            color: 'black',
             fontSize: '13px',
             fontWeight: '900'
         },
@@ -119,350 +119,352 @@ function filterBox() {
     }
 
     return (
-            <Grid
-                container
-                direction="column"
-                justifyContent="flex-start"
-                alignItems="flex-end"
-                sx={{ borderRadius: 2, backgroundColor: 'white', direction: 'rtl', height: 'auto', width: '298px', border: 1, borderColor: '#e5e5e5' }}
-            >
-                <Grid item >
+        <Grid
+            container
+            direction="column"
+            justifyContent="flex-start"
+            alignItems="flex-end"
+            sx={{
+                borderRadius: 2, backgroundColor: 'white', direction: 'rtl', height: 'auto', width: '298px', border: 1, borderColor: '#e5e5e5'
+            }}
+        >
+            <Grid item >
 
-                    <List
-                        sx={{ width: '295px', maxWidth: 360, bgcolor: 'background.paper' }}
-                        component="nav"
-                        aria-labelledby="nested-list-subheader"
-                        subheader={
-                            <ListSubheader component="div" id="nested-list-subheader">
-                                <Typography sx={{ fontWeight: '400', marginBottom: 2, marginTop: 2 }}>نتایج:</Typography>
-                            </ListSubheader>
-                        }
-                    >
-                        <Divider />
+                <List
+                    sx={{ width: '295px', maxWidth: 360, bgcolor: 'background.paper' }}
+                    component="nav"
+                    aria-labelledby="nested-list-subheader"
+                    subheader={
+                        <ListSubheader component="div" id="nested-list-subheader">
+                            <Typography sx={{ fontWeight: '400', marginBottom: 2, marginTop: 2 }}>نتایج:</Typography>
+                        </ListSubheader>
+                    }
+                >
+                    <Divider />
 
 
-                        <ListItemButton onClick={handleClick}>
-                            <ListItemIcon>
-                                <Typography sx={{ fontWeight: '900', marginTop: 1, marginBottom: 1 }}> ساعت حرکت</Typography>
-                            </ListItemIcon>
-                            <ListItemText />
-                            {open ? <ExpandLess sx={{
-                                fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680",
-                                "&: hover": {
-                                    backgroundColor: "#e8f8fb",
-                                    color: "#14a2b8",
-                                },
-                            }} /> : <ExpandMore sx={{
-                                fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680",
-                                "&: hover": {
-                                    backgroundColor: "#e8f8fb",
-                                    color: "#14a2b8",
-                                },
-                            }} />}
-                        </ListItemButton>
-                        <Collapse in={open} timeout="auto" unmountOnExit>
-                            <List component="div" disablePadding>
-                                
-                                <ListItem dir='rtl' sx={{ pl: 4 }}>
+                    <ListItemButton onClick={handleClick}>
+                        <ListItemIcon>
+                            <Typography sx={{ fontWeight: '900', marginTop: 1, marginBottom: 1 }}> ساعت حرکت</Typography>
+                        </ListItemIcon>
+                        <ListItemText />
+                        {open ? <ExpandLess sx={{
+                            fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680",
+                            "&: hover": {
+                                backgroundColor: "#e8f8fb",
+                                color: "#14a2b8",
+                            },
+                        }} /> : <ExpandMore sx={{
+                            fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680",
+                            "&: hover": {
+                                backgroundColor: "#e8f8fb",
+                                color: "#14a2b8",
+                            },
+                        }} />}
+                    </ListItemButton>
+                    <Collapse in={open} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
 
-                                    <FilterBoxSlider
-                                        components={{ Thumb: FilterBoxComponent }}
-                                        max={23}
-                                        min={6}
-                                        defaultValue={[0, 100]}
-                                        valueLabelDisplay="on"
-                                        sx={{ marginTop: 2.5 }}
-                                    />
+                            <ListItem dir='rtl' sx={{ pl: 4 }}>
 
-                                </ListItem>
-                            </List>
+                                <FilterBoxSlider
+                                    components={{ Thumb: FilterBoxComponent }}
+                                    max={23}
+                                    min={6}
+                                    defaultValue={[0, 100]}
+                                    valueLabelDisplay="on"
+                                    sx={{ marginTop: 2.5 }}
+                                />
 
-                        </Collapse>
+                            </ListItem>
+                        </List>
 
-                        <Divider />
+                    </Collapse>
 
-                        <ListItemButton onClick={handleClick2}>
-                            <ListItemIcon>
-                                <Typography sx={{ fontWeight: '900', marginTop: 1, marginBottom: 1 }}> نوع بلیط</Typography>
-                            </ListItemIcon>
-                            <ListItemText />
-                            {open2 ? <ExpandLess sx={{
-                                fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680",
-                                "&: hover": {
-                                    backgroundColor: "#e8f8fb",
-                                    color: "#14a2b8",
-                                },
-                            }} /> : <ExpandMore sx={{
-                                fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680", "&: hover": {
-                                    backgroundColor: "#e8f8fb",
-                                    color: "#14a2b8",
-                                },
-                            }} />}
-                        </ListItemButton>
-                        <Collapse in={open2} timeout="auto" unmountOnExit>
-                            <List component="div" disablePadding>
-                                <ListItem >
-                                    <FormGroup>
-                                        <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label="سیستمی" />
-                                        <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label="چارتر" />
-                                    </FormGroup>
+                    <Divider />
 
-                                </ListItem>
-                            </List>
-                        </Collapse>
-                        <Divider />
-                        <ListItemButton onClick={handleClick3}>
-                            <ListItemIcon>
-                                <Typography sx={{ fontWeight: '900', marginTop: 1, marginBottom: 1 }}> نوع بلیط</Typography>
-                            </ListItemIcon>
-                            <ListItemText />
-                            {open3 ? <ExpandLess sx={{
-                                fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680",
-                                "&: hover": {
-                                    backgroundColor: "#e8f8fb",
-                                    color: "#14a2b8",
-                                },
-                            }} /> : <ExpandMore sx={{
-                                fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680", "&: hover": {
-                                    backgroundColor: "#e8f8fb",
-                                    color: "#14a2b8",
-                                },
-                            }} />}
-                        </ListItemButton>
-                        <Collapse in={open3} timeout="auto" unmountOnExit>
-                            <List component="div" disablePadding>
-                                <ListItem >
-                                    <FormGroup sx={{ width: '100%' }}>
+                    <ListItemButton onClick={handleClick2}>
+                        <ListItemIcon>
+                            <Typography sx={{ fontWeight: '900', marginTop: 1, marginBottom: 1 }}> نوع بلیط</Typography>
+                        </ListItemIcon>
+                        <ListItemText />
+                        {open2 ? <ExpandLess sx={{
+                            fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680",
+                            "&: hover": {
+                                backgroundColor: "#e8f8fb",
+                                color: "#14a2b8",
+                            },
+                        }} /> : <ExpandMore sx={{
+                            fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680", "&: hover": {
+                                backgroundColor: "#e8f8fb",
+                                color: "#14a2b8",
+                            },
+                        }} />}
+                    </ListItemButton>
+                    <Collapse in={open2} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                            <ListItem >
+                                <FormGroup>
+                                    <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label="سیستمی" />
+                                    <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label="چارتر" />
+                                </FormGroup>
+
+                            </ListItem>
+                        </List>
+                    </Collapse>
+                    <Divider />
+                    <ListItemButton onClick={handleClick3}>
+                        <ListItemIcon>
+                            <Typography sx={{ fontWeight: '900', marginTop: 1, marginBottom: 1 }}> نوع بلیط</Typography>
+                        </ListItemIcon>
+                        <ListItemText />
+                        {open3 ? <ExpandLess sx={{
+                            fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680",
+                            "&: hover": {
+                                backgroundColor: "#e8f8fb",
+                                color: "#14a2b8",
+                            },
+                        }} /> : <ExpandMore sx={{
+                            fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680", "&: hover": {
+                                backgroundColor: "#e8f8fb",
+                                color: "#14a2b8",
+                            },
+                        }} />}
+                    </ListItemButton>
+                    <Collapse in={open3} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                            <ListItem >
+                                <FormGroup sx={{ width: '100%' }}>
+                                    <Grid container
+                                        direction="row"
+                                        justifyContent="space-between"
+                                        alignItems="center"
+                                        xs={12}
+                                    >
                                         <Grid container
+                                            xs={10}
                                             direction="row"
-                                            justifyContent="space-between"
+                                            justifyContent="flex-start"
                                             alignItems="center"
-                                            xs={12}
+                                            spacing={2}
+
                                         >
-                                            <Grid container
-                                                xs={10}
-                                                direction="row"
-                                                justifyContent="flex-start"
-                                                alignItems="center"
-                                                spacing={2}
-
-                                            >
-                                                <Grid item lg={3}>
-                                                    <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
-                                                </Grid>
-                                                <Grid item lg={3} sx={{ marginLeft: -1.5, marginRight: -1.5 }} >
-                                                    <Image src={Img1} width="24px" height="24px" />
-                                                </Grid>
-                                                <Grid item lg={3}>
-                                                    <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>آسمان</Typography>
-                                                </Grid>
+                                            <Grid item lg={3}>
+                                                <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
                                             </Grid>
-
-                                        </Grid>
-                                        <Grid container
-                                            direction="row"
-                                            justifyContent="space-between"
-                                            alignItems="center"
-                                            xs={12}
-                                        >
-                                            <Grid container
-                                                xs={10}
-                                                direction="row"
-                                                justifyContent="flex-start"
-                                                alignItems="center"
-                                                spacing={2}
-
-                                            >
-                                                <Grid item lg={3}>
-                                                    <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
-                                                </Grid>
-                                                <Grid item lg={3} sx={{ marginLeft: -2, marginRight: -1.5 }} >
-                                                    <Image src={Img2} width="24px" height="24px" />
-                                                </Grid>
-                                                <Grid item lg={2}>
-                                                    <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>آنا</Typography>
-                                                </Grid>
+                                            <Grid item lg={3} sx={{ marginLeft: -1.5, marginRight: -1.5 }} >
+                                                <Image src={Img1} width="24px" height="24px" />
                                             </Grid>
-
+                                            <Grid item lg={3}>
+                                                <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>آسمان</Typography>
+                                            </Grid>
                                         </Grid>
 
+                                    </Grid>
+                                    <Grid container
+                                        direction="row"
+                                        justifyContent="space-between"
+                                        alignItems="center"
+                                        xs={12}
+                                    >
                                         <Grid container
+                                            xs={10}
                                             direction="row"
-                                            justifyContent="space-between"
+                                            justifyContent="flex-start"
                                             alignItems="center"
-                                            xs={12}
+                                            spacing={2}
+
                                         >
-                                            <Grid container
-                                                xs={10}
-                                                direction="row"
-                                                justifyContent="flex-start"
-                                                alignItems="center"
-                                                spacing={2}
-
-                                            >
-                                                <Grid item lg={3}>
-                                                    <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
-                                                </Grid>
-                                                <Grid item lg={3} sx={{ marginLeft: -1, marginRight: -1.5 }} >
-                                                    <Image src={Img3} width="24px" height="24px" />
-                                                </Grid>
-                                                <Grid item lg={2}>
-                                                    <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>کاسپین</Typography>
-                                                </Grid>
+                                            <Grid item lg={3}>
+                                                <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
                                             </Grid>
-
+                                            <Grid item lg={3} sx={{ marginLeft: -2, marginRight: -1.5 }} >
+                                                <Image src={Img2} width="24px" height="24px" />
+                                            </Grid>
+                                            <Grid item lg={2}>
+                                                <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>آنا</Typography>
+                                            </Grid>
                                         </Grid>
 
+                                    </Grid>
+
+                                    <Grid container
+                                        direction="row"
+                                        justifyContent="space-between"
+                                        alignItems="center"
+                                        xs={12}
+                                    >
                                         <Grid container
+                                            xs={10}
                                             direction="row"
-                                            justifyContent="space-between"
+                                            justifyContent="flex-start"
                                             alignItems="center"
-                                            xs={12}
+                                            spacing={2}
+
                                         >
-                                            <Grid container
-                                                xs={10}
-                                                direction="row"
-                                                justifyContent="flex-start"
-                                                alignItems="center"
-                                                spacing={2}
-
-                                            >
-                                                <Grid item lg={3}>
-                                                    <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
-                                                </Grid>
-                                                <Grid item lg={3} sx={{ marginLeft: -1.5, marginRight: -1.5 }} >
-                                                    <Image src={Img4} width="24px" height="24px" />
-                                                </Grid>
-                                                <Grid item lg={4}>
-                                                    <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>فلای پرشیا</Typography>
-                                                </Grid>
+                                            <Grid item lg={3}>
+                                                <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
                                             </Grid>
-
+                                            <Grid item lg={3} sx={{ marginLeft: -1, marginRight: -1.5 }} >
+                                                <Image src={Img3} width="24px" height="24px" />
+                                            </Grid>
+                                            <Grid item lg={2}>
+                                                <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>کاسپین</Typography>
+                                            </Grid>
                                         </Grid>
 
+                                    </Grid>
+
+                                    <Grid container
+                                        direction="row"
+                                        justifyContent="space-between"
+                                        alignItems="center"
+                                        xs={12}
+                                    >
                                         <Grid container
+                                            xs={10}
                                             direction="row"
-                                            justifyContent="space-between"
+                                            justifyContent="flex-start"
                                             alignItems="center"
-                                            xs={12}
+                                            spacing={2}
+
                                         >
-                                            <Grid container
-                                                xs={10}
-                                                direction="row"
-                                                justifyContent="flex-start"
-                                                alignItems="center"
-                                                spacing={2}
-
-                                            >
-                                                <Grid item lg={3}>
-                                                    <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
-                                                </Grid>
-                                                <Grid item lg={3} sx={{ marginLeft: -1.5, marginRight: -1.5 }} >
-                                                    <Image src={Img5} width="24px" height="24px" />
-                                                </Grid>
-                                                <Grid item lg={3}>
-                                                    <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>قشم‌ ایر</Typography>
-                                                </Grid>
+                                            <Grid item lg={3}>
+                                                <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
                                             </Grid>
-
+                                            <Grid item lg={3} sx={{ marginLeft: -1.5, marginRight: -1.5 }} >
+                                                <Image src={Img4} width="24px" height="24px" />
+                                            </Grid>
+                                            <Grid item lg={4}>
+                                                <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>فلای پرشیا</Typography>
+                                            </Grid>
                                         </Grid>
 
+                                    </Grid>
+
+                                    <Grid container
+                                        direction="row"
+                                        justifyContent="space-between"
+                                        alignItems="center"
+                                        xs={12}
+                                    >
                                         <Grid container
+                                            xs={10}
                                             direction="row"
-                                            justifyContent="space-between"
+                                            justifyContent="flex-start"
                                             alignItems="center"
-                                            xs={12}
+                                            spacing={2}
+
                                         >
-                                            <Grid container
-                                                xs={10}
-                                                direction="row"
-                                                justifyContent="flex-start"
-                                                alignItems="center"
-                                                spacing={2}
-
-                                            >
-                                                <Grid item lg={3}>
-                                                    <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
-                                                </Grid>
-                                                <Grid item lg={3} sx={{ marginLeft: -3.5, marginRight: -1.5 }} >
-                                                    <Image src={Img6} width="24px" height="24px" />
-                                                </Grid>
-                                                <Grid item lg={4}>
-                                                    <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>پارس ایر</Typography>
-                                                </Grid>
+                                            <Grid item lg={3}>
+                                                <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
                                             </Grid>
-
+                                            <Grid item lg={3} sx={{ marginLeft: -1.5, marginRight: -1.5 }} >
+                                                <Image src={Img5} width="24px" height="24px" />
+                                            </Grid>
+                                            <Grid item lg={3}>
+                                                <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>قشم‌ ایر</Typography>
+                                            </Grid>
                                         </Grid>
 
-                                    </FormGroup>
+                                    </Grid>
 
-                                </ListItem>
-                            </List>
-                        </Collapse>
-                        <Divider />
-                        <ListItemButton onClick={handleClick5}>
-                            <ListItemIcon>
-                                <Typography sx={{ fontWeight: '900', marginTop: 1, marginBottom: 1 }}>پیشنهاد های ویژه</Typography>
-                            </ListItemIcon>
-                            <ListItemText />
-                            {open5 ? <ExpandLess sx={{
-                                fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680",
-                                "&: hover": {
-                                    backgroundColor: "#e8f8fb",
-                                    color: "#14a2b8",
-                                },
-                            }} /> : <ExpandMore sx={{
-                                fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680", "&: hover": {
-                                    backgroundColor: "#e8f8fb",
-                                    color: "#14a2b8",
-                                },
-                            }} />}
-                        </ListItemButton>
-                        <Collapse in={open5} timeout="auto" unmountOnExit>
-                            <List component="div" disablePadding>
-                                <ListItem >
-                                    <FormGroup>
-                                        <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label="هدیه علی‌بابا به مسافران این پرواز" />
-                                    </FormGroup>
+                                    <Grid container
+                                        direction="row"
+                                        justifyContent="space-between"
+                                        alignItems="center"
+                                        xs={12}
+                                    >
+                                        <Grid container
+                                            xs={10}
+                                            direction="row"
+                                            justifyContent="flex-start"
+                                            alignItems="center"
+                                            spacing={2}
 
-                                </ListItem>
-                            </List>
-                        </Collapse> 
-                        <Divider />
-                        <ListItemButton onClick={handleClick4}>
-                            <ListItemIcon>
-                                <Typography sx={{ fontWeight: '900', marginTop: 1, marginBottom: 1 }}>موارد دیگر</Typography>
-                            </ListItemIcon>
-                            <ListItemText />
-                            {open4 ? <ExpandLess sx={{
-                                fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680",
-                                "&: hover": {
-                                    backgroundColor: "#e8f8fb",
-                                    color: "#14a2b8",
-                                },
-                            }} /> : <ExpandMore sx={{
-                                fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680", "&: hover": {
-                                    backgroundColor: "#e8f8fb",
-                                    color: "#14a2b8",
-                                },
-                            }} />}
-                        </ListItemButton>
-                        <Collapse in={open4} timeout="auto" unmountOnExit>
-                            <List component="div" disablePadding>
-                                <ListItem >
-                                    <FormGroup>
-                                        <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label="نمایش بلیط های تکراری" />
-                                        <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label="نمایش بلیط های موجود" />
-                                    </FormGroup>
+                                        >
+                                            <Grid item lg={3}>
+                                                <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
+                                            </Grid>
+                                            <Grid item lg={3} sx={{ marginLeft: -3.5, marginRight: -1.5 }} >
+                                                <Image src={Img6} width="24px" height="24px" />
+                                            </Grid>
+                                            <Grid item lg={4}>
+                                                <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>پارس ایر</Typography>
+                                            </Grid>
+                                        </Grid>
 
-                                </ListItem>
-                            </List>
-                        </Collapse>
+                                    </Grid>
 
-                        
-                    </List>
-                </Grid>
+                                </FormGroup>
+
+                            </ListItem>
+                        </List>
+                    </Collapse>
+                    <Divider />
+                    <ListItemButton onClick={handleClick5}>
+                        <ListItemIcon>
+                            <Typography sx={{ fontWeight: '900', marginTop: 1, marginBottom: 1 }}>پیشنهاد های ویژه</Typography>
+                        </ListItemIcon>
+                        <ListItemText />
+                        {open5 ? <ExpandLess sx={{
+                            fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680",
+                            "&: hover": {
+                                backgroundColor: "#e8f8fb",
+                                color: "#14a2b8",
+                            },
+                        }} /> : <ExpandMore sx={{
+                            fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680", "&: hover": {
+                                backgroundColor: "#e8f8fb",
+                                color: "#14a2b8",
+                            },
+                        }} />}
+                    </ListItemButton>
+                    <Collapse in={open5} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                            <ListItem >
+                                <FormGroup>
+                                    <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label="هدیه علی‌بابا به مسافران این پرواز" />
+                                </FormGroup>
+
+                            </ListItem>
+                        </List>
+                    </Collapse>
+                    <Divider />
+                    <ListItemButton onClick={handleClick4}>
+                        <ListItemIcon>
+                            <Typography sx={{ fontWeight: '900', marginTop: 1, marginBottom: 1 }}>موارد دیگر</Typography>
+                        </ListItemIcon>
+                        <ListItemText />
+                        {open4 ? <ExpandLess sx={{
+                            fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680",
+                            "&: hover": {
+                                backgroundColor: "#e8f8fb",
+                                color: "#14a2b8",
+                            },
+                        }} /> : <ExpandMore sx={{
+                            fontSize: 35, borderRadius: 100, padding: 0.5, backgroundColor: "#F7FAFB", color: "#6C7680", "&: hover": {
+                                backgroundColor: "#e8f8fb",
+                                color: "#14a2b8",
+                            },
+                        }} />}
+                    </ListItemButton>
+                    <Collapse in={open4} timeout="auto" unmountOnExit>
+                        <List component="div" disablePadding>
+                            <ListItem >
+                                <FormGroup>
+                                    <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label="نمایش بلیط های تکراری" />
+                                    <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label="نمایش بلیط های موجود" />
+                                </FormGroup>
+
+                            </ListItem>
+                        </List>
+                    </Collapse>
+
+
+                </List>
             </Grid>
+        </Grid>
 
 
     )

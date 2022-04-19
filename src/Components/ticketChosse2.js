@@ -109,7 +109,7 @@ function TicketChosse(props) {
                 justifyContent="flex-start"
                 alignItems="center"
                 lg={8.7}
-
+                
 
             >
                 <Grid
@@ -119,7 +119,6 @@ function TicketChosse(props) {
                     justifyContent="flex-start"
                     alignItems="center"
                     lg={12}
-
 
                 >
 
@@ -421,7 +420,7 @@ function TicketChosse(props) {
                                     justifyContent="center"
                                     alignItems="center"
                                     lg={12}
-                                    sx={{ marginTop: 2, marginBottom: 0.25 }}
+                                    sx={{ marginTop: 2, marginBottom: 0.25}}
                                 >
                                     <Button onClick={handleClick3} value="0" variant="Close">بستن<KeyboardArrowUpRoundedIcon /></Button>
                                 </Grid>

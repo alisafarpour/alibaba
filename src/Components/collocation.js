@@ -7,7 +7,7 @@ import Divider from '@mui/material/Divider';
 import FilterBoxTop from './filterBoxTop.js';
 import PriorityHighRoundedIcon from '@mui/icons-material/PriorityHighRounded';
 import TicketChosse2 from './ticketChosse2.js';
-import Data from '../Data.js';
+import Data from '../Data/Data.js';
 
 
 function collocation() {
