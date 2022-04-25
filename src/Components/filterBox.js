@@ -25,6 +25,8 @@ import Img3 from '../../public/IV.png';
 import Img4 from '../../public/FP.png';
 import Img5 from '../../public/QB.png';
 import Img6 from '../../public/PA.png';
+import Data from '../Data/Data.js';
+import collocation from './collocation';
 
 
 function ValueLabelComponent(props) {
@@ -43,6 +45,7 @@ ValueLabelComponent.propTypes = {
 };
 
 function filterBox() {
+    
 
     const [open, setOpen] = React.useState(true);
     const [open2, setOpen2] = React.useState(true);
@@ -66,7 +69,7 @@ function filterBox() {
         setOpen5(!open5);
     };
 
-
+    const number = Data().length;
 
 
     const FilterBoxSlider = styled(Slider)(({ theme }) => ({
@@ -107,6 +110,10 @@ function filterBox() {
     }));
 
     function FilterBoxComponent(props) {
+
+        
+
+
         const { children, ...other } = props;
         return (
             <SliderThumb {...other}>
@@ -136,7 +143,7 @@ function filterBox() {
                     aria-labelledby="nested-list-subheader"
                     subheader={
                         <ListSubheader component="div" id="nested-list-subheader">
-                            <Typography sx={{ fontWeight: '400', marginBottom: 2, marginTop: 2 }}>نتایج:</Typography>
+                            <Typography sx={{ fontWeight: '400', marginBottom: 2, marginTop: 2 }}>نتایج:{number}</Typography>
                         </ListSubheader>
                     }
                 >
@@ -250,7 +257,7 @@ function filterBox() {
 
                                         >
                                             <Grid item lg={3}>
-                                                <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
+                                                <FormControlLabel  control={<Checkbox   sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
                                             </Grid>
                                             <Grid item lg={3} sx={{ marginLeft: -1.5, marginRight: -1.5 }} >
                                                 <Image src={Img1} width="24px" height="24px" />

@@ -12,8 +12,18 @@ import Data from '../Data/Data.js';
 
 function collocation() {
 
-  const items = Data() ;
-
+  let items = Data() ;
+  const [flightSky, setflightSky] = React.useState(false);
+  const seat = items.filter(item => item.seat >= 10);
+  const handelClickSky = () => {
+      if(flightSky == false){
+        items = items.filter(item => item.label == 'آسمان');
+        console.log('im in if')
+      }
+      setflightSky(!flightSky);
+    console.log('hey im working')
+  };
+  
 
   const [value, setValue] = React.useState(0);
 
