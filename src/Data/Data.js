@@ -1,4 +1,3 @@
-import React from 'react'
 import Img1 from '../../public/EP.png';
 import Img2 from '../../public/I3.png';
 import Img3 from '../../public/IV.png';
@@ -6,9 +5,7 @@ import Img4 from '../../public/FP.png';
 import Img5 from '../../public/QB.png';
 import Img6 from '../../public/PA.png';
 
-
-function Data() {
-    const items = [
+   export const airlinesName = [
         {
           label: "کاسپین",
           startTime: "۱۵:۰۰",
@@ -106,7 +103,3 @@ function Data() {
           imgSrc: Img6,
         },
       ];
-  return items
-}
-
-export default Data

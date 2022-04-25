@@ -5,10 +5,10 @@ import FilterBox from '../src/Components/filterBox.js';
 import Collocation from '../src/Components/collocation.js';
 import ToggleFlightPage from '../src/toggleFlightPage.js';
 import { Grid, Typography } from '@mui/material';
-import toggleData from '../src/Data/toggleData.js';
+import { toggleData } from '../src/Data/toggleData.js';
 
 function flights() {
-    const items = toggleData();
+    const items = toggleData ;
     return (
         <div>
             <Header />

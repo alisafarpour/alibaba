@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { skyFilter, filterBacksky } from '../features/counter/counterSlice.js';
+import { ticketFilter, filterBack } from '../features/counter/counterSlice.js';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 
@@ -12,11 +12,11 @@ function FilterBoxTicketKind(props) {
 
     const handelClick = () => {
         if (flightSky == false) {
-            dispatch(skyFilter(props.ticketKind));
+            dispatch(ticketFilter(props.ticketKind));
             setflightSky(!flightSky);
         }
         else if (flightSky == true) {
-            dispatch(filterBacksky(props.ticketKind));
+            dispatch(filterBack(props.ticketKind));
             setflightSky(!flightSky);
         }
     };

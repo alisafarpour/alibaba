@@ -1,40 +1,57 @@
 import { createSlice } from '@reduxjs/toolkit'
-import Data from '../../Data/Data.js'
+import Data, { airlinesName } from '../../Data/Data.js'
 
 const initialState = {
-  value: Data(),
+  value: airlinesName ,
 }
 let sub = [] ;
 let subcombine = [];
-let data = Data() ;
+let data = airlinesName ;
 export const counterSlice = createSlice({
   name: 'counter',
   initialState,
   reducers: {
 
-    skyFilter: (state , action) => {
-        let sky = data.filter(item => (item.label == action.payload));
-        sub = sub.concat(sky);
-        state.value = sub;
-        
+    flightFilter: (state , action) => {
+        let flight = data.filter(item => (item.label == action.payload));
+        sub = sub.concat(flight);
+        state.value = sub;   
     },
     
-    filterBacksky: (state, action) => {
+    filterBack: (state, action) => {
         sub = (sub.filter(item => (!(item.label == action.payload))));
-        if ( !(sub.length == 0 )){
+        if( !(sub.length == 0 )){
             state.value = sub;
-        }
-        
-        else if (sub.length == 0){
+        }else{
             state.value = data;
         }
     },
     
+    ticketFilter: (state , action) => {
+        let ticket = data.filter(item => (item.ticketKind == action.payload));
+        
+        // const findDuplicates = (arr) => {
+        //     let sorted_arr = arr.slice().sort(); 
+        //     let results = [];
+        //     for (let i = 0; i < sorted_arr.length - 1; i++) {
+        //       if (sorted_arr[i + 1] == sorted_arr[i]) {
+        //         results.push(sorted_arr[i]);
+        //       }
+        //     }
+        //     return results;
+        //   }
+        //   let Repeated = findDuplicates(inputs) ;
+        //   uniqueArray = Repeated.filter(function(item, pos) {
+        //       return Repeated.indexOf(item) == pos;
+        //   })
 
+        sub = sub.concat(ticket);
+        state.value = sub;
+        
+    },
   },
 })
 
-// Action creators are generated for each case reducer function
-export const { skyFilter, filterBacksky} = counterSlice.actions
+export const { flightFilter, filterBack, ticketFilter} = counterSlice.actions
 
 export default counterSlice.reducer

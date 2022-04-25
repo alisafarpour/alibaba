@@ -1,8 +1,5 @@
-import React from 'react'
 
-
-function toggleData() {
-    const items = [
+    export const toggleData = [
         {
             question:
                 "قیمت بلیط هواپیمای اهواز شیراز چقدر است؟"
@@ -52,7 +49,3 @@ function toggleData() {
             
         },
     ];
-    return items
-}
-
-export default toggleData

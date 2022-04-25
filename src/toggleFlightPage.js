@@ -13,15 +13,16 @@ function toggleFlightpage(props) {
     return (
         <Grid
             xs={9.8}
-            sx={{ marginTop: 1, direction: "rtl"  }}
+            sx={{ marginTop: 1, direction: "rtl", width: '100%' }}
             container
             justifyContent="center"
             alignItems="center"
         >
             <Grid
                 container
-                justifyContent="flex-start"
-                alignItems="center"
+                direction="column"
+                justifyContent="center"
+                alignItems="stretch"
             >
                 <Accordion sx={{ borderRadius: 1, marginTop: 1 }}>
                     <AccordionSummary

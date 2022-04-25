@@ -1,33 +1,24 @@
 import React from 'react'
-import DataFilterBox from '../Data/DataFilterBox';
+import {DataFilterBox} from '../Data/DataFilterBox';
 import { Grid } from '@mui/material';
 import { Typography } from "@mui/material";
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Image from "next/image";
 import { useSelector, useDispatch } from 'react-redux';
-import { skyFilter, filterBacksky } from '../features/counter/counterSlice.js';
-
+import { flightFilter, filterBack } from '../features/counter/counterSlice.js';
 
 function filterBoxTicketSection(props) {
 
-    let Data = DataFilterBox();
-
     const dispatch = useDispatch()
-
-    const FilterData = useSelector(state => state.counter.value)
-
-    let items = FilterData;
-
     const [flightSky, setflightSky] = React.useState(false);
 
     const handelClick = () => {
-        if (flightSky == false) {
-            dispatch(skyFilter(props.label));
+       if (flightSky) {
+            dispatch(filterBack(props.label));
             setflightSky(!flightSky);
-        }
-        else if (flightSky == true) {
-            dispatch(filterBacksky(props.label));
+        }else{
+            dispatch(flightFilter(props.label));
             setflightSky(!flightSky);
         }
     };

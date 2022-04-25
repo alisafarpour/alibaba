@@ -1,18 +1,14 @@
+export const dataTicket = [
+  {
+
+    ticketKind: "سیستمی",
+
+  },
+  {
+
+    ticketKind: "چارتر",
+
+  },
+];
 
 
-function DataticketKind() {
-    const items = [
-        {
-
-          ticketKind: "سیستمی",
-
-        },
-        {
-
-          ticketKind: "چارتر",
-
-        },
-      ];
-  return items
-}
-export default DataticketKind
