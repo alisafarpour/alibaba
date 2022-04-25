@@ -18,16 +18,11 @@ import Tooltip from '@mui/material/Tooltip';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import Image from "next/image";
-import Img1 from '../../public/EP.png';
-import Img2 from '../../public/I3.png';
-import Img3 from '../../public/IV.png';
-import Img4 from '../../public/FP.png';
-import Img5 from '../../public/QB.png';
-import Img6 from '../../public/PA.png';
 import Data from '../Data/Data.js';
-import { useSelector, useDispatch } from 'react-redux';
-import { skyFilter, kaspiyanFilter, ataFilter, filterBackata, filterBackkas, filterBacksky, defaultdata, pershiaFilter, filterBackpershia } from '../features/counter/counterSlice.js';
+import DataFilterBox from '../Data/DataFilterBox';
+import DataticketKind from '../Data/DataticketKind.js'
+import FilterBoxTicketSection from './filterBoxTicketSection';
+import FilterBoxTicketKind from './FilterBoxTicketKind.js';
 
 function ValueLabelComponent(props) {
     const { children, value } = props;
@@ -45,80 +40,9 @@ ValueLabelComponent.propTypes = {
 };
 
 function filterBox() {
-    const dispatch = useDispatch()
 
-    const FilterData = useSelector(state => state.counter.value)
-    let items = FilterData;
-
-    const [flightSky, setflightSky] = React.useState(false);
-    const handelClickSky = () => {
-        if (flightSky == false) {
-
-            dispatch(skyFilter());
-            console.log(items)
-            setflightSky(!flightSky);
-        }
-        else if (flightSky == true) {
-            dispatch(filterBacksky());
-            // items = Data();
-            setflightSky(!flightSky);
-            console.log(items)
-        }
-        else if(flightSky == false && flightKas == false && flightAta == false){
-            dispatch(defaultdata());
-        }
-    };
-
-    const [flightKas, setflightKas] = React.useState(false);
-    const handelClickKas = () => {
-        if (flightKas == false) {
-
-            dispatch(kaspiyanFilter());
-            console.log('im in if')
-            console.log(items)
-            setflightKas(!flightKas);
-        }
-        else if (flightKas == true) {
-            dispatch(filterBackkas());
-            // items = Data();
-            setflightKas(!flightKas);
-            console.log(items)
-        }
-        else if(flightSky == false && flightKas == false && flightAta == false){
-            dispatch(defaultdata());
-        }
-    };
-
-    const [flightAta, setflightAta] = React.useState(false);
-    const handelClickAta = () => {
-        if (flightAta == false) {
-
-            dispatch(ataFilter());
-            console.log(items)
-            setflightAta(!flightAta);
-        }
-        else if (flightAta == true) {
-            dispatch(filterBackata());
-            setflightAta(!flightAta);
-            console.log(items)
-        }
-        
-    };
-    const [flightPershia, setflightPershia] = React.useState(false);
-    const handelClickPershia = () => {
-        if (flightPershia == false) {
-
-            dispatch(pershiaFilter());
-            console.log(items)
-            setflightPershia(!flightPershia);
-        }
-        else if (flightPershia == true) {
-            dispatch(filterBackpershia());
-            setflightPershia(!flightPershia);
-            console.log(items)
-        }
-        
-    };
+    let dataFilterBoxTicket = DataFilterBox();
+    let DataticketKind1 = DataticketKind();
 
     const [open, setOpen] = React.useState(true);
     const [open2, setOpen2] = React.useState(true);
@@ -285,10 +209,16 @@ function filterBox() {
                         <List component="div" disablePadding>
                             <ListItem >
                                 <FormGroup>
+                                         {
+                                            DataticketKind1.map((item) => {
+                                                return (
+                                                    <FilterBoxTicketKind {...item} />
+                                                )
+                                            })
+                                        }
                                     <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label="سیستمی" />
                                     <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label="چارتر" />
                                 </FormGroup>
-
                             </ListItem>
                         </List>
                     </Collapse>
@@ -321,160 +251,16 @@ function filterBox() {
                                         alignItems="center"
                                         xs={12}
                                     >
-                                        <Grid container
-                                            xs={10}
-                                            direction="row"
-                                            justifyContent="flex-start"
-                                            alignItems="center"
-                                            spacing={2}
-
-                                        >
-                                            <Grid item lg={3}>
-                                                <FormControlLabel onClick={handelClickSky} control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
-                                            </Grid>
-                                            <Grid item lg={3} sx={{ marginLeft: -1.5, marginRight: -1.5 }} >
-                                                <Image src={Img1} width="24px" height="24px" />
-                                            </Grid>
-                                            <Grid item lg={3}>
-                                                <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>آسمان</Typography>
-                                            </Grid>
-                                        </Grid>
-
+                                        {
+                                            dataFilterBoxTicket.map((item) => {
+                                                return (
+                                                    <FilterBoxTicketSection {...item} />
+                                                )
+                                            })
+                                        }
+                                        
                                     </Grid>
-                                    <Grid container
-                                        direction="row"
-                                        justifyContent="space-between"
-                                        alignItems="center"
-                                        xs={12}
-                                    >
-                                        <Grid container
-                                            xs={10}
-                                            direction="row"
-                                            justifyContent="flex-start"
-                                            alignItems="center"
-                                            spacing={2}
-
-                                        >
-                                            <Grid item lg={3}>
-                                                <FormControlLabel onClick={handelClickAta} control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
-                                            </Grid>
-                                            <Grid item lg={3} sx={{ marginLeft: -2, marginRight: -1.5 }} >
-                                                <Image src={Img2} width="24px" height="24px" />
-                                            </Grid>
-                                            <Grid item lg={2}>
-                                                <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>آنا</Typography>
-                                            </Grid>
-                                        </Grid>
-
-                                    </Grid>
-
-                                    <Grid container
-                                        direction="row"
-                                        justifyContent="space-between"
-                                        alignItems="center"
-                                        xs={12}
-                                    >
-                                        <Grid container
-                                            xs={10}
-                                            direction="row"
-                                            justifyContent="flex-start"
-                                            alignItems="center"
-                                            spacing={2}
-
-                                        >
-                                            <Grid item lg={3}>
-                                                <FormControlLabel onClick={handelClickKas} control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
-                                            </Grid>
-                                            <Grid item lg={3} sx={{ marginLeft: -1, marginRight: -1.5 }} >
-                                                <Image src={Img3} width="24px" height="24px" />
-                                            </Grid>
-                                            <Grid item lg={2}>
-                                                <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>کاسپین</Typography>
-                                            </Grid>
-                                        </Grid>
-
-                                    </Grid>
-
-                                    <Grid container
-                                        direction="row"
-                                        justifyContent="space-between"
-                                        alignItems="center"
-                                        xs={12}
-                                    >
-                                        <Grid container
-                                            xs={10}
-                                            direction="row"
-                                            justifyContent="flex-start"
-                                            alignItems="center"
-                                            spacing={2}
-
-                                        >
-                                            <Grid item lg={3}>
-                                                <FormControlLabel onClick={handelClickPershia} control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
-                                            </Grid>
-                                            <Grid item lg={3} sx={{ marginLeft: -1.5, marginRight: -1.5 }} >
-                                                <Image src={Img4} width="24px" height="24px" />
-                                            </Grid>
-                                            <Grid item lg={4}>
-                                                <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>فلای پرشیا</Typography>
-                                            </Grid>
-                                        </Grid>
-
-                                    </Grid>
-
-                                    <Grid container
-                                        direction="row"
-                                        justifyContent="space-between"
-                                        alignItems="center"
-                                        xs={12}
-                                    >
-                                        <Grid container
-                                            xs={10}
-                                            direction="row"
-                                            justifyContent="flex-start"
-                                            alignItems="center"
-                                            spacing={2}
-
-                                        >
-                                            <Grid item lg={3}>
-                                                <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
-                                            </Grid>
-                                            <Grid item lg={3} sx={{ marginLeft: -1.5, marginRight: -1.5 }} >
-                                                <Image src={Img5} width="24px" height="24px" />
-                                            </Grid>
-                                            <Grid item lg={3}>
-                                                <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>قشم‌ ایر</Typography>
-                                            </Grid>
-                                        </Grid>
-
-                                    </Grid>
-
-                                    <Grid container
-                                        direction="row"
-                                        justifyContent="space-between"
-                                        alignItems="center"
-                                        xs={12}
-                                    >
-                                        <Grid container
-                                            xs={10}
-                                            direction="row"
-                                            justifyContent="flex-start"
-                                            alignItems="center"
-                                            spacing={2}
-
-                                        >
-                                            <Grid item lg={3}>
-                                                <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
-                                            </Grid>
-                                            <Grid item lg={3} sx={{ marginLeft: -3.5, marginRight: -1.5 }} >
-                                                <Image src={Img6} width="24px" height="24px" />
-                                            </Grid>
-                                            <Grid item lg={4}>
-                                                <Typography sx={{ fontWeight: '600', fontSize: '12px' }}>پارس ایر</Typography>
-                                            </Grid>
-                                        </Grid>
-
-                                    </Grid>
+                                    
 
                                 </FormGroup>
 

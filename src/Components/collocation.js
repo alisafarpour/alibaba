@@ -14,7 +14,7 @@ function collocation() {
 
 
   const FilterData = useSelector(state => state.counter.value)
-  const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
 
   let items = FilterData;
