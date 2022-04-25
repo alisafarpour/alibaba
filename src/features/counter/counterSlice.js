@@ -26,6 +26,22 @@ export const counterSlice = createSlice({
         sub = sub.concat(ata);
         state.value = sub;
     },
+    pershiaFilter: (state) => {
+        let pershia = data.filter(item => item.label == 'فلای پرشین');
+        sub = sub.concat(pershia);
+        state.value = sub;
+    },
+    filterBackpershia: (state) => {
+        sub = (sub.filter(item => !(item.label == 'فلای پرشین')));
+        if ( !(sub.length == 0 )){
+            state.value = sub;
+        }
+        
+        else if (sub.length == 0){
+            state.value = data;
+        }
+        
+    },
     filterBackata: (state) => {
         sub = (sub.filter(item => !(item.label == 'آتا')));
         if ( !(sub.length == 0 )){
@@ -34,7 +50,6 @@ export const counterSlice = createSlice({
         
         else if (sub.length == 0){
             state.value = data;
-            console.log('hey')
         }
         
     },
@@ -46,7 +61,6 @@ export const counterSlice = createSlice({
         
         else if (sub.length == 0){
             state.value = data;
-            console.log('hey')
         }
     },
     filterBacksky: (state) => {
@@ -57,17 +71,14 @@ export const counterSlice = createSlice({
         
         else if (sub.length == 0){
             state.value = data;
-            console.log('hey')
         }
     },
-    defaultdata: (state) => {
-        state.value = data;
-    },
+    
 
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { skyFilter, kaspiyanFilter,ataFilter,filterBackata,filterBackkas,filterBacksky,defaultdata } = counterSlice.actions
+export const { skyFilter, kaspiyanFilter,ataFilter,filterBackata,filterBackkas,filterBacksky,defaultdata,filterBackpershia,pershiaFilter } = counterSlice.actions
 
 export default counterSlice.reducer

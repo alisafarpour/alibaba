@@ -27,7 +27,7 @@ import Img5 from '../../public/QB.png';
 import Img6 from '../../public/PA.png';
 import Data from '../Data/Data.js';
 import { useSelector, useDispatch } from 'react-redux';
-import { skyFilter, kaspiyanFilter, ataFilter, filterBackata, filterBackkas, filterBacksky, defaultdata } from '../features/counter/counterSlice.js';
+import { skyFilter, kaspiyanFilter, ataFilter, filterBackata, filterBackkas, filterBacksky, defaultdata, pershiaFilter, filterBackpershia } from '../features/counter/counterSlice.js';
 
 function ValueLabelComponent(props) {
     const { children, value } = props;
@@ -100,6 +100,21 @@ function filterBox() {
         else if (flightAta == true) {
             dispatch(filterBackata());
             setflightAta(!flightAta);
+            console.log(items)
+        }
+        
+    };
+    const [flightPershia, setflightPershia] = React.useState(false);
+    const handelClickPershia = () => {
+        if (flightPershia == false) {
+
+            dispatch(pershiaFilter());
+            console.log(items)
+            setflightPershia(!flightPershia);
+        }
+        else if (flightPershia == true) {
+            dispatch(filterBackpershia());
+            setflightPershia(!flightPershia);
             console.log(items)
         }
         
@@ -395,7 +410,7 @@ function filterBox() {
 
                                         >
                                             <Grid item lg={3}>
-                                                <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
+                                                <FormControlLabel onClick={handelClickPershia} control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
                                             </Grid>
                                             <Grid item lg={3} sx={{ marginLeft: -1.5, marginRight: -1.5 }} >
                                                 <Image src={Img4} width="24px" height="24px" />
