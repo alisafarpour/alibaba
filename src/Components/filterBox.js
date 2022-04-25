@@ -26,8 +26,8 @@ import Img4 from '../../public/FP.png';
 import Img5 from '../../public/QB.png';
 import Img6 from '../../public/PA.png';
 import Data from '../Data/Data.js';
-import collocation from './collocation';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { skyFilter, kaspiyanFilter, ataFilter, filterBackata, filterBackkas, filterBacksky, defaultdata } from '../features/counter/counterSlice.js';
 
 function ValueLabelComponent(props) {
     const { children, value } = props;
@@ -45,7 +45,65 @@ ValueLabelComponent.propTypes = {
 };
 
 function filterBox() {
-    
+    const dispatch = useDispatch()
+
+    const FilterData = useSelector(state => state.counter.value)
+    let items = FilterData;
+
+    const [flightSky, setflightSky] = React.useState(false);
+    const handelClickSky = () => {
+        if (flightSky == false) {
+
+            dispatch(skyFilter());
+            console.log(items)
+            setflightSky(!flightSky);
+        }
+        else if (flightSky == true) {
+            dispatch(filterBacksky());
+            // items = Data();
+            setflightSky(!flightSky);
+            console.log(items)
+        }
+        else if(flightSky == false && flightKas == false && flightAta == false){
+            dispatch(defaultdata());
+        }
+    };
+
+    const [flightKas, setflightKas] = React.useState(false);
+    const handelClickKas = () => {
+        if (flightKas == false) {
+
+            dispatch(kaspiyanFilter());
+            console.log('im in if')
+            console.log(items)
+            setflightKas(!flightKas);
+        }
+        else if (flightKas == true) {
+            dispatch(filterBackkas());
+            // items = Data();
+            setflightKas(!flightKas);
+            console.log(items)
+        }
+        else if(flightSky == false && flightKas == false && flightAta == false){
+            dispatch(defaultdata());
+        }
+    };
+
+    const [flightAta, setflightAta] = React.useState(false);
+    const handelClickAta = () => {
+        if (flightAta == false) {
+
+            dispatch(ataFilter());
+            console.log(items)
+            setflightAta(!flightAta);
+        }
+        else if (flightAta == true) {
+            dispatch(filterBackata());
+            setflightAta(!flightAta);
+            console.log(items)
+        }
+        
+    };
 
     const [open, setOpen] = React.useState(true);
     const [open2, setOpen2] = React.useState(true);
@@ -111,7 +169,7 @@ function filterBox() {
 
     function FilterBoxComponent(props) {
 
-        
+
 
 
         const { children, ...other } = props;
@@ -257,7 +315,7 @@ function filterBox() {
 
                                         >
                                             <Grid item lg={3}>
-                                                <FormControlLabel  control={<Checkbox   sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
+                                                <FormControlLabel onClick={handelClickSky} control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
                                             </Grid>
                                             <Grid item lg={3} sx={{ marginLeft: -1.5, marginRight: -1.5 }} >
                                                 <Image src={Img1} width="24px" height="24px" />
@@ -283,7 +341,7 @@ function filterBox() {
 
                                         >
                                             <Grid item lg={3}>
-                                                <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
+                                                <FormControlLabel onClick={handelClickAta} control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
                                             </Grid>
                                             <Grid item lg={3} sx={{ marginLeft: -2, marginRight: -1.5 }} >
                                                 <Image src={Img2} width="24px" height="24px" />
@@ -310,7 +368,7 @@ function filterBox() {
 
                                         >
                                             <Grid item lg={3}>
-                                                <FormControlLabel control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
+                                                <FormControlLabel onClick={handelClickKas} control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
                                             </Grid>
                                             <Grid item lg={3} sx={{ marginLeft: -1, marginRight: -1.5 }} >
                                                 <Image src={Img3} width="24px" height="24px" />

@@ -7,23 +7,23 @@ import Divider from '@mui/material/Divider';
 import FilterBoxTop from './filterBoxTop.js';
 import PriorityHighRoundedIcon from '@mui/icons-material/PriorityHighRounded';
 import TicketChosse2 from './ticketChosse2.js';
-import Data from '../Data/Data.js';
+import { useSelector, useDispatch } from 'react-redux';
 
 
 function collocation() {
 
-  let items = Data() ;
-  const [flightSky, setflightSky] = React.useState(false);
+
+  const FilterData = useSelector(state => state.counter.value)
+  const dispatch = useDispatch()
+
+
+  let items = FilterData;
+
+
+
   const seat = items.filter(item => item.seat >= 10);
-  const handelClickSky = () => {
-      if(flightSky == false){
-        items = items.filter(item => item.label == 'آسمان');
-        console.log('im in if')
-      }
-      setflightSky(!flightSky);
-    console.log('hey im working')
-  };
-  
+
+
 
   const [value, setValue] = React.useState(0);
 
@@ -77,13 +77,13 @@ function collocation() {
         <Typography>قیمت ها برای یک بزرگسال محاسبه شده است.</Typography>
       </Grid>
       <Grid container sx={{ marginTop: 2 }}>
-                {
-                  items.map((item) => {
-                    return (
-                      <TicketChosse2 {...item}/>
-                    )
-                  })
-                }
+        {
+          items.map((item) => {
+            return (
+              <TicketChosse2 {...item} />
+            )
+          })
+        }
       </Grid>
 
 
