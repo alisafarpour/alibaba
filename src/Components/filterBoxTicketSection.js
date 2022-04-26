@@ -18,7 +18,7 @@ function filterBoxTicketSection(props) {
             dispatch(filterBack(props.label));
             setflightSky(!flightSky);
         }else{
-            dispatch(flightFilter(props.label));
+            dispatch(flightFilter(props.label , props.flightNumber));
             setflightSky(!flightSky);
         }
     };

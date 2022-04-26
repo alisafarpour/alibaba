@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { ticketFilter, filterBack } from '../features/counter/counterSlice.js';
+import { ticketFilter, ticketFilterBack } from '../features/counter/counterSlice.js';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 
@@ -16,7 +16,7 @@ function FilterBoxTicketKind(props) {
             setflightSky(!flightSky);
         }
         else if (flightSky == true) {
-            dispatch(filterBack(props.ticketKind));
+            dispatch(ticketFilterBack(props.ticketKind));
             setflightSky(!flightSky);
         }
     };

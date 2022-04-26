@@ -1,5 +1,4 @@
 import React from "react";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
@@ -8,6 +7,8 @@ import HowToRegOutlinedIcon from "@mui/icons-material/HowToRegOutlined";
 import SpeakerNotesOutlinedIcon from "@mui/icons-material/SpeakerNotesOutlined";
 import Alibaba from "../public/ali-baba.png";
 import Image from "next/image";
+import { headerButtData } from "./Data/headerButtdata";
+import Headerbuttcom from "./Components/Headerbuttcom";
 
 function header() {
   return (
@@ -17,7 +18,7 @@ function header() {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        
+
         spacing={2}
         xs={12}
         sx={{ backgroundColor: "white", height: 80, position: 'sticky' }}
@@ -37,77 +38,12 @@ function header() {
             divider={<Divider orientation="vertical" flexItem />}
             spacing={0.5}
           >
-            <Button
-              sx={{
-                bgcolor: "background.paper",
-                color: "text.secondary",
-                fontSize: 16,
-              }}
-            >
-              پرواز
-              <KeyboardArrowDownIcon />
-            </Button>
+            {headerButtData.map((item) => {
+              return (
+                <Headerbuttcom {...item} />
+              )
+            })}
 
-            <Button
-              sx={{
-                bgcolor: "background.paper",
-                color: "text.secondary",
-                fontSize: 16,
-              }}
-            >
-              قطار
-            </Button>
-
-            <Button
-              sx={{
-                bgcolor: "background.paper",
-                color: "text.secondary",
-                fontSize: 16,
-              }}
-            >
-              اتوبوس
-            </Button>
-
-            <Button
-              sx={{
-                bgcolor: "background.paper",
-                color: "text.secondary",
-                fontSize: 16,
-              }}
-            >
-              تور
-            </Button>
-
-            <Button
-              sx={{
-                bgcolor: "background.paper",
-                color: "text.secondary",
-                fontSize: 16,
-              }}
-            >
-              هتل
-            </Button>
-
-            <Button
-              sx={{
-                bgcolor: "background.paper",
-                color: "text.secondary",
-                fontSize: 16,
-              }}
-            >
-              ویلا و اقامتگاه
-            </Button>
-
-            <Button
-              sx={{
-                bgcolor: "background.paper",
-                color: "text.secondary",
-                fontSize: 16,
-              }}
-            >
-              بیشتر
-              <KeyboardArrowDownIcon />
-            </Button>
           </Stack>
         </Grid>
         <Grid item xs={4} dir="ltr">

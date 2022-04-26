@@ -13,8 +13,9 @@ import DirectionsBusFilledOutlinedIcon from "@mui/icons-material/DirectionsBusFi
 import TourOutlinedIcon from "@mui/icons-material/TourOutlined";
 import KingBedOutlinedIcon from "@mui/icons-material/KingBedOutlined";
 import MeetingRoomOutlinedIcon from "@mui/icons-material/MeetingRoomOutlined";
-
 import Enterflight from "./enterflight";
+import { mainMenuData } from "../Data/mainMenuData";
+import Mainmenudatacomponent from "./Mainmenudatacomponent";
 
 export default function LabTabs() {
   const [value, setValue] = useState("1");
@@ -49,7 +50,12 @@ export default function LabTabs() {
               justifyContent: "center",
             }}
           >
-            <TabList centered onChange={handleChange} sx={{ marginTop: 2.5 }}>
+            <TabList centered onChange={handleChange} sx={{ marginTop: 1.5 }}>
+              {/* {mainMenuData.map((item) => {
+                    return (
+                        <Mainmenudatacomponent  {...item} />
+                    )
+                })} */}
               <Tab
                 sx={{ fontSize: 16, marginRight: 3, marginLeft: 3 }}
                 label="پرواز داخلی"
@@ -98,8 +104,7 @@ export default function LabTabs() {
           </Box>
           <Box sx={{ direction: "rtl", justifyContent: "center" }}>
             <TabPanel value="1">
-              {" "}
-              <Enterflight />{" "}
+              <Enterflight />
             </TabPanel>
             <TabPanel value="2">Item Two</TabPanel>
             <TabPanel value="3">Item Three</TabPanel>

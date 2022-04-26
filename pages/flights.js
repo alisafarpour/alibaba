@@ -7,7 +7,6 @@ import { toggleData } from '../src/Data/toggleData.js';
 import FlightMiddleCom from '../src/Components/flightMiddleCom.js';
 
 function flights() {
-    const items = toggleData;
     return (
         <div>
             <Header />
@@ -21,7 +20,7 @@ function flights() {
                 sx={{ marginTop: 30, width: '85%' }}
             >
                 <Typography sx={{ marginTop: 5, fontWeight: '900', fontSize: '22px' }}>سوالات متداول پرواز اهواز به شیراز</Typography>
-                {items.map((item) => {
+                {toggleData.map((item) => {
                     return (
                         <ToggleFlightPage  {...item} />
                     )

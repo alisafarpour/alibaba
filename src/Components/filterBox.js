@@ -24,6 +24,42 @@ import { dataTicket } from "../Data/DataticketKind.js";
 import FilterBoxTicketSection from "./filterBoxTicketSection";
 import FilterBoxTicketKind from "./FilterBoxTicketKind.js";
 
+const FilterBoxSlider = styled(Slider)(({ theme }) => ({
+  color: "#0177DB",
+  height: 1,
+  margin: 5,
+  "& .MuiSlider-thumb": {
+    height: 15,
+    width: 15,
+    backgroundColor: "#fff",
+    border: "2px solid gray",
+    "&:hover": {
+      border: "2px solid #0177DB",
+    },
+    "& .MuiSlider-bar": {
+      height: 1,
+      width: 1,
+      backgroundColor: "currentColor",
+      marginLeft: 1,
+      marginRight: 1,
+    },
+  },
+  "& .MuiSlider-valueLabelOpen": {
+    backgroundColor: "white",
+    color: "black",
+    fontSize: "13px",
+    fontWeight: "900",
+  },
+  "& .MuiSlider-track": {
+    height: 4,
+  },
+  "& .MuiSlider-rail": {
+    color: theme.palette.mode === "dark" ? "#bfbfbf" : "#d8d8d8",
+    opacity: theme.palette.mode === "dark" ? undefined : 1,
+    height: 4,
+  },
+}));
+
 function ValueLabelComponent(props) {
   const { children, value } = props;
 
@@ -53,41 +89,7 @@ function filterBox() {
 
   const number =  airlinesName.length;
 
-  const FilterBoxSlider = styled(Slider)(({ theme }) => ({
-    color: "#0177DB",
-    height: 1,
-    margin: 5,
-    "& .MuiSlider-thumb": {
-      height: 15,
-      width: 15,
-      backgroundColor: "#fff",
-      border: "2px solid gray",
-      "&:hover": {
-        border: "2px solid #0177DB",
-      },
-      "& .MuiSlider-bar": {
-        height: 1,
-        width: 1,
-        backgroundColor: "currentColor",
-        marginLeft: 1,
-        marginRight: 1,
-      },
-    },
-    "& .MuiSlider-valueLabelOpen": {
-      backgroundColor: "white",
-      color: "black",
-      fontSize: "13px",
-      fontWeight: "900",
-    },
-    "& .MuiSlider-track": {
-      height: 4,
-    },
-    "& .MuiSlider-rail": {
-      color: theme.palette.mode === "dark" ? "#bfbfbf" : "#d8d8d8",
-      opacity: theme.palette.mode === "dark" ? undefined : 1,
-      height: 4,
-    },
-  }));
+
 
   function FilterBoxComponent(props) {
     const { children, ...other } = props;
@@ -196,7 +198,6 @@ function filterBox() {
               <Typography
                 sx={{ fontWeight: "900", marginTop: 1, marginBottom: 1 }}
               >
-                {" "}
                 نوع بلیط
               </Typography>
             </ListItemIcon>
@@ -248,8 +249,7 @@ function filterBox() {
               <Typography
                 sx={{ fontWeight: "900", marginTop: 1, marginBottom: 1 }}
               >
-                {" "}
-                نوع بلیط
+                شرکت‌های هواپیمایی
               </Typography>
             </ListItemIcon>
             <ListItemText />
@@ -427,5 +427,4 @@ function filterBox() {
     </Grid>
   );
 }
-
 export default filterBox;

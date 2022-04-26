@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
 import { Divider } from '@mui/material';
 import Slider from '@mui/material/Slider';
 import { styled } from '@mui/material/styles';
@@ -13,8 +12,6 @@ import AirplanemodeActiveRoundedIcon from '@mui/icons-material/AirplanemodeActiv
 import Button from '@mui/material/Button';
 import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded';
 import { Collapse } from '@mui/material';
-
-
 
 function TicketChosse(props) {
 
@@ -72,17 +69,6 @@ function TicketChosse(props) {
         }
 
     };
-
-    // const [seat, setseat] = React.useState(false);
-
-    // const condition = () => {
-
-    //     if(props.seat < 10){
-    //         setseat(!seat)
-    //         return seat
-    //     }
-    // }
-
     const PrettoSlider = styled(Slider)({
         height: 0.5,
         '& .MuiSlider-thumb': {

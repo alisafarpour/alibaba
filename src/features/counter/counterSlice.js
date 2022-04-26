@@ -12,8 +12,12 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
 
-    flightFilter: (state , action) => {
+    flightFilter: (state , action, flightNumber) => {
+      console.log(flightNumber);
         let flight = data.filter(item => (item.label == action.payload));
+        if (sub.filter(item => item.flightNumber)){
+
+        }
         sub = sub.concat(flight);
         state.value = sub;   
     },
@@ -29,29 +33,22 @@ export const counterSlice = createSlice({
     
     ticketFilter: (state , action) => {
         let ticket = data.filter(item => (item.ticketKind == action.payload));
-        
-        // const findDuplicates = (arr) => {
-        //     let sorted_arr = arr.slice().sort(); 
-        //     let results = [];
-        //     for (let i = 0; i < sorted_arr.length - 1; i++) {
-        //       if (sorted_arr[i + 1] == sorted_arr[i]) {
-        //         results.push(sorted_arr[i]);
-        //       }
-        //     }
-        //     return results;
-        //   }
-        //   let Repeated = findDuplicates(inputs) ;
-        //   uniqueArray = Repeated.filter(function(item, pos) {
-        //       return Repeated.indexOf(item) == pos;
-        //   })
-
         sub = sub.concat(ticket);
         state.value = sub;
         
     },
+    ticketFilterBack: (state , action) => {
+      sub = (sub.filter(item => (!(item.ticketKind == action.payload))));
+        if( !(sub.length == 0 )){
+            state.value = sub;
+        }else{
+            state.value = data;
+        }
+      
+  },
   },
 })
 
-export const { flightFilter, filterBack, ticketFilter} = counterSlice.actions
+export const { flightFilter, filterBack, ticketFilter, ticketFilterBack} = counterSlice.actions
 
 export default counterSlice.reducer
