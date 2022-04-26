@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { airlinesName } from '../../Data/Data.js'
+import { airlinesName } from '../../Data/data.js'
 
 const initialState = {
   value: airlinesName ,
@@ -12,12 +12,8 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
 
-    flightFilter: (state , action, flightNumber) => {
-      console.log(flightNumber);
+    flightFilter: (state , action) => {
         let flight = data.filter(item => (item.label == action.payload));
-        if (sub.filter(item => item.flightNumber)){
-
-        }
         sub = sub.concat(flight);
         state.value = sub;   
     },

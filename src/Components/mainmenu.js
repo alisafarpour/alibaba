@@ -6,21 +6,14 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
-import FlightLandOutlinedIcon from "@mui/icons-material/FlightLandOutlined";
-import FlightTakeoffOutlinedIcon from "@mui/icons-material/FlightTakeoffOutlined";
-import DirectionsSubwayFilledOutlinedIcon from "@mui/icons-material/DirectionsSubwayFilledOutlined";
-import DirectionsBusFilledOutlinedIcon from "@mui/icons-material/DirectionsBusFilledOutlined";
-import TourOutlinedIcon from "@mui/icons-material/TourOutlined";
-import KingBedOutlinedIcon from "@mui/icons-material/KingBedOutlined";
-import MeetingRoomOutlinedIcon from "@mui/icons-material/MeetingRoomOutlined";
-import Enterflight from "./enterflight";
+import Enterflight from "./EnterFlight";
 import { mainMenuData } from "../Data/mainMenuData";
-import Mainmenudatacomponent from "./Mainmenudatacomponent";
+import { test } from "../Data/test";
 
 export default function LabTabs() {
   const [value, setValue] = useState("1");
 
-  const handleChange = (event, newValue) => {
+  const handelChange = (event, newValue) => {
     setValue(newValue);
   };
 
@@ -50,68 +43,30 @@ export default function LabTabs() {
               justifyContent: "center",
             }}
           >
-            <TabList centered onChange={handleChange} sx={{ marginTop: 1.5 }}>
-              {/* {mainMenuData.map((item) => {
-                    return (
-                        <Mainmenudatacomponent  {...item} />
-                    )
-                })} */}
-              <Tab
-                sx={{ fontSize: 16, marginRight: 3, marginLeft: 3 }}
-                label="پرواز داخلی"
-                icon={<FlightLandOutlinedIcon sx={{ fontSize: 30 }} />}
-                value="1"
-              />
-              <Tab
-                sx={{ fontSize: 16, marginRight: 3, marginLeft: 3 }}
-                label="پرواز خارجی"
-                icon={<FlightTakeoffOutlinedIcon sx={{ fontSize: 30 }} />}
-                value="2"
-              />
-              <Tab
-                sx={{ fontSize: 16, marginRight: 3, marginLeft: 3 }}
-                label="قطار"
-                icon={
-                  <DirectionsSubwayFilledOutlinedIcon sx={{ fontSize: 30 }} />
-                }
-                value="3"
-              />
-              <Tab
-                sx={{ fontSize: 16, marginRight: 3, marginLeft: 3 }}
-                label="اتوبوس"
-                icon={<DirectionsBusFilledOutlinedIcon sx={{ fontSize: 30 }} />}
-                value="4"
-              />
-              <Tab
-                sx={{ fontSize: 16, marginRight: 3, marginLeft: 3 }}
-                label="تور"
-                icon={<TourOutlinedIcon sx={{ fontSize: 30 }} />}
-                value="5"
-              />
-              <Tab
-                sx={{ fontSize: 16, marginRight: 3, marginLeft: 3 }}
-                label="هتل"
-                icon={<KingBedOutlinedIcon sx={{ fontSize: 30 }} />}
-                value="6"
-              />
-              <Tab
-                sx={{ fontSize: 16, marginRight: 3, marginLeft: 3 }}
-                label="ویلا و اقامتگاه"
-                icon={<MeetingRoomOutlinedIcon sx={{ fontSize: 30 }} />}
-                value="7"
-              />
+            <TabList centered onChange={handelChange} sx={{ marginTop: 1.5 }}>
+              {mainMenuData.map((item) => {
+                return (
+                  <Tab
+                    sx={{ fontSize: 16, marginRight: 3, marginLeft: 3 }}
+                    label={item.label}
+                    icon={item.icon}
+                    value={item.value}
+                  />
+                )
+              })}
             </TabList>
           </Box>
           <Box sx={{ direction: "rtl", justifyContent: "center" }}>
             <TabPanel value="1">
               <Enterflight />
             </TabPanel>
-            <TabPanel value="2">Item Two</TabPanel>
-            <TabPanel value="3">Item Three</TabPanel>
-            <TabPanel value="4">Item four</TabPanel>
-            <TabPanel value="5">Item five</TabPanel>
-            <TabPanel value="6">Item six</TabPanel>
-            <TabPanel value="7">Item seven</TabPanel>
+            {test.map((item) => {
+                return (
+                  <TabPanel
+                    value={item.value}
+                  >{item.label}</TabPanel>
+                )
+              })}
           </Box>
         </TabContext>
       </Box>

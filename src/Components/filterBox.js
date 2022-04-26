@@ -18,12 +18,34 @@ import Tooltip from "@mui/material/Tooltip";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import { airlinesName } from "../Data/Data.js";
-import {DataFilterBox} from "../Data/DataFilterBox";
-import { dataTicket } from "../Data/DataticketKind.js";
-import FilterBoxTicketSection from "./filterBoxTicketSection";
+import { airlinesName } from "../Data/data.js";
+import { DataFilterBox } from "../Data/dataFilterBox";
+import { dataTicket } from "../Data/dataTicketKind.js";
+import FilterBoxTicketSection from "./FilterBoxTicketSection";
 import FilterBoxTicketKind from "./FilterBoxTicketKind.js";
 
+const Expand = styled(ExpandMore)(() => ({
+  fontSize: 30,
+  borderRadius: 100,
+  padding: 0.5,
+  backgroundColor: "#F7FAFB",
+  color: "#6C7680",
+  "&: hover": {
+    backgroundColor: "#e8f8fb",
+    color: "#14a2b8",
+  },
+}));
+const ExpandL = styled(ExpandLess)(() => ({
+  fontSize: 30,
+  borderRadius: 100,
+  padding: 0.5,
+  backgroundColor: "#F7FAFB",
+  color: "#6C7680",
+  "&: hover": {
+    backgroundColor: "#e8f8fb",
+    color: "#14a2b8",
+  },
+}));
 const FilterBoxSlider = styled(Slider)(({ theme }) => ({
   color: "#0177DB",
   height: 1,
@@ -87,18 +109,13 @@ function filterBox() {
     setOpen(test);
   };
 
-  const number =  airlinesName.length;
-
-
+  const number = airlinesName.length;
 
   function FilterBoxComponent(props) {
     const { children, ...other } = props;
     return (
       <SliderThumb {...other}>
         {children}
-        <span className="airbnb-bar" />
-        <span className="airbnb-bar" />
-        <span className="airbnb-bar" />
       </SliderThumb>
     );
   }
@@ -147,33 +164,9 @@ function filterBox() {
             </ListItemIcon>
             <ListItemText />
             {open[0] ? (
-              <ExpandLess
-                sx={{
-                  fontSize: 35,
-                  borderRadius: 100,
-                  padding: 0.5,
-                  backgroundColor: "#F7FAFB",
-                  color: "#6C7680",
-                  "&: hover": {
-                    backgroundColor: "#e8f8fb",
-                    color: "#14a2b8",
-                  },
-                }}
-              />
+              <ExpandL />
             ) : (
-              <ExpandMore
-                sx={{
-                  fontSize: 35,
-                  borderRadius: 100,
-                  padding: 0.5,
-                  backgroundColor: "#F7FAFB",
-                  color: "#6C7680",
-                  "&: hover": {
-                    backgroundColor: "#e8f8fb",
-                    color: "#14a2b8",
-                  },
-                }}
-              />
+              <Expand />
             )}
           </ListItemButton>
           <Collapse in={open[0]} timeout="auto" unmountOnExit>
@@ -203,33 +196,9 @@ function filterBox() {
             </ListItemIcon>
             <ListItemText />
             {open[1] ? (
-              <ExpandLess
-                sx={{
-                  fontSize: 35,
-                  borderRadius: 100,
-                  padding: 0.5,
-                  backgroundColor: "#F7FAFB",
-                  color: "#6C7680",
-                  "&: hover": {
-                    backgroundColor: "#e8f8fb",
-                    color: "#14a2b8",
-                  },
-                }}
-              />
+              <ExpandL />
             ) : (
-              <ExpandMore
-                sx={{
-                  fontSize: 35,
-                  borderRadius: 100,
-                  padding: 0.5,
-                  backgroundColor: "#F7FAFB",
-                  color: "#6C7680",
-                  "&: hover": {
-                    backgroundColor: "#e8f8fb",
-                    color: "#14a2b8",
-                  },
-                }}
-              />
+              <Expand />
             )}
           </ListItemButton>
           <Collapse in={open[1]} timeout="auto" unmountOnExit>
@@ -254,33 +223,9 @@ function filterBox() {
             </ListItemIcon>
             <ListItemText />
             {open[2] ? (
-              <ExpandLess
-                sx={{
-                  fontSize: 35,
-                  borderRadius: 100,
-                  padding: 0.5,
-                  backgroundColor: "#F7FAFB",
-                  color: "#6C7680",
-                  "&: hover": {
-                    backgroundColor: "#e8f8fb",
-                    color: "#14a2b8",
-                  },
-                }}
-              />
+              <ExpandL />
             ) : (
-              <ExpandMore
-                sx={{
-                  fontSize: 35,
-                  borderRadius: 100,
-                  padding: 0.5,
-                  backgroundColor: "#F7FAFB",
-                  color: "#6C7680",
-                  "&: hover": {
-                    backgroundColor: "#e8f8fb",
-                    color: "#14a2b8",
-                  },
-                }}
-              />
+              <Expand />
             )}
           </ListItemButton>
           <Collapse in={open[2]} timeout="auto" unmountOnExit>
@@ -313,33 +258,9 @@ function filterBox() {
             </ListItemIcon>
             <ListItemText />
             {open[3] ? (
-              <ExpandLess
-                sx={{
-                  fontSize: 35,
-                  borderRadius: 100,
-                  padding: 0.5,
-                  backgroundColor: "#F7FAFB",
-                  color: "#6C7680",
-                  "&: hover": {
-                    backgroundColor: "#e8f8fb",
-                    color: "#14a2b8",
-                  },
-                }}
-              />
+              <ExpandL />
             ) : (
-              <ExpandMore
-                sx={{
-                  fontSize: 35,
-                  borderRadius: 100,
-                  padding: 0.5,
-                  backgroundColor: "#F7FAFB",
-                  color: "#6C7680",
-                  "&: hover": {
-                    backgroundColor: "#e8f8fb",
-                    color: "#14a2b8",
-                  },
-                }}
-              />
+              <Expand />
             )}
           </ListItemButton>
           <Collapse in={open[3]} timeout="auto" unmountOnExit>
@@ -369,33 +290,9 @@ function filterBox() {
             </ListItemIcon>
             <ListItemText />
             {open[4] ? (
-              <ExpandLess
-                sx={{
-                  fontSize: 35,
-                  borderRadius: 100,
-                  padding: 0.5,
-                  backgroundColor: "#F7FAFB",
-                  color: "#6C7680",
-                  "&: hover": {
-                    backgroundColor: "#e8f8fb",
-                    color: "#14a2b8",
-                  },
-                }}
-              />
+              <ExpandL />
             ) : (
-              <ExpandMore
-                sx={{
-                  fontSize: 35,
-                  borderRadius: 100,
-                  padding: 0.5,
-                  backgroundColor: "#F7FAFB",
-                  color: "#6C7680",
-                  "&: hover": {
-                    backgroundColor: "#e8f8fb",
-                    color: "#14a2b8",
-                  },
-                }}
-              />
+              <Expand />
             )}
           </ListItemButton>
           <Collapse in={open[4]} timeout="auto" unmountOnExit>

@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from "@mui/material/Button";
 
-function Headerbuttcom(props) {
+function headerButtCom(props) {
     return (
         <Button
             sx={{
@@ -16,4 +16,4 @@ function Headerbuttcom(props) {
     )
 }
 
-export default Headerbuttcom
+export default headerButtCom

@@ -8,7 +8,7 @@ import SpeakerNotesOutlinedIcon from "@mui/icons-material/SpeakerNotesOutlined";
 import Alibaba from "../public/ali-baba.png";
 import Image from "next/image";
 import { headerButtData } from "./Data/headerButtdata";
-import Headerbuttcom from "./Components/Headerbuttcom";
+import Headerbuttcom from "./Components/HeaderButtcom";
 
 function header() {
   return (

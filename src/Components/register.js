@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 import TextField from '@mui/material/TextField';
-import { height } from '@mui/material/node_modules/@mui/system';
 import MenuItem from '@mui/material/MenuItem';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
@@ -20,12 +19,9 @@ function register() {
             label: 'زن',
         },
     ];
-
-
-    const [SexChosse, setSexChosse] = React.useState('مرد');
-
+    const [sexChoose, setSexChoose] = React.useState('مرد');
     const handleChange = (event) => {
-        setSexChosse(event.target.value);
+        setSexChoose(event.target.value);
     };
     return (
         <Grid
@@ -70,7 +66,7 @@ function register() {
                         id="outlined-select-currency"
                         select
                         label="جنسیت"
-                        value={SexChosse}
+                        value={sexChoose}
                         onChange={handleChange}
                     >
                         {sexType.map((option) => (

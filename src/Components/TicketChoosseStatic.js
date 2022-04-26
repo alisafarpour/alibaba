@@ -4,13 +4,13 @@ import { Divider } from '@mui/material';
 
 function ticketChossseStatic(props) {
     return (
-        
+        <>
             <Grid
                 container
                 direction="row"
                 justifyContent="center"
                 alignItems="center"
-                lg={2.6}
+                lg={2}
             >
                 <Grid>
                     <Typography sx={{ color: '#DC3444', fontSize: '20px', fontWeight: '900' }}>
@@ -22,12 +22,10 @@ function ticketChossseStatic(props) {
                         {props.text}
                     </Typography>
                 </Grid>
-                <Divider orientation="vertical" flexItem />
+
             </Grid>
-            
-            
-           
+            <Divider orientation="vertical" flexItem />
+        </>
     )
 }
-
 export default ticketChossseStatic

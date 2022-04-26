@@ -4,22 +4,20 @@ import { Typography } from '@mui/material';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Divider from '@mui/material/Divider';
-import FilterBoxTop from './filterBoxTop.js';
+import FilterBoxTop from './FilterBoxTop.js';
 import PriorityHighRoundedIcon from '@mui/icons-material/PriorityHighRounded';
-import TicketChosse2 from './ticketChosse2.js';
-import { useSelector, useDispatch } from 'react-redux';
+import TicketChosse2 from './TicketChoose.js';
+import { useSelector } from 'react-redux';
+import { collocationData } from '../Data/collocationData.js';
 
 function collocation() {
 
-
   const FilterData = useSelector(state => state.counter.value)
-  let items = FilterData;
-  const seat = items.filter(item => item.seat >= 10);
   const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+    const handleChange = (event, newValue) => {
+      console.log(newValue);
+      setValue(newValue);
+    };
   return (
 
     <Grid
@@ -47,15 +45,11 @@ function collocation() {
           <Grid container justifyContent="center"
             alignItems="center" sx={{ width: '100%', marginRight: 4, height: 'auto', bgcolor: 'background.paper', borderRadius: 100, backgroundColor: 'white', border: 1, borderColor: '#e5e5e5', }}>
             <Tabs value={value} onChange={handleChange} centered>
-              <Tab label="پیشنهاد علی بابا" />
-              <Divider orientation="vertical" variant="middle" flexItem />
-              <Tab label="زودترین" />
-              <Divider orientation="vertical" variant="middle" flexItem />
-              <Tab label="دیرترین" />
-              <Divider orientation="vertical" variant="middle" flexItem />
-              <Tab label="ارزان ترین" />
-              <Divider orientation="vertical" variant="middle" flexItem />
-              <Tab label="گران ترین" />
+              {collocationData.map((item) => {
+                return (
+                    <Tab label={item.label} />
+                )
+              })}
             </Tabs>
           </Grid>
         </Grid>
@@ -66,7 +60,7 @@ function collocation() {
       </Grid>
       <Grid container sx={{ marginTop: 2 }}>
         {
-          items.map((item) => {
+          FilterData.map((item) => {
             return (
               <TicketChosse2 {...item} />
             )

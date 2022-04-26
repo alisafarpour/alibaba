@@ -83,7 +83,7 @@ import Img6 from '../../public/PA.png';
           baggageWeight: "۲۵ کیلوگرم",
           terminalNumber: 'ترمینال ۴',
           airplaneName: "Fokker 100",
-          ticketKind: "سیستمی",
+          ticketKind: "چارتر",
           imgSrc: Img5,
         },
         {

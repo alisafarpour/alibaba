@@ -12,6 +12,18 @@ import AirplanemodeActiveRoundedIcon from '@mui/icons-material/AirplanemodeActiv
 import Button from '@mui/material/Button';
 import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded';
 import { Collapse } from '@mui/material';
+import TicketChossseStatic from './TicketChoosseStatic.js';
+import { ticketChooseData } from '../Data/ticketChosseData.js';
+
+const PrettoSlider = styled(Slider)({
+    height: 0.5,
+    '& .MuiSlider-thumb': {
+        height: 8,
+        width: 8,
+        backgroundColor: '#fff',
+        border: '1.5px solid currentColor',
+    },
+});
 
 function TicketChosse(props) {
 
@@ -20,67 +32,50 @@ function TicketChosse(props) {
     const [open3, setOpen3] = React.useState(false);
 
     const handleClick = () => {
-        if (open2 == true) {
+        if (open2 === true) {
             setOpen2(!open2);
         }
-        if (open == false) {
+        if (open === false) {
             setOpen(!open);
         }
-
-        if (open3 == false) {
+        if (open3 === false) {
             setOpen3(!open3);
         }
-
-
-
     };
     const handleClick2 = () => {
-        if (open == true) {
+        if (open === true) {
             setOpen(!open);
         }
-        if (open2 == false) {
+        if (open2 === false) {
             setOpen2(!open2);
         }
-        if (open3 == false) {
+        if (open3 === false) {
             setOpen3(!open3);
         }
 
     };
     const handleClick3 = () => {
         setOpen3(!open3);
-        if (open2 == true) {
+        if (open2 === true) {
             setOpen2(!open2);
         }
-        if (open == true) {
+        if (open === true) {
             setOpen(!open);
         }
     };
     const handleClick4 = () => {
-        if (open2 == true) {
+        if (open2 === true) {
             setOpen2(!open2);
         }
 
         setOpen(!open);
         setOpen3(!open3);
 
-        if (open3 == true && open == false) {
+        if (open3 === true && open === false) {
             setOpen(!open);
             setOpen3(open3);
         }
-
     };
-    const PrettoSlider = styled(Slider)({
-        height: 0.5,
-        '& .MuiSlider-thumb': {
-            height: 8,
-            width: 8,
-            backgroundColor: '#fff',
-            border: '1.5px solid currentColor',
-        },
-    });
-
-
-
 
     return (
         <Grid
@@ -95,7 +90,7 @@ function TicketChosse(props) {
                 justifyContent="flex-start"
                 alignItems="center"
                 lg={8.7}
-                
+
 
             >
                 <Grid
@@ -195,9 +190,6 @@ function TicketChosse(props) {
 
                         <TabContext>
                             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-
-
-
                                 <TabList>
                                     <Tab sx={{ color: '#0177DB' }} label="اطلاعات پرواز" onClick={handleClick} />
                                     <Tab sx={{ color: '#0177DB' }} label="قوانین استرداد" onClick={handleClick2} />
@@ -247,7 +239,6 @@ function TicketChosse(props) {
                                                 </Typography>
                                             </Grid>
                                         </Grid>
-
                                         <Grid
                                             container
                                             direction="column"
@@ -265,7 +256,6 @@ function TicketChosse(props) {
                                                     {props.baggageWeight}
                                                 </Typography>
                                             </Grid>
-
                                         </Grid>
                                         <Grid
                                             container
@@ -285,7 +275,6 @@ function TicketChosse(props) {
                                                 </Typography>
                                             </Grid>
                                         </Grid>
-
                                     </Grid>
                                 </Collapse>
                                 <Collapse in={open2} unmountOnExit sx={{ marginTop: 2 }}>
@@ -295,88 +284,11 @@ function TicketChosse(props) {
                                         justifyContent="space-around"
                                         alignItems="flex-start"
                                     >
-
-
-                                        <Grid
-                                            container
-                                            direction="column"
-                                            justifyContent="center"
-                                            alignItems="center"
-                                            lg={2}
-                                        >
-                                            <Grid>
-                                                <Typography sx={{ color: '#DC3444', fontSize: '20px', fontWeight: '900' }}>
-                                                    ۴۰%
-                                                </Typography>
-                                            </Grid>
-                                            <Grid>
-                                                <Typography sx={{ fontSize: '14px', marginTop: 1, textAlign: 'center' }}>
-                                                    از زمان صدور بلیط تا 12:00 ظهر 3 روز قبل از پرواز
-                                                </Typography>
-                                            </Grid>
-
-                                        </Grid>
-                                        <Divider orientation="vertical" flexItem />
-                                        <Grid
-                                            container
-                                            direction="column"
-                                            justifyContent="center"
-                                            alignItems="center"
-                                            lg={2}
-                                        >
-                                            <Grid>
-                                                <Typography sx={{ color: '#DC3444', fontSize: '20px', fontWeight: '900' }}>
-                                                    ۴۰%
-                                                </Typography>
-                                            </Grid>
-                                            <Grid>
-                                                <Typography sx={{ fontSize: '14px', marginTop: 1, textAlign: 'center' }}>
-                                                    از 12:00 ظهر 3 روز قبل از پرواز تا 12:00 ظهر 1 روز قبل از پرواز
-                                                </Typography>
-                                            </Grid>
-
-                                        </Grid>
-                                        <Divider orientation="vertical" flexItem />
-                                        <Grid
-                                            container
-                                            direction="column"
-                                            justifyContent="center"
-                                            alignItems="center"
-                                            lg={2}
-                                        >
-                                            <Grid>
-                                                <Typography sx={{ color: '#DC3444', fontSize: '20px', fontWeight: '900' }}>
-                                                    ۶۰%
-                                                </Typography>
-                                            </Grid>
-                                            <Grid>
-                                                <Typography sx={{ fontSize: '14px', marginTop: 1, textAlign: 'center' }}>
-                                                    از 12:00 ظهر 1 روز قبل از پرواز تا 3 ساعت قبل از پرواز
-                                                </Typography>
-                                            </Grid>
-
-                                        </Grid>
-                                        <Divider orientation="vertical" flexItem />
-                                        <Grid
-                                            container
-                                            direction="column"
-                                            justifyContent="center"
-                                            alignItems="center"
-                                            lg={2}
-                                        >
-                                            <Grid>
-                                                <Typography sx={{ color: '#DC3444', fontSize: '20px', fontWeight: '900' }}>
-                                                    ۶۰%
-                                                </Typography>
-                                            </Grid>
-                                            <Grid>
-                                                <Typography sx={{ fontSize: '14px', marginTop: 1, textAlign: 'center' }}>
-                                                    از 3 ساعت قبل از پرواز تا 30 دقیقه قبل از پرواز
-                                                </Typography>
-                                            </Grid>
-
-                                        </Grid>
-                                        <Divider orientation="vertical" flexItem />
+                                        {ticketChooseData.map((item) => {
+                                            return (
+                                                <TicketChossseStatic {...item} />
+                                            )
+                                        })}
                                         <Grid
                                             container
                                             direction="column"
@@ -394,10 +306,7 @@ function TicketChosse(props) {
                                                     از 30 دقیقه قبل از پرواز به بعد
                                                 </Typography>
                                             </Grid>
-
                                         </Grid>
-
-
                                     </Grid>
                                 </Collapse>
                                 <Grid
@@ -406,7 +315,7 @@ function TicketChosse(props) {
                                     justifyContent="center"
                                     alignItems="center"
                                     lg={12}
-                                    sx={{ marginTop: 2, marginBottom: 0.25}}
+                                    sx={{ marginTop: 2, marginBottom: 0.25 }}
                                 >
                                     <Button onClick={handleClick3} value="0" variant="Close">بستن<KeyboardArrowUpRoundedIcon /></Button>
                                 </Grid>
@@ -439,9 +348,9 @@ function TicketChosse(props) {
                 </Grid>
 
                 <Button sx={{ marginTop: 1 }} variant="ticket" href='http://localhost:3000/passengers' >انتخاب بلیط</Button>
-                
+
                 <Typography sx={{ color: '#DC3444', marginTop: 2, fontSize: '11px' }}>{props.seat} صندلی باقی مانده</Typography>
-       
+
                 <Grid
                     container
                     direction="row"
@@ -449,7 +358,6 @@ function TicketChosse(props) {
                     alignItems="center"
 
                 >
-
                     <Collapse unmountOnExit in={open3}>
 
                         <Grid
@@ -477,10 +385,6 @@ function TicketChosse(props) {
                 </Grid>
             </Grid>
         </Grid>
-
-
-
-
     )
 }
 

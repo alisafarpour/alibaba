@@ -1,4 +1,5 @@
-export const ticketChosseData = [
+export const ticketChooseData = [
+    
     {
         percentage:
             "۴۰%"
@@ -26,6 +27,5 @@ export const ticketChosseData = [
         ,
         text:
             "از 3 ساعت قبل از پرواز تا 30 دقیقه قبل از پرواز"
-    },
-    
+    },   
 ];

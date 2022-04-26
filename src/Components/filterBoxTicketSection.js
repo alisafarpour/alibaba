@@ -1,11 +1,10 @@
 import React from 'react'
-import {DataFilterBox} from '../Data/DataFilterBox';
 import { Grid } from '@mui/material';
 import { Typography } from "@mui/material";
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Image from "next/image";
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { flightFilter, filterBack } from '../features/counter/counterSlice.js';
 
 function filterBoxTicketSection(props) {

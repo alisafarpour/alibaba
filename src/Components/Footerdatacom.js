@@ -2,7 +2,7 @@ import React from 'react'
 import Grid from "@mui/material/Grid";
 import Image from 'next/image';
 
-function Footerdatacom(props) {
+function footerDataCom(props) {
     return (
         <Grid
             container
@@ -16,4 +16,4 @@ function Footerdatacom(props) {
     )
 }
 
-export default Footerdatacom
+export default footerDataCom

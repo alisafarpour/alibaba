@@ -9,9 +9,8 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Box } from "@mui/material";
-import { useState } from "react";
 
-export default function enterflight() {
+export default function enterFlight() {
 
   const top100Films = [
     { label: "تهران" },

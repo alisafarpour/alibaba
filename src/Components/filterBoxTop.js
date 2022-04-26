@@ -1,18 +1,15 @@
 import React from 'react';
-import { Typography } from '@mui/material';
 import { Grid } from '@mui/material';
-import Box from '@mui/material/Box';
 import Tabs, { tabsClasses } from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import { test } from '../Data/test';
 
 function filterBoxTop() {
 
     const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
+    const handleChange = (event, newValue) => {
+      setValue(newValue);
+    };
   return (
 
 
@@ -36,20 +33,11 @@ function filterBoxTop() {
           },
         }}
       >
-        <Tab label="Item One" />
-        <Tab label="Item Two" />
-        <Tab label="Item Three" />
-        <Tab label="Item Four" />
-        <Tab label="Item Five" />
-        <Tab label="Item Six" />
-        <Tab label="Item Seven" />
-        <Tab label="Item Seven" />
-        <Tab label="Item Seven" />
-        <Tab label="Item Seven" />
-        <Tab label="Item Seven" />
-        <Tab label="Item Two" />
-        <Tab label="Item Three" />
-        <Tab label="Item Four" />
+        {test.map((item) => {
+                    return (
+                         <Tab label={item.label} /> 
+                    )
+                })}
       </Tabs>
     
 

@@ -3,7 +3,7 @@ import Footer from "../src/footer.js";
 import Header from "../src/header.js";
 import Alert from '@mui/material/Alert';
 import { Grid } from '@mui/material';
-import Register from '../src/Components/register.js';
+import Register from '../src/Components/Register.js';
 
 function passengers() {
     return (

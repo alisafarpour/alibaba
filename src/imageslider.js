@@ -5,7 +5,7 @@ import Image from "next/image";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 
-function imageslider() {
+function imageSlider() {
   const images = [kish, isfahan];
 
   return (
@@ -40,4 +40,4 @@ function imageslider() {
   );
 }
 
-export default imageslider;
+export default imageSlider;

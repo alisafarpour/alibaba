@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid } from '@mui/material';
-import FilterBox from './filterBox.js';
-import Collocation from './collocation.js';
+import FilterBox from './FilterBox.js';
+import Collocation from './Collocation.js';
 
 function flightMiddleCom() {
     return (
