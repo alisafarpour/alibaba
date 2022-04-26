@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import toor from "../public/toor.webp";
-import Box from "@mui/material/Box";
 import { Grid } from "@mui/material";
 import airplane from "../public/airplane.webp";
 

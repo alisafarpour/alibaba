@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import Data, { airlinesName } from '../../Data/Data.js'
+import { airlinesName } from '../../Data/Data.js'
 
 const initialState = {
   value: airlinesName ,

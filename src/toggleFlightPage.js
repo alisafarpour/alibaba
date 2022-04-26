@@ -5,15 +5,13 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
-
 
 function toggleFlightpage(props) {
     return (
         <Grid
             xs={9.8}
-            sx={{ marginTop: 1, direction: "rtl", width: '100%' }}
+            sx={{  direction: "rtl", width: '100%' }}
             container
             justifyContent="center"
             alignItems="center"

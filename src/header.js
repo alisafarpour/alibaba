@@ -1,15 +1,12 @@
 import React from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
 import HowToRegOutlinedIcon from "@mui/icons-material/HowToRegOutlined";
 import SpeakerNotesOutlinedIcon from "@mui/icons-material/SpeakerNotesOutlined";
-import rtlPlugin from "stylis-plugin-rtl";
 import Alibaba from "../public/ali-baba.png";
-import { maxWidth } from "@mui/system";
 import Image from "next/image";
 
 function header() {

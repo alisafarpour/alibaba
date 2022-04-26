@@ -8,32 +8,26 @@ import Img6 from '../../public/PA.png';
   export const DataFilterBox = [
         {
           label: "کاسپین",
-          ticketKind: "سیستمی",
           imgSrc: Img3,
         },
         {
           label: "آتا",
-          ticketKind: "چارتر",
           imgSrc: Img2,
         },
         {
           label: "آسمان",
-          ticketKind: "سیستمی",
           imgSrc: Img1,
         },
         {
           label: "فلای پرشین",
-          ticketKind: "سیستمی",
           imgSrc: Img4,
         },
         {
           label: "علی ایرلاین",
-          ticketKind: "سیستمی",
           imgSrc: Img5,
         },
         {
           label: "قشم ایر",
-          ticketKind: "سیستمی",
           imgSrc: Img6,
         },
       ];

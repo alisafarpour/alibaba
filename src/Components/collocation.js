@@ -9,29 +9,17 @@ import PriorityHighRoundedIcon from '@mui/icons-material/PriorityHighRounded';
 import TicketChosse2 from './ticketChosse2.js';
 import { useSelector, useDispatch } from 'react-redux';
 
-
 function collocation() {
 
 
   const FilterData = useSelector(state => state.counter.value)
-    const dispatch = useDispatch()
-
-
   let items = FilterData;
-
-
-
   const seat = items.filter(item => item.seat >= 10);
-
-
-
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-
   return (
 
     <Grid

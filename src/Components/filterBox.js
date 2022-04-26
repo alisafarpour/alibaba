@@ -18,7 +18,7 @@ import Tooltip from "@mui/material/Tooltip";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import Data, { airlinesName } from "../Data/Data.js";
+import { airlinesName } from "../Data/Data.js";
 import {DataFilterBox} from "../Data/DataFilterBox";
 import { dataTicket } from "../Data/DataticketKind.js";
 import FilterBoxTicketSection from "./filterBoxTicketSection";
