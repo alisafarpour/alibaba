@@ -25,57 +25,16 @@ const PrettoSlider = styled(Slider)({
     },
 });
 
+const ticketSelector = {
+    close: "close",
+    flightDetails: "flightDetails open",
+    flightRole: "Role open",
+};
+
+
 function TicketChoose(props) {
 
-    const [open, setOpen] = React.useState(false);
-    const [open2, setOpen2] = React.useState(false);
-    const [open3, setOpen3] = React.useState(false);
-
-    const handleClick = () => {
-        if (open2 === true) {
-            setOpen2(!open2);
-        }
-        if (open === false) {
-            setOpen(!open);
-        }
-        if (open3 === false) {
-            setOpen3(!open3);
-        }
-    };
-    const handleClick2 = () => {
-        if (open === true) {
-            setOpen(!open);
-        }
-        if (open2 === false) {
-            setOpen2(!open2);
-        }
-        if (open3 === false) {
-            setOpen3(!open3);
-        }
-
-    };
-    const handleClick3 = () => {
-        setOpen3(!open3);
-        if (open2 === true) {
-            setOpen2(!open2);
-        }
-        if (open === true) {
-            setOpen(!open);
-        }
-    };
-    const handleClick4 = () => {
-        if (open2 === true) {
-            setOpen2(!open2);
-        }
-
-        setOpen(!open);
-        setOpen3(!open3);
-
-        if (open3 === true && open === false) {
-            setOpen(!open);
-            setOpen3(open3);
-        }
-    };
+     const [open, setOpen] = React.useState(ticketSelector.close);
 
     return (
         <Grid
@@ -94,7 +53,7 @@ function TicketChoose(props) {
 
             >
                 <Grid
-                    onClick={handleClick4}
+                    onClick={() => setOpen(ticketSelector.flightDetails)}
                     container
                     direction="row"
                     justifyContent="flex-start"
@@ -191,12 +150,12 @@ function TicketChoose(props) {
                         <TabContext>
                             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                                 <TabList>
-                                    <Tab sx={{ color: '#0177DB' }} label="اطلاعات پرواز" onClick={handleClick} />
-                                    <Tab sx={{ color: '#0177DB' }} label="قوانین استرداد" onClick={handleClick2} />
+                                    <Tab sx={{ color: '#0177DB' }} label="اطلاعات پرواز" onClick={() => {setOpen(ticketSelector.flightDetails)}} />
+                                    <Tab sx={{ color: '#0177DB' }} label="قوانین استرداد" onClick={() => {setOpen(ticketSelector.flightRole)}} />
                                 </TabList>
                             </Box>
-                            <Collapse in={open3} unmountOnExit>
-                                <Collapse in={open} unmountOnExit sx={{ marginTop: 2 }}>
+                            <Collapse in={open === ticketSelector.flightDetails || open === ticketSelector.flightRole} unmountOnExit>
+                                <Collapse in={open === ticketSelector.flightDetails} unmountOnExit sx={{ marginTop: 2 }}>
                                     <Grid
                                         container
                                         direction="row"
@@ -277,7 +236,7 @@ function TicketChoose(props) {
                                         </Grid>
                                     </Grid>
                                 </Collapse>
-                                <Collapse in={open2} unmountOnExit sx={{ marginTop: 2 }}>
+                                <Collapse in={open === ticketSelector.flightRole} unmountOnExit sx={{ marginTop: 2 }}>
                                     <Grid
                                         container
                                         direction="row"
@@ -317,7 +276,7 @@ function TicketChoose(props) {
                                     lg={12}
                                     sx={{ marginTop: 2, marginBottom: 0.25 }}
                                 >
-                                    <Button onClick={handleClick3} value="0" variant="Close">بستن<KeyboardArrowUpRoundedIcon /></Button>
+                                    <Button onClick={() => setOpen(ticketSelector.close)} value="0" variant="Close">بستن<KeyboardArrowUpRoundedIcon /></Button>
                                 </Grid>
                             </Collapse>
                         </TabContext>
@@ -358,7 +317,7 @@ function TicketChoose(props) {
                     alignItems="center"
 
                 >
-                    <Collapse unmountOnExit in={open3}>
+                    <Collapse unmountOnExit in={open === ticketSelector.flightDetails || open === ticketSelector.flightRole}>
 
                         <Grid
                             container

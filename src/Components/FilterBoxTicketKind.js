@@ -11,11 +11,11 @@ function filterBoxTicketKind(props) {
     const [flightSky, setflightSky] = React.useState(false);
 
     const handleClick = () => {
-        if (flightSky == false) {
+        if (!flightSky) {
             dispatch(ticketFilter(props.ticketKind));
             setflightSky(!flightSky);
         }
-        else if (flightSky == true) {
+        else{
             dispatch(ticketFilterBack(props.ticketKind));
             setflightSky(!flightSky);
         }
