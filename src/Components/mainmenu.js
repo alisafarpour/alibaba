@@ -8,7 +8,7 @@ import Grid from "@mui/material/Grid";
 import { useState } from "react";
 import Enterflight from "./enterFlight";
 import { mainMenuData } from "../Data/mainMenuData";
-import { test } from "../Data/test";
+import { test2 } from "../Data/test2";
 
 export default function LabTabs() {
   const [value, setValue] = useState("1");
@@ -60,7 +60,7 @@ export default function LabTabs() {
             <TabPanel value="1">
               <Enterflight />
             </TabPanel>
-            {test.map((item) => {
+            {test2.map((item) => {
                 return (
                   <TabPanel
                     value={item.value}

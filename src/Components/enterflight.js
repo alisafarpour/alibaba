@@ -11,14 +11,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Box } from "@mui/material";
 
 const city = [
-  { label: "تهران" },
-  { label: "اهواز" },
-  { label: "شیراز" },
-  { label: "مشهد" },
-  { label: "بندر عباس" },
-  { label: "اصفهان" },
-  { label: "تبریز" },
-  { label: "کیش" },
+  "تهران" ,"اهواز" , "شیراز" ,"مشهد" ,"بندر عباس" ,"اصفهان" ,"تبریز" ,"کیش" 
 ];
 
 export default function enterFlight() {
@@ -50,7 +43,7 @@ export default function enterFlight() {
             renderOption={(props, option) => (
               <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
                 <LocationOnIcon />
-                {option.label}
+                {option}
               </Box>
             )}
             renderInput={(params) => (
@@ -67,7 +60,7 @@ export default function enterFlight() {
             renderOption={(props, option) => (
               <Box sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
                 <LocationOnIcon />
-                {option.label}
+                {option}
               </Box>
             )}
             renderInput={(params) => (

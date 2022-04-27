@@ -58,7 +58,7 @@ function collocation() {
           >
             <Tabs value={value} onChange={handleChange} centered>
               {collocationData.map((item) => {
-                return <Tab label={item.label} />;
+                return <Tab label={item} />;
               })}
             </Tabs>
           </Grid>

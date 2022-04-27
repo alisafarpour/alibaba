@@ -11,7 +11,7 @@ function footerData(props) {
             xs={1.65}
             sx={{ border: 0.25, borderRadius: 2, marginRight:1 }}
         >
-            <Image src={props.img} width="69px" height="69px"  />
+            <Image src={props.image} width="69px" height="69px"  />
         </Grid>
     )
 }

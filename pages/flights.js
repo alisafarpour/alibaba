@@ -17,7 +17,7 @@ function flights() {
                 justifyContent="flex-end"
                 alignItems="flex-end"
                 spacing={1}
-                sx={{ marginTop: 30, width: '85%' }}
+                sx={{ marginTop: 40, width: '85%' }}
             >
                 <Typography sx={{ marginTop: 5, fontWeight: '900', fontSize: '22px' }}>سوالات متداول پرواز اهواز به شیراز</Typography>
                 {toggleData.map((item) => {

@@ -22,7 +22,7 @@ function toggleFlightpage(props) {
                 justifyContent="center"
                 alignItems="stretch"
             >
-                <Accordion sx={{ borderRadius: 1, marginTop: 1 }}>
+                <Accordion sx={{ borderRadius: 1, marginTop: 1, marginBottom: 1 }}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"

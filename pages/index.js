@@ -17,7 +17,7 @@ function Index() {
       <MainMenu />
       <Imageslider />
       <Common />
-      <Typography sx={{ marginTop: 5, fontWeight: '900', fontSize: '22px', width: "86%", direction: "rtl" }}>پرسش های شما</Typography>
+      <Typography sx={{ marginTop: 1, fontWeight: '900', fontSize: '22px', width: "86%", direction: "rtl" }}>پرسش های شما</Typography>
                 {toggleFirstPage.map((item) => {
                     return (
                         <Toggle {...item} />

@@ -35,7 +35,7 @@ function filterBoxTop() {
       >
         {test.map((item) => {
                     return (
-                         <Tab label={item.label} /> 
+                         <Tab label={item} /> 
                     )
                 })}
       </Tabs>

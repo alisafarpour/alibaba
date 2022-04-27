@@ -91,7 +91,7 @@ function footer() {
               </Grid>
               <Grid container sx={{ marginTop: 2, marginBottom: 5 }}>
                 {footerImageData.map((item) => {
-                  return <Footerdata {...item} />;
+                  return <Footerdata image={item} />;
                 })}
               </Grid>
             </Grid>

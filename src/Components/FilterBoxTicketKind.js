@@ -12,11 +12,11 @@ function filterBoxTicketKind(props) {
 
     const handleClick = () => {
         if (!flightSky) {
-            dispatch(ticketFilter(props.ticketKind));
+            dispatch(ticketFilter(props.label));
             setflightSky(!flightSky);
         }
-        else{
-            dispatch(ticketFilterBack(props.ticketKind));
+        else {
+            dispatch(ticketFilterBack(props.label));
             setflightSky(!flightSky);
         }
     };
@@ -24,7 +24,7 @@ function filterBoxTicketKind(props) {
 
     return (
 
-        <FormControlLabel onClick={handleClick} control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label={props.ticketKind} />
+        <FormControlLabel onClick={handleClick} control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label={props.label} />
 
     )
 }

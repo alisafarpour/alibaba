@@ -32,7 +32,7 @@ const ticketSelector = {
 };
 
 
-function TicketChoose(props) {
+function ticketChoose(props) {
 
      const [open, setOpen] = React.useState(ticketSelector.close);
 
@@ -347,4 +347,4 @@ function TicketChoose(props) {
     )
 }
 
-export default TicketChoose
+export default ticketChoose

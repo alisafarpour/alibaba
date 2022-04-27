@@ -1,10 +1,1 @@
-export const dataTicket = [
-  {
-    ticketKind: "سیستمی",
-  },
-  {
-    ticketKind: "چارتر",
-  },
-];
-
-
+export const dataTicket = ['سیستمی', 'چارتر'];

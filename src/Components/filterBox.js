@@ -98,8 +98,6 @@ ValueLabelComponent.propTypes = {
 };
 
 function filterBox() {
-  let dataFilterBoxTicket = DataFilterBox;
-  let DataticketKind1 = dataTicket;
 
   const [open, setOpen] = React.useState([true, true, true, true, true]);
 
@@ -205,8 +203,8 @@ function filterBox() {
             <List component="div" disablePadding>
               <ListItem>
                 <FormGroup>
-                  {DataticketKind1.map((item) => {
-                    return <FilterBoxTicketKind {...item} />;
+                  {dataTicket.map((item) => {
+                    return <FilterBoxTicketKind label={item} />;
                   })}
                 </FormGroup>
               </ListItem>
@@ -239,7 +237,7 @@ function filterBox() {
                     alignItems="center"
                     xs={12}
                   >
-                    {dataFilterBoxTicket.map((item) => {
+                    {DataFilterBox.map((item) => {
                       return <FilterBoxTicketSection {...item} />;
                     })}
                   </Grid>

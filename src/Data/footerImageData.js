@@ -5,26 +5,4 @@ import enamad from "../../public/enamad.png";
 import samandehi from "../../public/samandehi.png";
 import ecunion from "../../public/ecunion.png";
 
-export const footerImageData = [
- 
-  {
-    img: state,
-  },
-  {
-    img: aira,
-  },
-  {
-    img: passenger,
-  },
-  {
-    img: enamad,
-  },
-  {
-    img: samandehi,
-  },
-  {
-    img: ecunion,
-  },
-];
-
-
+export const footerImageData = [state,aira,passenger,enamad,samandehi,ecunion];
