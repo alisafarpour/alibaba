@@ -33,9 +33,9 @@ function FilterBoxTop() {
           },
         }}
       >
-        {test.map((item) => {
+        {test.map((item,index) => {
                     return (
-                         <Tab label={item} /> 
+                         <Tab key={index} label={item} /> 
                     )
                 })}
       </Tabs>

@@ -6,7 +6,7 @@ function test() {
   return (
     <>
       <div>test</div>
-      <Image src={toor} />
+      <Image alt="toor" src={toor} />
     </>
   );
 }

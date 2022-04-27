@@ -20,9 +20,9 @@ function flights() {
                 sx={{ marginTop: 40, width: '85%' }}
             >
                 <Typography sx={{ marginTop: 5, fontWeight: '900', fontSize: '22px' }}>سوالات متداول پرواز اهواز به شیراز</Typography>
-                {toggleData.map((item) => {
+                {toggleData.map((item,index) => {
                     return (
-                        <ToggleFlightPage  {...item} />
+                        <ToggleFlightPage key={index} {...item} />
                     )
                 })}
             </Grid>

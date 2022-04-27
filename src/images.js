@@ -10,7 +10,7 @@ function images() {
       alignItems={"center"}
       sx={{ zIndex: "modal", position: "relative" }}
     >
-      <Image src={airplane} sizes="100vm" />
+      <Image src={airplane} alt="landing page image" sizes="100vm" />
     </Grid>
   );
 }

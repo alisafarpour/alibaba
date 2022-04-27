@@ -72,7 +72,7 @@ function TicketChoose(props) {
                     >
 
                         <Grid item sx={{ border: 1, borderColor: '#e5e5e5', borderRadius: 100, padding: 1, width: '48px', height: '48px' }} >
-                            <Image src={props.imgSrc} width="32px" height="32px" />
+                            <Image src={props.imgSrc} alt="flight company" width="32px" height="32px" />
                         </Grid>
                         <Grid>
                             <Typography>{props.label}</Typography>
@@ -243,9 +243,9 @@ function TicketChoose(props) {
                                         justifyContent="space-around"
                                         alignItems="flex-start"
                                     >
-                                        {ticketChooseData.map((item) => {
+                                        {ticketChooseData.map((item,index) => {
                                             return (
-                                                <TicketChooseStatic {...item} />
+                                                <TicketChooseStatic key={index} {...item} />
                                             )
                                         })}
                                         <Grid

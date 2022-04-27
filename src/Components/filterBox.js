@@ -203,8 +203,8 @@ function FilterBox() {
             <List component="div" disablePadding>
               <ListItem>
                 <FormGroup>
-                  {dataTicket.map((item) => {
-                    return <FilterBoxTicketKind label={item} />;
+                  {dataTicket.map((item,index) => {
+                    return <FilterBoxTicketKind key={index} label={item} />;
                   })}
                 </FormGroup>
               </ListItem>
@@ -237,8 +237,8 @@ function FilterBox() {
                     alignItems="center"
                     xs={12}
                   >
-                    {DataFilterBox.map((item) => {
-                      return <FilterBoxTicketSection {...item} />;
+                    {DataFilterBox.map((item,index) => {
+                      return <FilterBoxTicketSection key={index} {...item} />;
                     })}
                   </Grid>
                 </FormGroup>

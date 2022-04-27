@@ -18,9 +18,9 @@ function Index() {
       <Imageslider />
       <Common />
       <Typography sx={{ marginTop: 1, fontWeight: '900', fontSize: '22px', width: "86%", direction: "rtl" }}>پرسش های شما</Typography>
-                {toggleFirstPage.map((item) => {
+                {toggleFirstPage.map((item, index) => {
                     return (
-                        <Toggle {...item} />
+                        <Toggle key={index} {...item} />
                     )
                 })}
       <Text />

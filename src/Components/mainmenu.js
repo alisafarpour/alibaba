@@ -44,9 +44,10 @@ export default function LabTabs() {
             }}
           >
             <TabList centered onChange={handleChange} sx={{ marginTop: 1.5 }}>
-              {mainMenuData.map((item) => {
+              {mainMenuData.map((item, index) => {
                 return (
                   <Tab
+                    key={index}
                     sx={{ fontSize: 16, marginRight: 3, marginLeft: 3 }}
                     label={item.label}
                     icon={item.icon}
@@ -60,9 +61,10 @@ export default function LabTabs() {
             <TabPanel value="1">
               <Enterflight />
             </TabPanel>
-            {test2.map((item) => {
+            {test2.map((item,index) => {
                 return (
                   <TabPanel
+                    key={index}
                     value={item.value}
                   >{item.label}</TabPanel>
                 )

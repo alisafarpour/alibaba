@@ -6,7 +6,7 @@ function FooterTopImg(props) {
   return (
     <Grid container xs={4} justifyContent="center" alignItems="center">
             <Grid xs={4}>
-              <Image src={props.img} height="89px" width="89px" />
+              <Image src={props.img} alt="footer top image" height="89px" width="89px" />
             </Grid>
             <Grid
               xs={8}

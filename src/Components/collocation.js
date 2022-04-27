@@ -57,8 +57,8 @@ function Collocation() {
             }}
           >
             <Tabs value={value} onChange={handleChange} centered>
-              {collocationData.map((item) => {
-                return <Tab label={item} />;
+              {collocationData.map((item,index) => {
+                return <Tab key={index} label={item} />;
               })}
             </Tabs>
           </Grid>
@@ -71,8 +71,8 @@ function Collocation() {
         <Typography>قیمت ها برای یک بزرگسال محاسبه شده است.</Typography>
       </Grid>
       <Grid container sx={{ marginTop: 2 }}>
-        {FilterData.map((item) => {
-          return <TicketChosse {...item} />;
+        {FilterData.map((item,index) => {
+          return <TicketChosse key={index} {...item} />;
         })}
       </Grid>
     </Grid>
