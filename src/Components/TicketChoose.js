@@ -32,7 +32,7 @@ const ticketSelector = {
 };
 
 
-function ticketChoose(props) {
+function TicketChoose(props) {
 
      const [open, setOpen] = React.useState(ticketSelector.close);
 
@@ -67,7 +67,7 @@ function ticketChoose(props) {
                         direction="column"
                         justifyContent="center"
                         alignItems="center"
-                        sx={{ marginRight: 3, marginTop: 2, marginRight: 1.7 }}
+                        sx={{ marginRight: 3, marginTop: 2}}
                         lg={1.4}
                     >
 
@@ -347,4 +347,4 @@ function ticketChoose(props) {
     )
 }
 
-export default ticketChoose
+export default TicketChoose

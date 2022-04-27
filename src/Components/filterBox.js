@@ -97,7 +97,7 @@ ValueLabelComponent.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-function filterBox() {
+function FilterBox() {
 
   const [open, setOpen] = React.useState([true, true, true, true, true]);
 
@@ -322,4 +322,4 @@ function filterBox() {
     </Grid>
   );
 }
-export default filterBox;
+export default FilterBox;

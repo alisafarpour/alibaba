@@ -2,7 +2,7 @@ import React from 'react'
 import Grid from "@mui/material/Grid";
 import Image from 'next/image';
 
-function footerTopImg(props) {
+function FooterTopImg(props) {
   return (
     <Grid container xs={4} justifyContent="center" alignItems="center">
             <Grid xs={4}>
@@ -19,4 +19,4 @@ function footerTopImg(props) {
   )
 }
 
-export default footerTopImg
+export default FooterTopImg

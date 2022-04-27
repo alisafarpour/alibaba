@@ -1,5 +1,5 @@
 import Header from "../src/header.js";
-import MainMenu from "../src/components/mainMenu.js";
+import MainMenu from "../src/Components/mainMenu.js";
 import Image from "../src/images.js";
 import Toggle from "../src/Components/toggle.js";
 import Common from "../src/common.js";

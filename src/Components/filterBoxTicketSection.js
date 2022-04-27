@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useDispatch } from 'react-redux';
 import { flightFilter, filterBack } from '../features/flight/flightFilter.js';
 
-function filterBoxTicketSection(props) {
+function FilterBoxTicketSection(props) {
 
     const dispatch = useDispatch()
     const [flightSky, setflightSky] = React.useState(false);
@@ -49,4 +49,4 @@ function filterBoxTicketSection(props) {
 
 }
 
-export default filterBoxTicketSection
+export default FilterBoxTicketSection

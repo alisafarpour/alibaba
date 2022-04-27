@@ -4,7 +4,7 @@ import Tabs, { tabsClasses } from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { test } from '../Data/test';
 
-function filterBoxTop() {
+function FilterBoxTop() {
 
     const [value, setValue] = React.useState(0);
     const handleChange = (event, newValue) => {
@@ -45,4 +45,4 @@ function filterBoxTop() {
   )
 }
 
-export default filterBoxTop
+export default FilterBoxTop

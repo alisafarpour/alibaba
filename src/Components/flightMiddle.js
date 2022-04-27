@@ -3,7 +3,7 @@ import { Grid } from '@mui/material';
 import FilterBox from './filterBox.js';
 import Collocation from './collocation.js';
 
-function flightMiddle() {
+function FlightMiddle() {
     return (
         <Grid
             container
@@ -19,4 +19,4 @@ function flightMiddle() {
     )
 }
 
-export default flightMiddle
+export default FlightMiddle

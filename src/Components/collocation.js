@@ -9,7 +9,7 @@ import TicketChosse from "./ticketChoose.js";
 import { useSelector } from "react-redux";
 import { collocationData } from "../Data/collocationData.js";
 
-function collocation() {
+function Collocation() {
 
   const FilterData = useSelector((state) => state.flightFilter.value);
 
@@ -79,4 +79,4 @@ function collocation() {
   );
 }
 
-export default collocation;
+export default Collocation;

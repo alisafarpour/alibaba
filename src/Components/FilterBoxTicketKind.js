@@ -5,7 +5,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 
 
-function filterBoxTicketKind(props) {
+function FilterBoxTicketKind(props) {
 
     const dispatch = useDispatch()
     const [flightSky, setflightSky] = React.useState(false);
@@ -29,4 +29,4 @@ function filterBoxTicketKind(props) {
     )
 }
 
-export default filterBoxTicketKind
+export default FilterBoxTicketKind

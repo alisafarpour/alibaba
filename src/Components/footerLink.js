@@ -2,7 +2,7 @@ import React from 'react'
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 
-function footerLink(props) {
+function FooterLink(props) {
     return (
         <Grid xs={4}>
             <h3>{props.title}</h3>
@@ -31,4 +31,4 @@ function footerLink(props) {
     )
 }
 
-export default footerLink
+export default FooterLink

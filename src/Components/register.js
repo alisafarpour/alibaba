@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import ClearIcon from '@mui/icons-material/Clear';
 import Typography from "@mui/material/Typography";
 
-function register() {
+function Register() {
 
     const sexType = [
         {
@@ -130,4 +130,4 @@ function register() {
     )
 }
 
-export default register
+export default Register

@@ -14,7 +14,7 @@ const city = [
   "تهران" ,"اهواز" , "شیراز" ,"مشهد" ,"بندر عباس" ,"اصفهان" ,"تبریز" ,"کیش" 
 ];
 
-export default function enterFlight() {
+export default function EnterFlight() {
 
   const [value, setValue] = React.useState(new Date());
   const [value2, setValue2] = React.useState(new Date());
