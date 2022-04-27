@@ -6,14 +6,14 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import Grid from "@mui/material/Grid";
 import { useState } from "react";
-import Enterflight from "./EnterFlight";
+import Enterflight from "./enterFlight";
 import { mainMenuData } from "../Data/mainMenuData";
 import { test } from "../Data/test";
 
 export default function LabTabs() {
   const [value, setValue] = useState("1");
 
-  const handelChange = (event, newValue) => {
+  const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
@@ -43,7 +43,7 @@ export default function LabTabs() {
               justifyContent: "center",
             }}
           >
-            <TabList centered onChange={handelChange} sx={{ marginTop: 1.5 }}>
+            <TabList centered onChange={handleChange} sx={{ marginTop: 1.5 }}>
               {mainMenuData.map((item) => {
                 return (
                   <Tab

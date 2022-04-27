@@ -5,7 +5,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Image from "next/image";
 import { useDispatch } from 'react-redux';
-import { flightFilter, filterBack } from '../features/counter/counterSlice.js';
+import { flightFilter, filterBack } from '../features/flight/flightFilter.js';
 
 function filterBoxTicketSection(props) {
 

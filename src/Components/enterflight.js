@@ -10,20 +10,22 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Box } from "@mui/material";
 
+const city = [
+  { label: "تهران" },
+  { label: "اهواز" },
+  { label: "شیراز" },
+  { label: "مشهد" },
+  { label: "بندر عباس" },
+  { label: "اصفهان" },
+  { label: "تبریز" },
+  { label: "کیش" },
+];
+
 export default function enterFlight() {
 
-  const top100Films = [
-    { label: "تهران" },
-    { label: "اهواز" },
-    { label: "شیراز" },
-    { label: "مشهد" },
-    { label: "بندر عباس" },
-    { label: "اصفهان" },
-    { label: "تبریز" },
-    { label: "کیش" },
-  ];
   const [value, setValue] = React.useState(new Date());
   const [value2, setValue2] = React.useState(new Date());
+
   return (
     <Grid container spacing={2}>
       <Grid
@@ -43,7 +45,7 @@ export default function enterFlight() {
           <Autocomplete
             disablePortal
             id="combo-box-demo"
-            options={top100Films}
+            options={city}
             sx={{ width: 220, borderTopRightRadius: "100%" }}
             renderOption={(props, option) => (
               <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
@@ -60,7 +62,7 @@ export default function enterFlight() {
           <Autocomplete
             disablePortal
             id="combo-box-demo"
-            options={top100Films}
+            options={city}
             sx={{ width: 220, borderTopRightRadius: "100%" }}
             renderOption={(props, option) => (
               <Box sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>

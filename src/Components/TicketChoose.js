@@ -12,8 +12,8 @@ import AirplanemodeActiveRoundedIcon from '@mui/icons-material/AirplanemodeActiv
 import Button from '@mui/material/Button';
 import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded';
 import { Collapse } from '@mui/material';
-import TicketChossseStatic from './TicketChoosseStatic.js';
-import { ticketChooseData } from '../Data/ticketChosseData.js';
+import TicketChooseStatic from './ticketChooseStatic.js';
+import { ticketChooseData } from '../Data/ticketChooseData.js';
 
 const PrettoSlider = styled(Slider)({
     height: 0.5,
@@ -25,7 +25,7 @@ const PrettoSlider = styled(Slider)({
     },
 });
 
-function TicketChosse(props) {
+function TicketChoose(props) {
 
     const [open, setOpen] = React.useState(false);
     const [open2, setOpen2] = React.useState(false);
@@ -286,7 +286,7 @@ function TicketChosse(props) {
                                     >
                                         {ticketChooseData.map((item) => {
                                             return (
-                                                <TicketChossseStatic {...item} />
+                                                <TicketChooseStatic {...item} />
                                             )
                                         })}
                                         <Grid
@@ -388,4 +388,4 @@ function TicketChosse(props) {
     )
 }
 
-export default TicketChosse
+export default TicketChoose

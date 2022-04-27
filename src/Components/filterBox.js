@@ -21,8 +21,8 @@ import Checkbox from "@mui/material/Checkbox";
 import { airlinesName } from "../Data/data.js";
 import { DataFilterBox } from "../Data/dataFilterBox";
 import { dataTicket } from "../Data/dataTicketKind.js";
-import FilterBoxTicketSection from "./FilterBoxTicketSection";
-import FilterBoxTicketKind from "./FilterBoxTicketKind.js";
+import FilterBoxTicketSection from "./filterBoxTicketSection";
+import FilterBoxTicketKind from "./filterBoxTicketKind.js";
 
 const Expand = styled(ExpandMore)(() => ({
   fontSize: 30,

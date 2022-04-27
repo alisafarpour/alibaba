@@ -1,8 +1,8 @@
 import Header from "../src/header.js";
-import MainMenu from "../src/components/MainMenu.js";
+import MainMenu from "../src/components/mainMenu.js";
 import Image from "../src/images.js";
-import Toggle from "../src/Components/Toggle.js";
-import Commen from "../src/commen.js";
+import Toggle from "../src/Components/toggle.js";
+import Common from "../src/common.js";
 import Text from "../src/text.js";
 import Footer from "../src/footer.js";
 import Imageslider from "../src/imageslider.js";
@@ -16,7 +16,7 @@ function Index() {
       <Image />
       <MainMenu />
       <Imageslider />
-      <Commen />
+      <Common />
       <Typography sx={{ marginTop: 5, fontWeight: '900', fontSize: '22px', width: "86%", direction: "rtl" }}>پرسش های شما</Typography>
                 {toggleFirstPage.map((item) => {
                     return (

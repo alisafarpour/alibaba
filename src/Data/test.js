@@ -24,16 +24,4 @@ export const test = [
         label: 'item one maaan',
         value: '7'
     },
-    // {
-    //     label: 'item one maaan',
-    // },
-    // {
-    //     label: 'item one maaan',
-    // },
-    // {
-    //     label: 'item one maaan',
-    // },
-    // {
-    //     label: 'item one maaan',
-    // },
   ];

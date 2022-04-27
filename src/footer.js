@@ -9,10 +9,10 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import { footerImageData } from "./Data/footerImageData";
-import Footerdatacom from "./Components/Footerdatacom";
-import Footerlinkcom from "./Components/Footerlinkcom";
+import Footerdata from "./Components/footerData";
+import Footerlink from "./Components/footerlink";
 import { footerLinkData } from "./Data/footerLinkData";
-import Footertopimgcom from "./Components/Footertopimgcom";
+import Footertopimg from "./Components/footertopimg";
 import { footerTopImgData } from "./Data/fotterTopImgData";
 
 function footer() {
@@ -43,7 +43,7 @@ function footer() {
           }}
         >
           {footerTopImgData.map((item) => {
-                return <Footertopimgcom {...item} />;
+                return <Footertopimg {...item} />;
               })}
         </Grid>
         <Grid
@@ -65,7 +65,7 @@ function footer() {
               sx={{ fontSize: 14, marginTop: -10 }}
             >
               {footerLinkData.map((item) => {
-                return <Footerlinkcom {...item} />;
+                return <Footerlink {...item} />;
               })}
             </Grid>
             <Grid
@@ -91,7 +91,7 @@ function footer() {
               </Grid>
               <Grid container sx={{ marginTop: 2, marginBottom: 5 }}>
                 {footerImageData.map((item) => {
-                  return <Footerdatacom {...item} />;
+                  return <Footerdata {...item} />;
                 })}
               </Grid>
             </Grid>

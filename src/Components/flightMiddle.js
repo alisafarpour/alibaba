@@ -1,9 +1,9 @@
 import React from 'react'
 import { Grid } from '@mui/material';
-import FilterBox from './FilterBox.js';
-import Collocation from './Collocation.js';
+import FilterBox from './filterBox.js';
+import Collocation from './collocation.js';
 
-function flightMiddleCom() {
+function flightMiddle() {
     return (
         <Grid
             container
@@ -15,10 +15,8 @@ function flightMiddleCom() {
         >
             <FilterBox />
             <Collocation />
-
-
         </Grid>
     )
 }
 
-export default flightMiddleCom
+export default flightMiddle

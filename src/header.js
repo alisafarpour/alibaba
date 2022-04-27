@@ -8,7 +8,8 @@ import SpeakerNotesOutlinedIcon from "@mui/icons-material/SpeakerNotesOutlined";
 import Alibaba from "../public/ali-baba.png";
 import Image from "next/image";
 import { headerButtData } from "./Data/headerButtdata";
-import Headerbuttcom from "./Components/HeaderButtcom";
+import HeaderButt from "./Components/headerButt";
+import Link from 'next/link';
 
 function header() {
   return (
@@ -23,8 +24,10 @@ function header() {
         xs={12}
         sx={{ backgroundColor: "white", height: 80, position: 'sticky' }}
       >
-        <Grid item xs={1.25}>
-          <Image src={Alibaba} />
+        <Grid item xs={1.25} sx={{cursor:"pointer"}}>
+          <Link href="http://localhost:3000/">
+            <Image src={Alibaba} />
+          </Link>
         </Grid>
         <Grid
           item
@@ -40,7 +43,7 @@ function header() {
           >
             {headerButtData.map((item) => {
               return (
-                <Headerbuttcom {...item} />
+                <HeaderButt {...item} />
               )
             })}
 

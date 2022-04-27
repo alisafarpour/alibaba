@@ -4,9 +4,12 @@ import { airlinesName } from '../../Data/data.js'
 const initialState = {
   value: airlinesName ,
 }
+
 let sub = [] ;
 let subcombine = [];
 let data = airlinesName ;
+
+
 export const counterSlice = createSlice({
   name: 'counter',
   initialState,

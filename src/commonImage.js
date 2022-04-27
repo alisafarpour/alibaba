@@ -3,7 +3,9 @@ import Image from "next/image";
 import Grid from "@mui/material/Grid";
 import kish from "../public/kish.webp";
 import isfahan from "../public/isfahan.webp";
-function commenImage() {
+import Container from "@mui/material/Container";
+
+function commonImage() {
   return (
     <Container
       sx={{
@@ -33,4 +35,4 @@ function commenImage() {
   );
 }
 
-export default commenImage;
+export default commonImage;

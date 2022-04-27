@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { ticketFilter, ticketFilterBack } from '../features/counter/counterSlice.js';
+import { ticketFilter, ticketFilterBack } from '../features/flight/flightFilter.js';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 

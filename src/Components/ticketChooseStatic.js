@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Typography } from '@mui/material';
 import { Divider } from '@mui/material';
 
-function ticketChossseStatic(props) {
+function ticketChooseStatic(props) {
     return (
         <>
             <Grid
@@ -28,4 +28,4 @@ function ticketChossseStatic(props) {
         </>
     )
 }
-export default ticketChossseStatic
+export default ticketChooseStatic

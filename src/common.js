@@ -10,7 +10,7 @@ import AppleIcon from "@mui/icons-material/Apple";
 import Link from "@mui/material/Link";
 import { Typography } from "@mui/material";
 
-function commen() {
+function common() {
   return (
     <Container
       maxWidth="xlg"
@@ -57,4 +57,4 @@ function commen() {
   );
 }
 
-export default commen;
+export default common;
