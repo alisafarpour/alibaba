@@ -13,7 +13,7 @@ function Index() {
   return (
     <div>
       <Header />
-      <Image />
+      <Image alt="landing page image" />
       <MainMenu />
       <Imageslider />
       <Common />

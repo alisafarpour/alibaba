@@ -1,8 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
-import IranYekanRegularWoff from "../public/fonts/woff/iranyekanwebregular(fanum).woff";
 import IranSharp from '../public/fonts/iransharp.woff';
-import { CenterFocusStrong } from "@mui/icons-material";
 // Create a theme instance.
 const theme = createTheme({
 
