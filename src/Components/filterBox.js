@@ -35,6 +35,7 @@ const Expand = styled(ExpandMore)(() => ({
     color: "#14a2b8",
   },
 }));
+
 const ExpandL = styled(ExpandLess)(() => ({
   fontSize: 30,
   borderRadius: 100,
@@ -46,6 +47,7 @@ const ExpandL = styled(ExpandLess)(() => ({
     color: "#14a2b8",
   },
 }));
+
 const FilterBoxSlider = styled(Slider)(({ theme }) => ({
   color: "#0177DB",
   height: 1,
@@ -83,6 +85,7 @@ const FilterBoxSlider = styled(Slider)(({ theme }) => ({
 }));
 
 function ValueLabelComponent(props) {
+
   const { children, value } = props;
 
   return (
@@ -150,7 +153,7 @@ function FilterBox() {
           }
         >
           <Divider />
-
+          
           <ListItemButton onClick={() => handleClick(0)}>
             <ListItemIcon>
               <Typography

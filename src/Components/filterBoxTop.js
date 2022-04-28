@@ -12,15 +12,14 @@ function FilterBoxTop() {
     };
   return (
 
-
     <Grid
       container
       direction="row"
       justifyContent="flex-start"
       alignItems="center"
       sx={{ direction: 'rtl', height: '64px', width: '835px', marginRight: 1, marginBottom: 2, bgcolor: 'background.paper', }}
-    >
-       
+    > 
+    
       <Tabs
         value={value}
         onChange={handleChange}
@@ -39,8 +38,7 @@ function FilterBoxTop() {
                     )
                 })}
       </Tabs>
-    
-
+  
     </Grid>
   )
 }

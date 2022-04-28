@@ -21,7 +21,6 @@ function FilterBoxTicketKind(props) {
         }
     };
 
-
     return (
 
         <FormControlLabel onClick={handleClick} control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} label={props.label} />

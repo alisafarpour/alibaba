@@ -5,7 +5,7 @@ import Toggle from "../src/Components/toggle.js";
 import Common from "../src/common.js";
 import Text from "../src/text.js";
 import Footer from "../src/footer.js";
-import Imageslider from "../src/imageslider.js";
+import Imageslider from "../src/imageSlider.js";
 import Typography from "@mui/material/Typography";
 import { toggleFirstPage } from "../src/Data/toggleFirstPage.js";
 

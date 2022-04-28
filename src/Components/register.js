@@ -7,18 +7,20 @@ import Button from '@mui/material/Button';
 import ClearIcon from '@mui/icons-material/Clear';
 import Typography from "@mui/material/Typography";
 
+const sexType = [
+    {
+        value: 'مرد',
+        label: 'مرد',
+    },
+    {
+        value: 'زن',
+        label: 'زن',
+    },
+];
+
 function Register() {
 
-    const sexType = [
-        {
-            value: 'مرد',
-            label: 'مرد',
-        },
-        {
-            value: 'زن',
-            label: 'زن',
-        },
-    ];
+    
     const [sexChoose, setSexChoose] = React.useState('مرد');
     const handleChange = (event) => {
         setSexChoose(event.target.value);
