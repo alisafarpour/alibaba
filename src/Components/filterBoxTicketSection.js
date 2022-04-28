@@ -12,7 +12,7 @@ function FilterBoxTicketSection(props) {
     const dispatch = useDispatch()
     const [flightSky, setflightSky] = React.useState(false);
 
-    const handelClick = () => {
+    const handleClick = () => {
        if (flightSky) {
             dispatch(filterBack(props.label));
             setflightSky(!flightSky);
@@ -33,7 +33,7 @@ function FilterBoxTicketSection(props) {
 
         >
             <Grid item lg={4}>
-                <FormControlLabel onClick={handelClick} control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
+                <FormControlLabel onClick={handleClick} control={<Checkbox sx={{ transform: "scale(1.2)", color: '#BBC3C9', }} />} />
             </Grid>
             <Grid item lg={4} sx={{  marginRight: -6.5 }} >
                 <Image src={props.imgSrc} alt="flight company" width="24px" height="24px" />

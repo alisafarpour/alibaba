@@ -5,9 +5,10 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import FilterBoxTop from "./filterBoxTop.js";
 import PriorityHighRoundedIcon from "@mui/icons-material/PriorityHighRounded";
-import TicketChosse from "./ticketChoose.js";
+import TicketChoose from "./ticketChoose.js";
 import { useSelector } from "react-redux";
 import { collocationData } from "../Data/collocationData.js";
+
 
 function Collocation() {
 
@@ -17,6 +18,8 @@ function Collocation() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+
 
   return (
     <Grid
@@ -57,8 +60,8 @@ function Collocation() {
             }}
           >
             <Tabs value={value} onChange={handleChange} centered>
-              {collocationData.map((item,index) => {
-                return <Tab key={index} label={item} />;
+              {collocationData.map((item, index) => {
+                return <Tab  key={index} label={item} />;
               })}
             </Tabs>
           </Grid>
@@ -71,8 +74,8 @@ function Collocation() {
         <Typography>قیمت ها برای یک بزرگسال محاسبه شده است.</Typography>
       </Grid>
       <Grid container sx={{ marginTop: 2 }}>
-        {FilterData.map((item,index) => {
-          return <TicketChosse key={index} {...item} />;
+        {FilterData.map((item, index) => {
+          return <TicketChoose key={index} {...item} />;
         })}
       </Grid>
     </Grid>

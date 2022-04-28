@@ -5,7 +5,6 @@ import ToggleFlightPage from '../src/toggleFlightPage.js';
 import { Grid, Typography } from '@mui/material';
 import { toggleData } from '../src/Data/toggleData.js';
 import FlightMiddle from '../src/Components/flightMiddle.js';
-
 function flights() {
     return (
         <div>

@@ -5,7 +5,7 @@ import Toggle from "../src/Components/toggle.js";
 import Common from "../src/common.js";
 import Text from "../src/text.js";
 import Footer from "../src/footer.js";
-import Imageslider from "../src/imageSlider.js";
+import ImageSlider from "../src/imageSlider.js";
 import Typography from "@mui/material/Typography";
 import { toggleFirstPage } from "../src/Data/toggleFirstPage.js";
 
@@ -15,7 +15,7 @@ function Index() {
       <Header />
       <Image alt="landing page image" />
       <MainMenu />
-      <Imageslider />
+      <ImageSlider />
       <Common />
       <Typography sx={{ marginTop: 1, fontWeight: '900', fontSize: '22px', width: "86%", direction: "rtl" }}>پرسش های شما</Typography>
                 {toggleFirstPage.map((item, index) => {

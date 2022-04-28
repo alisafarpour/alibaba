@@ -25,7 +25,7 @@ function header() {
         sx={{ backgroundColor: "white", height: 80, position: 'sticky' }}
       >
         <Grid item xs={1.25} sx={{cursor:"pointer"}}>
-          <Link href="http://localhost:3000/">
+          <Link href="/">
             <Image src={Alibaba} />
           </Link>
         </Grid>

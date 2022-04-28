@@ -9,7 +9,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import { footerImageData } from "./Data/footerImageData";
-import Footerdata from "./Components/footerData";
+import Footerdata from "./Components/footerImage";
 import Footerlink from "./Components/footerlink";
 import { footerLinkData } from "./Data/footerLinkData";
 import Footertopimg from "./Components/footertopimg";
