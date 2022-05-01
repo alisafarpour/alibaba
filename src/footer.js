@@ -43,7 +43,7 @@ function footer() {
             direction: "rtl",
             paddingTop: 5,
             paddingBottom: 8,
-            borderBottom: 0.2,
+            borderBottom: 1, borderColor: '#e5e5e5'
           }}
           
         >
@@ -67,7 +67,7 @@ function footer() {
               md={6}
               justifyContent="space-between"
               alignItems="flex-start"
-              sx={{ fontSize: 14, marginTop: -10,display: { xs: 'none', md: 'flex' , xl:'flex', lg: 'flex' } }}
+              sx={{ fontSize: 14, marginBottom: 10,display: { xs: 'none', md: 'flex' , xl:'flex', lg: 'flex' } }}
             >
               {footerLinkData.map((item) => {
                 return <Footerlink {...item} />;
@@ -79,12 +79,12 @@ function footer() {
               justifyContent="flex-start"
               alignItems="center"
               md={6}
-              sx={{ direction: "ltr", marginTop: 10,display: { xs: 'none', md: 'flex' , xl:'flex', lg: 'flex' } }}
+              sx={{ direction: "ltr", marginTop: 5,display: { xs: 'none', md: 'flex' , xl:'flex', lg: 'flex' } }}
             >
               <Grid md={12}>
                 <Image src={shawl} width="189px" height="30px" />
               </Grid>
-              <Grid xmd={12} sx={{ lineHeight: 0.75 }}>
+              <Grid md={12} sx={{ lineHeight: 0.75 , marginTop: 1 }}>
                 <p>
                   تلفن پشتیبانی:&ensp; ۰۲۱ - ۴۳۹۰۰۰۰۰ &ensp;|&ensp;۰۲۱ -
                   ۴۹۲۷۵۰۰۰
@@ -94,7 +94,7 @@ function footer() {
                   ۴
                 </p>
               </Grid>
-              <Grid container sx={{ marginTop: 2, marginBottom: 5 }}>
+              <Grid container sx={{ marginTop: 8, marginBottom: 5 }}>
                 {footerImageData.map((item) => {
                   return <Footerdata image={item} />;
                 })}
@@ -106,7 +106,7 @@ function footer() {
               justifyContent="space-between"
               alignItems="center"
               sx={{
-                borderTop: 0.2,
+                borderTop: 1, borderColor: '#e5e5e5',
                 paddingTop: 2,
                 direction: "rtl",
                 fontSize: 12,

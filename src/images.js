@@ -4,6 +4,9 @@ import { Grid } from "@mui/material";
 import airplane from "../public/airplane.webp";
 
 function images() {
+
+  // const imageData = useSelector((state) => state.flightFilter.value);
+
   return (
     <Grid
       justifyContent={"center"}

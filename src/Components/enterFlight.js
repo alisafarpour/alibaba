@@ -77,7 +77,7 @@ export default function EnterFlight() {
                 mask="____/__/__"
                 value={value}
                 onChange={(newValue) => setValue(newValue)}
-                renderInput={(params) => <TextField sx={{width:{xs:'100%', md:'auto'}}} {...params} />}
+                renderInput={(params) => <TextField sx={{width:{xs:'100%', md:'auto' }}} {...params} />}
               />
             </LocalizationProvider>
           </Grid>

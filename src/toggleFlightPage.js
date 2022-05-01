@@ -24,7 +24,7 @@ function toggleFlightpage(props) {
             >
                 <Accordion sx={{ borderRadius: 1, marginTop: 1, marginBottom: 1 }}>
                     <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
+                        expandIcon={<ExpandMoreIcon sx={{ border: '0.2px solid currentColor', borderRadius: 100 }}/>}
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                     >
