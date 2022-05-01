@@ -11,8 +11,9 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { Box } from "@mui/material";
 
 const city = [
-  "تهران" ,"اهواز" , "شیراز" ,"مشهد" ,"بندر عباس" ,"اصفهان" ,"تبریز" ,"کیش" 
+  "تهران", "اهواز", "شیراز", "مشهد", "بندر عباس", "اصفهان", "تبریز", "کیش"
 ];
+
 
 export default function EnterFlight() {
 
@@ -21,27 +22,26 @@ export default function EnterFlight() {
 
   return (
 
-    <Grid container spacing={2}>
-      
+    <Grid container direction="row"
+    justifyContent="center"
+    alignItems="center" spacing={0.5}>
+
       <Grid
         item
         xs={12}
-        sx={{ direction: "rtl", borderRadius: 10, marginBottom: 2 }}
+        sx={{ direction: "rtl", borderRadius: 10, marginBottom: 2, paddingRight: {lg:5.5, xs:2} ,paddingLeft: {lg:5.5, xs:2}  }}
       >
         <Button href="#text-buttons" sx={{ borderRadius: "25%" }}>
           یک طرفه
           <KeyboardArrowDownIcon />
         </Button>
       </Grid>
-      <Grid container spacing={2} direction="row"
-        justifyContent="center"
-        alignItems="center" >
-        <Grid item>
+        <Grid item md={2.5} xs={10} sx={{marginTop: 2}}>
           <Autocomplete
             disablePortal
             id="combo-box-demo"
             options={city}
-            sx={{ width: 220, borderTopRightRadius: "100%" }}
+            sx={{ width: 'auto', borderTopRightRadius: "100%" }}
             renderOption={(props, option) => (
               <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
                 <LocationOnIcon />
@@ -53,12 +53,12 @@ export default function EnterFlight() {
             )}
           />
         </Grid>
-        <Grid item>
+        <Grid item md={2.5} xs={10} sx={{marginTop: 2}}>
           <Autocomplete
             disablePortal
             id="combo-box-demo"
             options={city}
-            sx={{ width: 220, borderTopRightRadius: "100%" }}
+            sx={{ width: 'auto', borderTopRightRadius: "100%" }}
             renderOption={(props, option) => (
               <Box sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
                 <LocationOnIcon />
@@ -70,34 +70,34 @@ export default function EnterFlight() {
             )}
           />
         </Grid>
-        <Grid container xs={7} spacing={1} sx={{ marginTop: 1 }}>
-          <Grid item>
+          <Grid item md={2} xs={10} sx={{marginTop: 2}}>
             <LocalizationProvider dateAdapter={AdapterJalali}>
               <DatePicker
+                label="زمان رفت"
                 mask="____/__/__"
                 value={value}
                 onChange={(newValue) => setValue(newValue)}
-                renderInput={(params) => <TextField {...params} />}
+                renderInput={(params) => <TextField sx={{width:{xs:'100%', md:'auto'}}} {...params} />}
               />
             </LocalizationProvider>
           </Grid>
-          <Grid item>
+          <Grid item md={2} xs={10} sx={{marginTop: 2}}>
             <LocalizationProvider dateAdapter={AdapterJalali}>
               <DatePicker
+                label="زمان برگشت"
                 mask="____/__/__"
                 value={value2}
                 onChange={(newValue2) => setValue2(newValue2)}
-                renderInput={(params) => <TextField {...params} />}
+                renderInput={(params) => <TextField sx={{width:{xs:'100%', md:'auto'}}} {...params} />}
               />
             </LocalizationProvider>
           </Grid>
-          <Grid item>
+          <Grid justifyContent="center" item md={2} xs={10} sx={{marginTop: 2 }}>
             <Button variant="main" href="/flights">جستجو</Button>
           </Grid>
 
         </Grid>
-      </Grid>
-    </Grid>
+
   );
 }
 

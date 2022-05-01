@@ -78,6 +78,7 @@ const theme = createTheme({
   
     typography: {
       fontSize: 12,
+      
 
       fontFamily: ["iransharp", "Roboto"].join(","),
       normalToggle:
@@ -148,6 +149,7 @@ const theme = createTheme({
     button: {
       width: "100%",
     },
+    
   });
 
 export default theme;

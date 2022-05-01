@@ -10,74 +10,79 @@ import Image from "next/image";
 import { headerButtData } from "./Data/headerButtdata";
 import HeaderButt from "./Components/headerButt";
 import Link from 'next/link';
+import Box from '@mui/material/Box';
 
 function header() {
+
+
+
+
   return (
-    <div dir="rtl">
-      <Grid
-        container
-        direction="row"
+
+    <Grid
+      container
+      direction="row"
+      justifyContent="space-around"
+      alignItems="center"
+      spacing={2}
+
+      sx={{ backgroundColor: "white", height: 'auto', direction: 'rtl', padding: 0.5 }}
+    >
+      <Box
+        component={Grid}
+        item xl={1.28} lg={1.5} md={1.75} sm={3} sx={{ cursor: "pointer" }}>
+        <Link href="/">
+          <Image src={Alibaba} />
+        </Link>
+      </Box>
+      <Box
+        component={Grid}
+        item
         justifyContent="center"
         alignItems="center"
-
-        spacing={2}
-        xs={12}
-        sx={{ backgroundColor: "white", height: 80, position: 'sticky' }}
+        xl={5.5}
+        lg={7.75}
+        display={{ md: "none" }}
+        sx={{ display: { xs: 'none', md: 'none' , xl: 'block', lg: 'block' }}}
       >
-        <Grid item xs={1.25} sx={{cursor:"pointer"}}>
-          <Link href="/">
-            <Image src={Alibaba} />
-          </Link>
-        </Grid>
-        <Grid
-          item
-          justifyContent="flex-end"
-          alignItems="center"
-          xs={5}
-          sx={{ marginRight: 3 }}
+        <Stack
+          direction="row"
+          spacing={1.2}
+          divider={<Divider orientation="vertical" flexItem />}
         >
-          <Stack
-            direction="row"
-            divider={<Divider orientation="vertical" flexItem />}
-            spacing={0.5}
-          >
-            {headerButtData.map((item) => {
-              return (
-                <HeaderButt {...item} />
-              )
-            })}
+          {headerButtData.map((item) => {
+            return (
+              <HeaderButt {...item} />
+            )
+          })}
 
-          </Stack>
-        </Grid>
-        <Grid item xs={4} dir="ltr">
-          <Stack
-            direction="row"
-            dir="rtl"
-            spacing={1}
-            sx={{ paddingRight: 25 }}
-          >
-            <Button
-              sx={{
-                bgcolor: "background.paper",
-                color: "text.secondary",
-                fontSize: 16,
-              }}
-            >
-              <SpeakerNotesOutlinedIcon sx={{ marginLeft: 1 }} /> پیگیری خرید
-            </Button>
-            <Button
-              sx={{
-                bgcolor: "background.paper",
-                color: "text.secondary",
-                fontSize: 16,
-              }}
-            >
-              <HowToRegOutlinedIcon sx={{ marginLeft: 1 }} /> ورود یا ثبت نام
-            </Button>
-          </Stack>
-        </Grid>
-      </Grid>
-    </div>
+        </Stack>
+      </Box>
+      <Box
+        component={Grid} item xl={2.25} lg={2.75} md={4} sm={0} sx={{ paddingLeft: 10,display: { xs: 'none', md: 'block' , xl: 'block', lg: 'block' } }} dir="rtl">
+
+        <Button
+          sx={{
+            bgcolor: "background.paper",
+            color: "text.secondary",
+            fontSize: 16,
+          }}
+        >
+          <SpeakerNotesOutlinedIcon sx={{ marginLeft: 1 }} /> پیگیری خرید
+        </Button>
+        <Button
+          sx={{
+            bgcolor: "background.paper",
+            color: "text.secondary",
+            fontSize: 16,
+          }}
+        >
+          <HowToRegOutlinedIcon sx={{ marginLeft: 1 }} /> ورود یا ثبت نام
+        </Button>
+
+      </Box>
+    </Grid>
+
   );
 }
 

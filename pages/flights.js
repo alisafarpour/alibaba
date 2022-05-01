@@ -1,6 +1,4 @@
 import React from 'react'
-import Footer from "../src/footer.js";
-import Header from "../src/header.js";
 import ToggleFlightPage from '../src/toggleFlightPage.js';
 import { Grid, Typography } from '@mui/material';
 import { toggleData } from '../src/Data/toggleData.js';
@@ -8,7 +6,6 @@ import FlightMiddle from '../src/Components/flightMiddle.js';
 function flights() {
     return (
         <div>
-            <Header />
             <FlightMiddle />
             <Grid
                 container
@@ -25,7 +22,6 @@ function flights() {
                     )
                 })}
             </Grid>
-            <Footer />
         </div>
     )
 }

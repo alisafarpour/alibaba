@@ -1,4 +1,4 @@
-import { Box, Container } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
@@ -14,33 +14,38 @@ import Footerlink from "./Components/footerlink";
 import { footerLinkData } from "./Data/footerLinkData";
 import Footertopimg from "./Components/footertopimg";
 import { footerTopImgData } from "./Data/fotterTopImgData";
+import { fontSize } from "@mui/system";
 
 function footer() {
   return (
-    <Box sx={{ backgroundColor: "white" }}>
-      <Container
-        sx={{
-          width: "72%",
-          marginTop: 5,
-          direction: "rtl",
-          left: 0,
-          bottom: 0,
-          right: 0,
-        }}
+    <Grid container
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+      sx={{backgroundColor: "white", marginTop: 10}}
+    >
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        spacing={1}
+        lg={8.65}
+        md={11.5}
       >
         <Grid
           container
           direction="row"
-          justifyContent="space-between"
+          justifyContent="center"
           alignItems="center"
           sx={{
-            marginTop: 18,
-
+            marginTop: 1,
             direction: "rtl",
             paddingTop: 5,
             paddingBottom: 8,
             borderBottom: 0.2,
           }}
+          
         >
           {footerTopImgData.map((item) => {
                 return <Footertopimg {...item} />;
@@ -59,10 +64,10 @@ function footer() {
           <Grid container justifyContent="space-between" alignItems="center">
             <Grid
               container
-              xs={6}
+              md={6}
               justifyContent="space-between"
               alignItems="flex-start"
-              sx={{ fontSize: 14, marginTop: -10 }}
+              sx={{ fontSize: 14, marginTop: -10,display: { xs: 'none', md: 'flex' , xl:'flex', lg: 'flex' } }}
             >
               {footerLinkData.map((item) => {
                 return <Footerlink {...item} />;
@@ -73,13 +78,13 @@ function footer() {
               direction="row"
               justifyContent="flex-start"
               alignItems="center"
-              xs={6}
-              sx={{ direction: "ltr", marginTop: 10 }}
+              md={6}
+              sx={{ direction: "ltr", marginTop: 10,display: { xs: 'none', md: 'flex' , xl:'flex', lg: 'flex' } }}
             >
-              <Grid xs={12}>
+              <Grid md={12}>
                 <Image src={shawl} width="189px" height="30px" />
               </Grid>
-              <Grid xs={12} sx={{ lineHeight: 0.75 }}>
+              <Grid xmd={12} sx={{ lineHeight: 0.75 }}>
                 <p>
                   تلفن پشتیبانی:&ensp; ۰۲۱ - ۴۳۹۰۰۰۰۰ &ensp;|&ensp;۰۲۱ -
                   ۴۹۲۷۵۰۰۰
@@ -108,19 +113,24 @@ function footer() {
                 paddingBottom: 5,
                 color: "black",
               }}
+              
             >
-              <Grid xs={7}>
-                <p>
+              <Grid container  direction="row-reverse"
+                justifyContent="center"
+                alignItems="center"
+                md={7} xs={11.5} >
+                <Typography sx={{fontSize: '12px', textAlign:'center', marginTop: 1}}>
                   کلیه حقوق این سرویس (وب‌سایت و اپلیکیشن‌های موبایل) محفوظ و
                   متعلق به شرکت سفرهای علی‌بابا می‌باشد. (نسخه 1.72.0)
-                </p>
+                  </Typography>
               </Grid>
               <Grid
                 container
-                xs={5}
+                md={5} xs={11.5}
                 direction="row-reverse"
-                justifyContent="flex-start"
+                justifyContent="center"
                 alignItems="center"
+                sx={{opacity: 0.5, marginTop: 1}}
               >
                 <LinkedInIcon sx={{ fontSize: 30 }} />
                 <InstagramIcon sx={{ fontSize: 30, marginLeft: 2.5 }} />
@@ -131,8 +141,8 @@ function footer() {
             </Grid>
           </Grid>
         </Grid>
-      </Container>
-    </Box>
+        </Grid>
+        </Grid>
   );
 }
 

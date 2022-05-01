@@ -8,6 +8,8 @@ import theme from "../theme/theme.js";
 import createEmotionCache from "../theme/createEmotionCache";
 import { store } from '../src/app/store';
 import { Provider } from 'react-redux';
+import Header from "../src/header.js";
+import Footer from "../src/footer.js";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -21,8 +23,10 @@ export default function MyApp(props) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
+        <Header/>
         <CssBaseline />
         <Component {...pageProps} />
+        <Footer/>
       </ThemeProvider>
     </CacheProvider>
     </Provider>

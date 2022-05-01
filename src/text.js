@@ -7,21 +7,18 @@ import { Typography } from "@mui/material";
 
 function text() {
   return (
-    <Container
-      maxWidth="xlg"
-      sx={{
-        width: "75%",
-        marginTop: 5,
-        direction: "rtl",
-      }}
-    >
+    
       <Grid
         container
         direction="row"
-        justifyContent="space-around"
+        justifyContent="center"
         alignItems="center"
+        sx={{
+          marginTop: 5,
+          direction: "rtl",
+        }}
       >
-        <Grid xs={6}>
+        <Grid xl={4} lg={4} md={11.5} xs={11.5}>
           <Typography variant="h6" >بلیط هواپیما</Typography>
           <Typography lineHeight="2.2">
             شرکت سفرهای علی‌بابا که فعالیتش را از سال 1393 شروع کرد، بعد از
@@ -38,11 +35,12 @@ function text() {
             شما با خرید بلیط هواپیما از علی‌بابا با سامانه مطمئن و معتبری روبه‌رو هستید که تمام نیازهایتان را پاسخ می‌دهد. برای خرید آنلاین بلیط هواپیما در علی‌بابا کافیست مبدا، مقصد و تاریخ پرواز خود را انتخاب کنید. پس از کلیک روی جستجو، لیست قیمت بلیط هواپیما به مقصد مورد نظر شما ظاهر می‌شود. در این لیست، انتخابهای متعددی پیش روی شماست. برای اینکه گزینه‌ ها را برای خرید بلیط هواپیما محدودتر کنید، علی‌بابا ابزارهای مختلفی در اختیار شما می‌گذارد.
           </Typography>
         </Grid>
-        <Grid xs={1}>
+        <Grid xl={1} lg={1} md={0} xs={0} sx={{ display: { xs: 'none', md: 'none' , xl: 'block', lg: 'block' }}}>
         </Grid>
-        <Grid xs={5}>
+        <Grid xl={3.6} lg={3.6} md={0} xs={0} sx={{ display: { xs: 'none', md: 'none' , xl: 'block', lg: 'block' }}}>
           <Image src={baggage} />
         </Grid>
+        <Grid xl={8.6} lg={8.6} md={11.5} xs={11.5}>
         <Typography variant="subtitle1">
           یکی از ابزارهای بسیار مفید و کاربردی برای خرید اینترنتی بلیط هواپیما، تقویم قیمتی است. با استفاده از تقویم قیمتی شما می‌توانید کمترین و بیشترین قیمت بلیط پرواز را در روزهای قبل و بعد از آن تاریخ مشاهده کنید. در صورتی که اصرار به خرید بلیط هواپیما در یک روز خاص نداشته باشید، این امکان به شما کمک می‌کند تا مبلغ بلیط هواپیما برایتان با مبلغ به صرفه تری تمام شود.
         </Typography>
@@ -52,7 +50,7 @@ function text() {
         <Typography variant="subtitle1">
           برای پرداخت هزینه می‌توانید از کارت شتاب استفاده کنید. پس از پرداخت، خرید اینترنتی بلیط هواپیما با موفقیت انجام میشود و بلیط به ایمیل شما ارسال میشود. همچنین در همه این مراحل، پشتیبانی علی‌بابا در کنار شماست تا هر زمانی که سوال یا مشکلی داشتید، 24 ساعته پاسخگوی شما باشد.
         </Typography>
-        <Grid xs={12}>
+        <Grid xl={12}>
           <Typography variant="subtitle2">
             امکان استرداد بلیط هواپیما
           </Typography>
@@ -77,10 +75,9 @@ function text() {
           <Typography variant="subtitle1">
           شما با رزرو بلیط هواپیما در علی‌بابا، از سفری راحت و بی‌دردسر مطمئن خواهید بود.
           </Typography>
-          
+          </Grid>
         </Grid>
       </Grid>
-    </Container>
   );
 }
 

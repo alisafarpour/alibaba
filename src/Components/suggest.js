@@ -3,10 +3,8 @@ import Tab from "@mui/material/Tab";
 import { useDispatch } from 'react-redux';
 import { suggestion } from '../features/flight/flightFilter.js';
 
-function suggest(props) {
-    console.log(props.value)
-    console.log(props.key)
-    console.log(props.label)
+function Suggest(props) {
+
     const dispatch = useDispatch()
     const [flightSky, setflightSky] = React.useState(false);
     let result;
@@ -36,4 +34,4 @@ function suggest(props) {
   )
 }
 
-export default suggest
+export default Suggest

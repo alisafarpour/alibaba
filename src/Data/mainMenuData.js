@@ -10,36 +10,36 @@ export const mainMenuData = [
     {
         label: "پرواز داخلی",
         value: "1",
-        icon: <FlightLandOutlinedIcon sx={{ fontSize: 30 }} />,
+        icon: <FlightLandOutlinedIcon sx={{ fontSize: {lg: 30, md:30, xs: 30} }} />,
     },
     {
         label: "پرواز خارجی",
         value: "2",
-        icon: <FlightTakeoffOutlinedIcon sx={{ fontSize: 30 }} />,
+        icon: <FlightTakeoffOutlinedIcon sx={{ fontSize: {lg: 30, md:30, xs: 30} }} />,
     },
     {
         label: "قطار",
         value: "3",
-        icon: <DirectionsSubwayFilledOutlinedIcon sx={{ fontSize: 30 }} />,
+        icon: <DirectionsSubwayFilledOutlinedIcon sx={{ fontSize: {lg: 30, md:30, xs: 30} }} />,
     },
     {
         label: "اتوبوس",
         value: "4",
-        icon: <DirectionsBusFilledOutlinedIcon sx={{ fontSize: 30 }} />,
+        icon: <DirectionsBusFilledOutlinedIcon sx={{ fontSize: {lg: 30, md:30, xs: 30} }} />,
     },
     {
         label: "تور",
         value: "5",
-        icon: <TourOutlinedIcon sx={{ fontSize: 30 }} />,
+        icon: <TourOutlinedIcon sx={{ fontSize: {lg: 30, md:30, xs: 30} }} />,
     },
     {
         label: "هتل",
         value: "6",
-        icon: <KingBedOutlinedIcon sx={{ fontSize: 30 }} />,
+        icon: <KingBedOutlinedIcon sx={{ fontSize: {lg: 30, md:30, xs: 30} }} />,
     },
     {
         label: "ویلا و اقامتگاه",
         value: "7",
-        icon: <MeetingRoomOutlinedIcon sx={{ fontSize: 30 }} />,
+        icon: <MeetingRoomOutlinedIcon sx={{ fontSize: {lg: 30, md:30, xs: 30} }} />,
     },
 ];

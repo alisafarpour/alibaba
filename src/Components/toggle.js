@@ -17,8 +17,11 @@ function toggle(props) {
       justifyContent="center"
       alignItems="center"
     >
-      <Box sx={{ width: "72%", direction: "rtl" }}>
-        <Accordion sx={{ borderRadius: 1,marginTop: 1 }}>
+      <Box component={Grid} xl={8.6}
+        lg={8.6}
+        md={11.5}
+        xs={12} sx={{ direction: "rtl" }}>
+        <Accordion sx={{ borderRadius: 1, marginTop: 1 }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -36,7 +39,7 @@ function toggle(props) {
           </AccordionSummary>
           <AccordionDetails sx={{ width: "95%", margin: "auto" }}>
             <Typography variant="normalToggle">
-             {props.answer}
+              {props.answer}
             </Typography>
           </AccordionDetails>
         </Accordion>

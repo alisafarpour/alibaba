@@ -1,6 +1,4 @@
 import React from 'react'
-import Footer from "../src/footer.js";
-import Header from "../src/header.js";
 import Alert from '@mui/material/Alert';
 import { Grid } from '@mui/material';
 import Register from '../src/Components/register.js';
@@ -8,7 +6,6 @@ import Register from '../src/Components/register.js';
 function passengers() {
     return (
         <div>
-            <Header />
             <Grid
                 container
                 justifyContent='center'
@@ -19,7 +16,6 @@ function passengers() {
                 </Alert>
                 <Register />
             </Grid>
-            <Footer />
         </div>
 
     )

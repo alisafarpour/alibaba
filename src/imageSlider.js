@@ -24,12 +24,12 @@ function imageSlider() {
       direction="row"
       justifyContent="center"
       alignItems="center"
-      sx={{marginTop: 20 }}
+      sx={{marginTop: {md: 22 , xs: 5} }}
     >
-    <Grid Item lg={6}>
+    <Grid Item xl={6} lg={6} md={12}>
     <Image src={kish} />
     </Grid >
-    <Grid Item lg={6}>
+    <Grid Item xl={6} lg={6} md={12}>
     <Image src={isfahan} />
     </Grid>
 
