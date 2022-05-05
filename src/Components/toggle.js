@@ -19,8 +19,8 @@ function toggle(props) {
     >
       <Box component={Grid} xl={8.6}
         lg={8.6}
-        md={11.5}
-        xs={12} sx={{ direction: "rtl" }}>
+        md={11}
+        xs={11} sx={{ direction: "rtl" }}>
         <Accordion sx={{ borderRadius: 1, marginTop: 1 }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{ border: '0.2px solid currentColor', borderRadius: 100 }} />}
@@ -29,16 +29,23 @@ function toggle(props) {
           >
             <Grid container justifyContent="flex-end"
               direction="row-reverse"
-              alignItems="center">
-              <Typography variant="bold">
+              alignItems="center"
+              >
+                <Grid container  xs={10.5}>
+                <Typography variant="bold" sx={{fontSize:{md:16, xs:13}}}>
                 {props.question}
-              </Typography>
-              <QuestionMarkIcon sx={{ fontSize: 30, borderRadius: 100, padding: 0.5, backgroundColor: "#e8f8fb", color: "#14a2b8", direction: "rtl" }} />
+                </Typography>
+                </Grid>
+              
+              <Grid container xs={1}>
+              <QuestionMarkIcon sx={{ fontSize:30, borderRadius: 100, padding: 0.5, backgroundColor: "#e8f8fb", color: "#14a2b8", direction: "rtl" }} />
+              </Grid>
+              
             </Grid>
 
           </AccordionSummary>
           <AccordionDetails sx={{ width: "95%", margin: "auto" }}>
-            <Typography variant="normalToggle">
+            <Typography variant="normalToggle" sx={{fontSize:{md:16, xs:13}}}>
               {props.answer}
             </Typography>
           </AccordionDetails>

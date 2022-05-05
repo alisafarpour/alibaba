@@ -18,7 +18,7 @@ function text() {
           direction: "rtl",
         }}
       >
-        <Grid xl={4} lg={4} md={11.5} xs={11.5}>
+        <Grid xl={4} lg={4} xs={11}>
           <Typography variant="h6" >بلیط هواپیما</Typography>
           <Typography lineHeight="2.2">
             شرکت سفرهای علی‌بابا که فعالیتش را از سال 1393 شروع کرد، بعد از

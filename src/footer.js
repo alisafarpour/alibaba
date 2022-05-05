@@ -22,7 +22,7 @@ function footer() {
       direction="row"
       justifyContent="center"
       alignItems="center"
-      sx={{backgroundColor: "white", marginTop: 10}}
+      sx={{backgroundColor: "white", marginTop: {md:10,xs:5} }} 
     >
       <Grid
         container

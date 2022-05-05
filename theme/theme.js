@@ -133,11 +133,15 @@ const theme = createTheme({
       text: {
         primary: "#173A5E",
         secondary: "#46505A",
+        third: "#e5e5e5",
       },
       primary: {
         main: "#0177db",
         light: "#e3f2fd",
         dark: "#4a5258",
+      },
+      buttonGroup: {
+        main: "#e5e5e5",
       },
       secondary: {
         main: "#fdb713",

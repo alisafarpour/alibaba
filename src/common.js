@@ -30,10 +30,8 @@ function common() {
           paddingLeft: 5,
           direction: "rtl",
         }}
-        xl={8.6}
         lg={8.6}
-        md={11.5}
-        xs={12}
+        xs={11}
       >
 
         <Grid item xl={1.75} lg={1.75} md={2} xs={12} sx={{ display: { xs: 'none', md: 'block' , xl: 'block', lg: 'block' }, marginTop:2 , marginBottom: 2}}>

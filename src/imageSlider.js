@@ -24,7 +24,7 @@ function imageSlider() {
       direction="row"
       justifyContent="center"
       alignItems="center"
-      sx={{marginTop: {md: 22 , xs: 5} }}
+      sx={{marginTop: {md: 22 , xs: 15} }}
     >
     <Grid Item xl={6} lg={6} md={12}>
     <Image src={kish} />
