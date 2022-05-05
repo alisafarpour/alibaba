@@ -69,7 +69,7 @@ function a11yProps(index) {
   }
 
 function mainMenuMobile() {
-    let a = element.scrollTop();
+    // let a = element.scrollTop();
 
     const [alignment, setAlignment] = React.useState('center');
 
