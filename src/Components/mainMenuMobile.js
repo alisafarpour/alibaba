@@ -35,38 +35,59 @@ import { styled } from '@mui/material/styles';
 const city = [
     "تهران", "اهواز", "شیراز", "مشهد", "بندر عباس", "اصفهان", "تبریز", "کیش"
 ];
+const labelName = [
+    "مبدا(شهر)", "مقصد(شهر)"
+];
+const labelTime = [
+    "زمان رفت", "زمان برگشت"
+];
+const bottomNavigationAction = [
+    {
+        label: "حساب کاربری",
+        icon: <AccountCircleRoundedIcon />
+    },
+    {
+        label: "سفرهای من",
+        icon: <LuggageIcon />
+    },
+    {
+        label: "خانه",
+        icon: <HomeIcon />
+    },
+
+];
 
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
     height: 45,
     '& .MuiToggleButtonGroup-grouped': {
-      margin: theme.spacing(0.5),
-      fontSize: 13,
-      fontWeight: 400,
-      border: 0,
-      '&.Mui-disabled': {
+        margin: theme.spacing(0.5),
+        fontSize: 13,
+        fontWeight: 400,
         border: 0,
-      },
-      '&:not(:first-of-type)': {
-        borderRadius: theme.shape.borderRadius,
-      },
-      '&:first-of-type': {
-        borderRadius: theme.shape.borderRadius,
-      },
-      '&.Mui-selected': {
-        border: 0,
-        color: 'white',
-        backgroundColor: '#0177db',
-        borderRadius: 10,
-      },
+        '&.Mui-disabled': {
+            border: 0,
+        },
+        '&:not(:first-of-type)': {
+            borderRadius: theme.shape.borderRadius,
+        },
+        '&:first-of-type': {
+            borderRadius: theme.shape.borderRadius,
+        },
+        '&.Mui-selected': {
+            border: 0,
+            color: 'white',
+            backgroundColor: '#0177db',
+            borderRadius: 10,
+        },
     },
-  }));
+}));
 
 function a11yProps(index) {
     return {
-      id: `simple-tab-${index}`,
-      'aria-controls': `simple-tabpanel-${index}`,
+        id: `simple-tab-${index}`,
+        'aria-controls': `simple-tabpanel-${index}`,
     };
-  }
+}
 
 function mainMenuMobile() {
     // let a = element.scrollTop();
@@ -77,7 +98,7 @@ function mainMenuMobile() {
         setAlignment(newAlignment);
     };
 
-    const[tabValue, setTabValue] = React.useState(1);
+    const [tabValue, setTabValue] = React.useState(1);
 
     const handleChange = (event, newValue) => {
         setTabValue(newValue);
@@ -106,7 +127,7 @@ function mainMenuMobile() {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <Grid container xs={12} sx={{ direction: 'rtl' }} >
-                <Button onClick={toggleDrawer('left', false)} sx={{ color: 'black', marginBottom: 1,marginTop: 1, fontSize: 15 }} variant='text'><ArrowForwardRoundedIcon sx={{ marginLeft: 2, fontSize: 23 }} />پرواز</Button>
+                <Button onClick={toggleDrawer('left', false)} sx={{ color: 'black', marginBottom: 1, marginTop: 1, fontSize: 15 }} variant='text'><ArrowForwardRoundedIcon sx={{ marginLeft: 2, fontSize: 23 }} />پرواز</Button>
             </Grid>
             <Grid container xs={11} >
                 <Grid xs={12} container direction="row"
@@ -119,7 +140,7 @@ function mainMenuMobile() {
                         onChange={handleAlignment}
                         aria-label="text alignment"
                     >
-                        <ToggleButton sx={{ width: '50%'}} value="left" >
+                        <ToggleButton sx={{ width: '50%' }} value="left" >
                             پرواز خارجی
                         </ToggleButton>
                         <ToggleButton sx={{ width: '50%' }} value="center">
@@ -127,69 +148,50 @@ function mainMenuMobile() {
                         </ToggleButton>
                     </StyledToggleButtonGroup>
                 </Grid>
-                <Grid xs={12} sx={{marginTop: 2}}>
-                    <Tabs sx={{borderBottom: 1 ,borderColor: '#e5e5e5'}} value={tabValue} onChange={handleChange} >
-                        <Tab sx={{width:'50%', fontWeight: 900, fontSize: 14 }} label="رفت و برگشت" {...a11yProps(0)} />
-                        <Tab sx={{width:'50%', fontWeight: 900, fontSize: 14 }} label="یک طرفه" {...a11yProps(1)} />
+                <Grid xs={12} sx={{ marginTop: 2 }}>
+                    <Tabs sx={{ borderBottom: 1, borderColor: '#e5e5e5' }} value={tabValue} onChange={handleChange} >
+                        <Tab sx={{ width: '50%', fontWeight: 900, fontSize: 14 }} label="رفت و برگشت" {...a11yProps(0)} />
+                        <Tab sx={{ width: '50%', fontWeight: 900, fontSize: 14 }} label="یک طرفه" {...a11yProps(1)} />
                     </Tabs>
                 </Grid>
-
-                <Grid xs={12} sx={{ marginTop: 2 }}>
-                    <Autocomplete
-                        disablePortal
-                        id="combo-box-demo"
-                        options={city}
-                        sx={{ width: 'auto', borderTopRightRadius: "100%" }}
-                        renderOption={(props, option) => (
-                            <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-                                <LocationOnIcon />
-                                {option}
-                            </Box>
-                        )}
-                        renderInput={(params) => (
-                            <TextField {...params} label="مبدا(شهر)" />
-                        )}
-                    />
-                </Grid>
-                <Grid xs={12} sx={{ marginTop: 2 }}>
-                    <Autocomplete
-                        disablePortal
-                        id="combo-box-demo"
-                        options={city}
-                        sx={{ width: 'auto', borderTopRightRadius: "100%" }}
-                        renderOption={(props, option) => (
-                            <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
-                                <LocationOnIcon />
-                                {option}
-                            </Box>
-                        )}
-                        renderInput={(params) => (
-                            <TextField {...params} label="مقصد(شهر)" />
-                        )}
-                    />
-                </Grid>
-                <Grid xs={12} sx={{ marginTop: 2 }}>
-                    <LocalizationProvider dateAdapter={AdapterJalali}>
-                        <DatePicker
-                            label="زمان رفت"
-                            mask="____/__/__"
-                            value={value}
-                            onChange={(newValue) => setValue(newValue)}
-                            renderInput={(params) => <TextField sx={{ width: { xs: '100%', md: 'auto' } }} {...params} />}
-                        />
-                    </LocalizationProvider>
-                </Grid>
-                <Grid xs={12} sx={{ marginTop: 2 }}>
-                    <LocalizationProvider dateAdapter={AdapterJalali}>
-                        <DatePicker
-                            label="زمان برگشت"
-                            mask="____/__/__"
-                            value={value2}
-                            onChange={(newValue2) => setValue2(newValue2)}
-                            renderInput={(params) => <TextField sx={{ width: { xs: '100%', md: 'auto' } }} {...params} />}
-                        />
-                    </LocalizationProvider>
-                </Grid>
+                {labelName.map((item, index) => {
+                    return (
+                        <Grid xs={12} sx={{ marginTop: 2 }}>
+                            <Autocomplete
+                                key={index}
+                                disablePortal
+                                id="combo-box-demo"
+                                options={city}
+                                sx={{ width: 'auto', borderTopRightRadius: "100%" }}
+                                renderOption={(props, option) => (
+                                    <Box component="li" sx={{ '& > img': { mr: 2, flexShrink: 0 } }} {...props}>
+                                        <LocationOnIcon />
+                                        {option}
+                                    </Box>
+                                )}
+                                renderInput={(params) => (
+                                    <TextField {...params} label={item} />
+                                )}
+                            />
+                        </Grid>
+                    )
+                })}
+                {labelTime.map((item, index) => {
+                    return (
+                        <Grid xs={12} sx={{ marginTop: 2 }}>
+                            <LocalizationProvider dateAdapter={AdapterJalali}>
+                                <DatePicker
+                                    key={index}
+                                    label={item}
+                                    mask="____/__/__"
+                                    value={value}
+                                    onChange={(newValue) => setValue(newValue)}
+                                    renderInput={(params) => <TextField sx={{ width: { xs: '100%', md: 'auto' } }} {...params} />}
+                                />
+                            </LocalizationProvider>
+                        </Grid>
+                    )
+                })}
                 <Grid xs={12} sx={{ marginTop: 2 }}>
                     <Button variant="main" sx={{ width: '100%' }} href="/flights">جستجو</Button>
                 </Grid>
@@ -240,8 +242,11 @@ function mainMenuMobile() {
                     </ButtonGroup>
                     <Divider />
                     <ButtonGroup size="large" color="buttonGroup" aria-label="large button group" variant="text">
-                        <Button fullWidth variant="text" key="one"><Typography sx={{ color: 'black', fontWeight: 900 }}>اقامتگاه</Typography><MeetingRoomOutlinedIcon sx={{ marginLeft: 1, color: 'black' }} /></Button>
-                        <Button fullWidth variant="text" key="one"><Typography sx={{ color: 'black', fontWeight: 900 }}>تور</Typography><TourOutlinedIcon sx={{ marginLeft: 1, color: 'black' }} /></Button>
+                    {[{label: 'اقامتگاه' , icon: <MeetingRoomOutlinedIcon sx={{ marginLeft: 1, color: 'black' }} /> },{label: 'تور', icon:<TourOutlinedIcon sx={{ marginLeft: 1, color: 'black' }} /> }].map((item, index) => {
+                        return (
+                            <Button key={index} fullWidth variant="text" ><Typography sx={{ color: 'black', fontWeight: 900 }}>{item.label}</Typography>{item.icon}</Button>
+                        )
+                    })}
                     </ButtonGroup>
                 </ButtonGroup>
             </Grid>
@@ -249,14 +254,14 @@ function mainMenuMobile() {
                 <BottomNavigation
                     showLabels
                 >
-                    <BottomNavigationAction label="حساب کاربری" icon={<AccountCircleRoundedIcon />} />
-                    <BottomNavigationAction label="سفرهای من" icon={<LuggageIcon />} />
-                    <BottomNavigationAction label="خانه" icon={<HomeIcon />} />
+                    {bottomNavigationAction.map((item, index) => {
+                        return (
+                            <BottomNavigationAction key={index} label={item.label} icon={item.icon} />
+                        )
+                    })}
                 </BottomNavigation>
             </Paper>
         </Grid>
-
-
 
     )
 }

@@ -24,11 +24,12 @@ export default function EnterFlight() {
 
     <Grid container direction="row"
     justifyContent="center"
-    alignItems="center" spacing={0.5}>
+    alignItems="center" spacing={0.5}
+    >
 
       <Grid
         item
-        xs={12}
+        xs={11.7}
         sx={{ direction: "rtl", borderRadius: 10, marginBottom: 2, paddingRight: {lg:5.5, xs:2} ,paddingLeft: {lg:5.5, xs:2}  }}
       >
         <Button href="#text-buttons" sx={{ borderRadius: "25%" }}>

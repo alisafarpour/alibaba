@@ -31,13 +31,13 @@ function toggle(props) {
               direction="row-reverse"
               alignItems="center"
               >
-                <Grid container  xs={10.5}>
+                <Grid container md={11} xs={10.5}>
                 <Typography variant="bold" sx={{fontSize:{md:16, xs:13}}}>
                 {props.question}
                 </Typography>
                 </Grid>
               
-              <Grid container xs={1}>
+              <Grid container md={0.35} xs={1}>
               <QuestionMarkIcon sx={{ fontSize:30, borderRadius: 100, padding: 0.5, backgroundColor: "#e8f8fb", color: "#14a2b8", direction: "rtl" }} />
               </Grid>
               

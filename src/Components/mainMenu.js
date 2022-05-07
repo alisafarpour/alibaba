@@ -11,10 +11,11 @@ import { test2 } from "../Data/test2";
 import { TabList } from "@mui/lab";
 import withWidth, { isWidthUp, isWidthDown } from "@material-ui/core/withWidth";
 import useMediaQuery from '@mui/material/useMediaQuery';
+import theme from '../../theme/theme'
 
 export default function LabTabs() {
 
-  const matches = useMediaQuery('(max-width:615px)');
+  const matches = useMediaQuery(theme.breakpoints.down(615));
 
   let condTabOrientation;
 
